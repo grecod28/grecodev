@@ -1,0 +1,16 @@
+{
+  "Header": {
+    "home": "Init",
+    "projects": "Projects",
+    "technologies": "Technologies",
+    "profile": "Profile"
+  },
+  "Index": {
+    "title": "Full Stack Web Developer",
+    "role": "FullStack Developer",
+    "bio": "I build robust, scalable web applications from database to UI. Passionate about clean code, modern architecture, and creating seamless digital experiences.",
+    "cta_projects": "View Projects",
+    "cta_contact": "Contact Me",
+    "tech_stack": "Tech Stack"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Header": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "technologies": "Tecnologías",
+    "profile": "Perfil"
+  },
+  "Index": {
+    "title": "Desarrollador Web Full Stack",
+    "role": "Desarrollador FullStack",
+    "bio": "Construyo aplicaciones web robustas y escalables, desde la base de datos hasta la interfaz de usuario. Apasionado por el código limpio, la arquitectura moderna y crear experiencias digitales fluidas.",
+    "cta_projects": "Ver Proyectos",
+    "cta_contact": "Contacto",
+    "tech_stack": "Tecnologías"
+  }
+}

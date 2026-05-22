@@ -42,44 +42,87 @@
   --gradient-surface: linear-gradient(180deg, #121a2b 0%, #0b1020 100%);
 }
 
-@theme {
+.light {
   /* Base */
-  --color-background: #0b1020;
-  --color-surface: #121a2b;
-  --color-surface-light: #1b2640;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-light: #eef2ff;
 
   /* Text */
-  --color-text: #f3f4f6;
-  --color-text-muted: #9ca3af;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
 
   /* Primary */
-  --color-primary: #6366f1;
-  --color-primary-hover: #7c83ff;
-  --color-primary-active: #4f46e5;
+  --color-primary: #4f46e5;
+  --color-primary-hover: #6366f1;
+  --color-primary-active: #4338ca;
 
   /* Secondary */
-  --color-secondary: #22c55e;
-  --color-secondary-hover: #34d399;
+  --color-secondary: #16a34a;
+  --color-secondary-hover: #22c55e;
 
   /* Accent */
-  --color-accent: #06b6d4;
-  --color-accent-hover: #22d3ee;
+  --color-accent: #0891b2;
+  --color-accent-hover: #06b6d4;
 
   /* Borders */
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-strong: rgba(255, 255, 255, 0.16);
+  --color-border: rgba(15, 23, 42, 0.08);
+  --color-border-strong: rgba(15, 23, 42, 0.16);
 
   /* States */
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-danger: #ef4444;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
 
   /* Effects */
-  --shadow-primary: 0 10px 30px rgba(99, 102, 241, 0.25);
-  --shadow-surface: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-primary: 0 10px 30px rgba(79, 70, 229, 0.15);
+  --shadow-surface: 0 8px 24px rgba(15, 23, 42, 0.08);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+  --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
 
-  --gradient-surface: linear-gradient(180deg, #121a2b 0%, #0b1020 100%);
+  --gradient-surface: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+@theme {
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-light: var(--color-surface-light);
+
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-active: var(--color-primary-active);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-hover: var(--color-secondary-hover);
+
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-danger: var(--color-danger);
+}
+
+a {
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.005);
+}
+
+button {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
 }

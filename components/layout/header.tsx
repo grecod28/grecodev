@@ -1,26 +1,24 @@
-import Image from "next/image";
 import Link from "next/link";
+import LanguageSelector from "@/components/i18n/languale-selector";
+import ThemeSelector from "@/components/i18n/theme-selector";
+import { getMessages, getTranslations } from "next-intl/server";
 
-export default function Header() {
+export default async function Header() {
+  const t = await getTranslations("Header");
+
   return (
-    <header className="flex items-center justify-between max-w-260 w-full mt-16 px-4">
-      <Link href="/" className="flex items-center gap-2">
-        <Image
-          alt="Foto de perfil"
-          src="/images/foto_perfil.jpg"
-          width={60}
-          height={60}
-          className="rounded-full"
-        />
-
-        <h2>Santiago Greco Domínguez</h2>
-      </Link>
-
-      <nav className="flex gap-4">
-        <Link href="/projects">Proyectos</Link>
-        <Link href="/tecnologies">Tecnologías</Link>
-        <Link href="/profile">Profile</Link>
+    <header className="flex items-center justify-between max-w-260 w-full mt-16 mb-4 px-4">
+      <nav className="flex gap-4 text-lg">
+        <Link href="/projects">{t("home")}</Link>
+        <Link href="/projects">{t("projects")}</Link>
+        <Link href="/tecnologies">{t("technologies")}</Link>
+        <Link href="/profile">{t("profile")}</Link>
       </nav>
+
+      <section className="flex gap-4 text-lg">
+        <LanguageSelector />
+        <ThemeSelector />
+      </section>
     </header>
   );
 }
