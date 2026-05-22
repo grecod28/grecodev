@@ -83,3 +83,11 @@
 
   --gradient-surface: linear-gradient(180deg, #121a2b 0%, #0b1020 100%);
 }
+
+a {
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.005);
+}
