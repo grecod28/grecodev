@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/layout/header";
-import Selectors from "@/components/layout/selectors";
 import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 
 const inter = Inter({
@@ -40,7 +38,6 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col items-center">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Selectors />
           <Header />
           {children}
         </NextIntlClientProvider>
