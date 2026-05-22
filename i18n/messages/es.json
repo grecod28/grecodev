@@ -1,4 +1,10 @@
 {
+  "Header": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "technologies": "Tecnologías",
+    "profile": "Perfil"
+  },
   "Index": {
     "title": "Desarrollador Web Full Stack",
     "role": "Desarrollador FullStack",
