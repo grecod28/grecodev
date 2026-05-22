@@ -1,7 +1,23 @@
 "use client";
 
-export default function LanguageSelector() {
-  const onCLick = () => console.log("Hola mundo");
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
 
-  return <button onClick={onCLick}>EN</button>;
+export default function LanguageSelector() {
+  const locale = useLocale();
+
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const changeLanguage = () => {
+    const newLocale = locale === "es" ? "en" : "es";
+
+    router.replace(pathname, {
+      locale: newLocale,
+    });
+  };
+
+  return (
+    <button onClick={changeLanguage}>{locale === "es" ? "EN" : "ES"}</button>
+  );
 }
