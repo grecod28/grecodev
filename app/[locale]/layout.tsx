@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Header from "@/components/layout/header";
 import Selectors from "@/components/layout/selectors";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
+import { getMessages } from "next-intl/server";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,19 +22,16 @@ export const metadata: Metadata = {
     "Desarrollador Full Stack especializado en aplicaciones web modernas y escalables. Trabajo con tecnologías como Angular, Next.js, NestJS, TypeScript y Docker, creando soluciones eficientes, seguras y centradas en la experiencia de usuario, desde el frontend hasta el backend.",
 };
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
-  params: { locale },
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-  params: { locale: string };
-}>) {
-  let messages;
-  try {
-    messages = (await import(`../../i18n/messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  const messages = await getMessages();
 
   return (
     <html
