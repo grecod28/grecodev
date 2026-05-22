@@ -12,5 +12,11 @@
     "cta_projects": "View Projects",
     "cta_contact": "Contact Me",
     "tech_stack": "Tech Stack"
+  },
+  "NotFound": {
+    "title": "404",
+    "heading": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "cta": "Go Back Home"
   }
 }

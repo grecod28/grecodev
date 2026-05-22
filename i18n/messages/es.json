@@ -12,5 +12,11 @@
     "cta_projects": "Ver Proyectos",
     "cta_contact": "Contacto",
     "tech_stack": "Tecnologías"
+  },
+  "NotFound": {
+    "title": "404",
+    "heading": "Página No Encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "cta": "Volver al Inicio"
   }
 }
