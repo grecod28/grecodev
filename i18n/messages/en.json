@@ -22,6 +22,23 @@
   "Technologies": {
     "title": "Technologies",
     "description": "A comprehensive overview of the tools and technologies I work with.",
-    "button": "Learn More"
+    "button": "Learn More",
+    "items": {
+      "typescript": "A typed superset of JavaScript that compiles to plain JavaScript, enabling better tooling and developer experience.",
+      "javascript": "A high-level, dynamic programming language that powers the interactive web.",
+      "nextjs": "A React framework for production-grade applications with server-side rendering and static generation.",
+      "nestjs": "A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.",
+      "angular": "A platform for building mobile and desktop web applications using TypeScript and other languages.",
+      "postgresql": "A powerful, open-source object-relational database system with a strong reputation for reliability.",
+      "mongodb": "A NoSQL document database designed for ease of development and scaling.",
+      "redis": "An in-memory data structure store used as a database, cache, and message broker.",
+      "tailwind-css": "A utility-first CSS framework for rapidly building custom user interfaces.",
+      "sass": "A mature CSS extension language that adds power and elegance to the basic language.",
+      "css3": "The latest evolution of the Cascading Style Sheets language, enabling rich visual styling.",
+      "html5": "The standard markup language for creating web pages and web applications.",
+      "php": "A popular general-purpose scripting language especially suited to web development.",
+      "apache": "A widely used open-source web server software.",
+      "nginx": "A high-performance HTTP server and reverse proxy server."
+    }
   }
 }

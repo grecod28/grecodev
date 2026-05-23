@@ -20,7 +20,6 @@ export const ALL_TECH_ICONS = [
   { name: "Apache", src: "/images/apache-svgrepo-com.svg" },
   { name: "Nginx", src: "/images/nginx-svgrepo-com.svg" },
   { name: "TypeScript", src: "/images/typescript-svgrepo-com.svg" },
-  { name: "Vanilla JS", src: "/images/javascript-svgrepo-com.svg" },
   { name: "Tailwind CSS", src: "/images/tailwind-svgrepo-com.svg" },
   { name: "Sass", src: "/images/sass-svgrepo-com.svg" },
   { name: "CSS3", src: "/images/css-3-svgrepo-com.svg" },
