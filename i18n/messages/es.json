@@ -18,5 +18,10 @@
     "heading": "Página No Encontrada",
     "description": "La página que buscas no existe o ha sido movida.",
     "cta": "Volver al Inicio"
+  },
+  "Technologies": {
+    "title": "Tecnologías",
+    "description": "Una visión general de las herramientas y tecnologías con las que trabajo.",
+    "button": "Ver más"
   }
 }

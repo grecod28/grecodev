@@ -9,3 +9,21 @@ export const TECH_STACK_ICONS = [
   { name: "Tailwind CSS", src: "/images/tailwind-svgrepo-com.svg" },
   { name: "Sass", src: "/images/sass-svgrepo-com.svg" },
 ] as const;
+
+export const ALL_TECH_ICONS = [
+  { name: "Next.js", src: "/images/nextjs-fill-svgrepo-com.svg" },
+  { name: "NestJS", src: "/images/nestjs-svgrepo-com.svg" },
+  { name: "Angular", src: "/images/angular-svgrepo-com.svg" },
+  { name: "PostgreSQL", src: "/images/pgsql-svgrepo-com.svg" },
+  { name: "MongoDB", src: "/images/mongo-svgrepo-com.svg" },
+  { name: "Redis", src: "/images/redis-svgrepo-com.svg" },
+  { name: "Apache", src: "/images/apache-svgrepo-com.svg" },
+  { name: "Nginx", src: "/images/nginx-svgrepo-com.svg" },
+  { name: "TypeScript", src: "/images/typescript-svgrepo-com.svg" },
+  { name: "Vanilla JS", src: "/images/javascript-svgrepo-com.svg" },
+  { name: "Tailwind CSS", src: "/images/tailwind-svgrepo-com.svg" },
+  { name: "Sass", src: "/images/sass-svgrepo-com.svg" },
+  { name: "CSS3", src: "/images/css-3-svgrepo-com.svg" },
+  { name: "HTML5", src: "/images/html-5-svgrepo-com.svg" },
+  { name: "PHP", src: "/images/php-svgrepo-com.svg" },
+] as const;
