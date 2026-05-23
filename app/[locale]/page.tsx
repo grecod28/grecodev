@@ -1,4 +1,4 @@
-import { TECH_ICONS } from "@/lib/constants/icons";
+import { TECH_STACK_ICONS } from "@/lib/constants/icons";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
@@ -56,7 +56,7 @@ export default async function Home() {
             {t("tech_stack")}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-5">
-            {TECH_ICONS.map(({ name, src }) => (
+            {TECH_STACK_ICONS.map(({ name, src }) => (
               <div
                 key={name}
                 className="group flex flex-col items-center gap-2"

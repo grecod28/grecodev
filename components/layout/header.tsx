@@ -16,7 +16,7 @@ export default async function Header() {
 
   return (
     <header className="flex items-center justify-between max-w-260 w-full mt-16 mb-4 px-4">
-      {/* Desktop Navigation */}
+      {/* Navegación de escritorio*/}
       <nav className="hidden md:flex gap-6 text-lg">
         {links.map((link) => (
           <Link
@@ -29,13 +29,13 @@ export default async function Header() {
         ))}
       </nav>
 
-      {/* Desktop Actions */}
+      {/* Acciones en escritorio */}
       <section className="hidden md:flex gap-4 text-lg">
         <LanguageSelector />
         <ThemeSelector />
       </section>
 
-      {/* Mobile Menu */}
+      {/* Solo en pantallas pequeñas */}
       <div className="md:hidden">
         <MobileMenu links={links} />
       </div>
