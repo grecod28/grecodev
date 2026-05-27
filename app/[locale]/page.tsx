@@ -1,4 +1,5 @@
-import { TECH_ICONS } from "@/lib/constants/icons";
+import { TECH_STACK_ICONS } from "@/lib/constants/icons";
+import { toSlug } from "@/lib/functions/slug";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +9,7 @@ export default async function Home() {
 
   return (
     <main className="flex flex-1 flex-col items-center justify-center w-full px-4">
-      <div className="flex flex-col items-center text-center max-w-2xl">
+      <div className="flex flex-col items-center text-center max-w-3xl">
         <div className="relative mb-6">
           <div
             className="absolute -inset-4 rounded-full bg-primary/20 blur-2xl"
@@ -56,9 +57,10 @@ export default async function Home() {
             {t("tech_stack")}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-5">
-            {TECH_ICONS.map(({ name, src }) => (
-              <div
+            {TECH_STACK_ICONS.map(({ name, src }) => (
+              <Link
                 key={name}
+                href={`/technologies/${toSlug(name)}`}
                 className="group flex flex-col items-center gap-2"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-light p-2.5 transition-colors duration-200 group-hover:bg-primary/10">
@@ -74,7 +76,7 @@ export default async function Home() {
                 <span className="text-[10px] font-medium text-text-muted">
                   {name}
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
