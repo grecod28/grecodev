@@ -3,7 +3,8 @@
     "home": "Init",
     "projects": "Projects",
     "technologies": "Technologies",
-    "profile": "Profile"
+    "about": "About me",
+    "contact": "Contact"
   },
   "Index": {
     "title": "Full Stack Web Developer",
@@ -38,8 +39,58 @@
       "html5": "The standard markup language for creating web pages and web applications.",
       "php": "A popular general-purpose scripting language especially suited to web development.",
       "apache": "A widely used open-source web server software.",
-      "nginx": "A high-performance HTTP server and reverse proxy server.",
-      "n8n": "A open source workflow automation tool."
+      "nginx": "A high-performance HTTP server and reverse proxy server."
     }
+  },
+  "About": {
+    "hero": {
+      "title": "FullStack Developer",
+      "greeting": "Santiago Greco",
+      "subtitle": "Building Scalable Digital Experiences",
+      "description": "I'm a FullStack Developer passionate about creating modern web applications. I specialize in building robust, scalable solutions from database to UI — always focusing on clean code, performance, and exceptional user experiences."
+    },
+    "about": {
+      "title": "About Me",
+      "subtitle": "Crafting Code with Purpose",
+      "p1": "Graduate in Web Application Development (CFGS DAW) with a deep passion for technology. Throughout my training I specialized in FullStack web development, working with modern technologies across the entire stack — from interactive frontends with frameworks like Angular, Next.js and React, to robust backends with Node.js, NestJS and APIs.",
+      "p2": "My approach combines solid technical skills with a focus on solving real problems. I enjoy creating scalable, efficient applications, optimizing performance, and designing intuitive interfaces that make a difference in the user experience.",
+      "p3": "I firmly believe in continuous learning. The tech world moves fast, and I love keeping up with new trends, tools, and methodologies to always deliver the best solutions."
+    },
+
+    "education": {
+      "title": "Education",
+      "subtitle": "My Learning Journey",
+      "degree": "Higher Degree in Web Application Development (DAW)",
+      "institution": "CIFP A Carballeira",
+      "location": "Ourense, Galicia, Spain",
+      "period": "2024 — 2026",
+      "description": "Specialized training in FullStack web development covering frontend and backend technologies, databases, system design, and professional software development methodologies."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What type of development do you do?",
+      "a1": "I specialize in FullStack web development, working on both the frontend and backend of web applications. From interactive user interfaces with modern frameworks to robust APIs and database design.",
+      "q2": "What are your favorite technologies?",
+      "a2": "I enjoy working with TypeScript, Next.js, and NestJS. I'm also passionate about Angular for frontend and PostgreSQL for databases — always exploring new tools that can improve my workflow.",
+      "q3": "Are you available for projects?",
+      "a3": "Yes, I'm currently open to new projects and collaborations. Whether freelance, part-time, or full-time opportunities, I'm excited to take on new challenges.",
+      "q4": "What type of projects interest you?",
+      "a4": "Projects involving modern web technologies — from SaaS platforms and e-commerce to custom applications and APIs. I love challenges that require creative problem-solving.",
+      "q5": "What is your development philosophy?",
+      "a5": "Clean code, scalability, and user experience. I believe in writing maintainable code, following best practices, and always putting the end user first.",
+      "q6": "Do you work remotely or freelance?",
+      "a6": "Yes, fully comfortable working remotely with freelance experience. Organized, communicative, and used to working with distributed teams.",
+      "q7": "How do you stay up to date?",
+      "a7": "Continuous learning is part of my routine. I follow industry leaders, read technical blogs, experiment with new technologies, and believe every project is an opportunity to learn."
+    }
+  },
+  "Contact": {
+    "title": "Let's Work Together",
+    "description": "Have a project in mind? I'd love to hear about it. Whether you need a web application, an API, or a complete digital solution — I'm here to help.",
+    "email": "stgrecodev@gmail.com",
+    "github": "github.com/grecod28",
+    "linkedin": "linkedin.com/in/santiagogreco",
+    "location": "Ourense, Galicia, Spain",
+    "cta": "Get in Touch"
   }
 }

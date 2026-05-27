@@ -11,7 +11,8 @@ export default async function Header() {
     { href: "/", label: t("home") },
     { href: "/projects", label: t("projects") },
     { href: "/technologies", label: t("technologies") },
-    { href: "/profile", label: t("profile") },
+    { href: "/about", label: t("about") },
+    { href: "/contact", label: t("contact") },
   ];
 
   return (

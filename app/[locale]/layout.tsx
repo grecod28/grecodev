@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/layout/header";
 import { NextIntlClientProvider } from "next-intl";
@@ -7,11 +7,6 @@ import { getMessages } from "next-intl/server";
 
 const inter = Inter({
   variable: "--font-inter",
-});
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  weight: ["900", "500", "300"],
 });
 
 export const metadata: Metadata = {

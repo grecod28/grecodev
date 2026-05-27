@@ -3,7 +3,8 @@
     "home": "Inicio",
     "projects": "Proyectos",
     "technologies": "Tecnologías",
-    "profile": "Perfil"
+    "about": "Sobre mí",
+    "contact": "Contacto"
   },
   "Index": {
     "title": "Desarrollador Web Full Stack",
@@ -24,22 +25,71 @@
     "description": "Una visión general de las herramientas y tecnologías con las que trabajo.",
     "button": "Ver más",
     "items": {
-      "typescript": "Superconjunto tipado de JavaScript que compila a JavaScript plano, permitiendo mejores herramientas y experiencia de desarrollo.",
-      "javascript": "Lenguaje de programación dinámico de alto nivel que impulsa la web interactiva.",
-      "nextjs": "Framework de React para aplicaciones de producción con renderizado del lado del servidor y generación estática.",
-      "nestjs": "Framework progresivo de Node.js para construir aplicaciones del lado del servidor eficientes, confiables y escalables.",
-      "angular": "Plataforma para construir aplicaciones web móviles y de escritorio usando TypeScript y otros lenguajes.",
+      "typescript": "Un superconjunto tipado de JavaScript que compila a JavaScript plano, permitiendo mejores herramientas y experiencia de desarrollo.",
+      "javascript": "Un lenguaje de programación dinámico de alto nivel que impulsa la web interactiva.",
+      "nextjs": "Un framework de React para aplicaciones de producción con renderizado del lado del servidor y generación estática.",
+      "nestjs": "Un framework progresivo de Node.js para construir aplicaciones del lado del servidor eficientes, confiables y escalables.",
+      "angular": "Una plataforma para construir aplicaciones web móviles y de escritorio usando TypeScript y otros lenguajes.",
       "postgresql": "Un potente sistema de base de datos relacional de código abierto con una sólida reputación de confiabilidad.",
-      "mongodb": "Base de datos documental NoSQL diseñada para facilitar el desarrollo y la escalabilidad.",
-      "redis": "Almacén de estructura de datos en memoria utilizado como base de datos, caché y broker de mensajes.",
-      "tailwind-css": "Framework de CSS utilitario para construir rápidamente interfaces de usuario personalizadas.",
-      "sass": "Lenguaje de extensión CSS maduro que añade potencia y elegancia al lenguaje básico.",
-      "css3": "Evolución más reciente del lenguaje de Hojas de Estilo en Cascada, que permite un estilo visual rico.",
-      "html5": "Lenguaje de marcado estándar para crear páginas web y aplicaciones web.",
-      "php": "Popular lenguaje de scripting de propósito general especialmente adecuado para el desarrollo web.",
-      "apache": "Software de servidor web de código abierto ampliamente utilizado.",
-      "nginx": "Servidor HTTP de alto rendimiento y proxy inverso.",
-      "n8n": "Herramienta Open Source para la automatización de flujos de trabajo."
+      "mongodb": "Una base de datos documental NoSQL diseñada para facilitar el desarrollo y la escalabilidad.",
+      "redis": "Un almacén de estructura de datos en memoria utilizado como base de datos, caché y broker de mensajes.",
+      "tailwind-css": "Un framework de CSS utilitario para construir rápidamente interfaces de usuario personalizadas.",
+      "sass": "Un lenguaje de extensión CSS maduro que añade potencia y elegancia al lenguaje básico.",
+      "css3": "La evolución más reciente del lenguaje de Hojas de Estilo en Cascada, que permite un estilo visual rico.",
+      "html5": "El lenguaje de marcado estándar para crear páginas web y aplicaciones web.",
+      "php": "Un popular lenguaje de scripting de propósito general especialmente adecuado para el desarrollo web.",
+      "apache": "Un software de servidor web de código abierto ampliamente utilizado.",
+      "nginx": "Un servidor HTTP de alto rendimiento y proxy inverso."
     }
+  },
+  "About": {
+    "hero": {
+      "title": "Desarrollador FullStack",
+      "greeting": "Santiago Greco",
+      "subtitle": "Construyendo Experiencias Digitales Escalables",
+      "description": "Soy un Desarrollador FullStack apasionado por crear aplicaciones web modernas. Me especializo en construir soluciones robustas y escalables desde la base de datos hasta la interfaz de usuario — enfocándome siempre en código limpio, rendimiento y experiencias de usuario excepcionales."
+    },
+    "about": {
+      "title": "Sobre Mí",
+      "subtitle": "Creando Código con Propósito",
+      "p1": "Graduado en Desarrollo de Aplicaciones Web (CFGS DAW) con una profunda pasión por la tecnología. Durante mi formación me especialicé en desarrollo web FullStack, trabajando con tecnologías modernas en todo el stack — desde frontends interactivos con frameworks como Angular, Next.js y React, hasta backends robustos con Node.js, NestJS y APIs.",
+      "p2": "Mi enfoque combina sólidas habilidades técnicas con una orientación a resolver problemas reales. Disfruto creando aplicaciones escalables y eficientes, optimizando el rendimiento y diseñando interfaces intuitivas que marcan la diferencia en la experiencia del usuario.",
+      "p3": "Creo firmemente en el aprendizaje continuo. El mundo tecnológico avanza rápido y me encanta mantenerme al día con nuevas tendencias, herramientas y metodologías para ofrecer siempre las mejores soluciones."
+    },
+    "education": {
+      "title": "Formación",
+      "subtitle": "Mi Formación Académica",
+      "degree": "FP Superior en Desarrollo de Aplicaciones Web (DAW)",
+      "institution": "CIFP A Carballeira",
+      "location": "Ourense, Galicia, España",
+      "period": "2024 — 2026",
+      "description": "Formación especializada en desarrollo web FullStack cubriendo tecnologías de frontend y backend, bases de datos, diseño de sistemas y metodologías profesionales de desarrollo de software."
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": "¿Qué tipo de desarrollo realizas?",
+      "a1": "Me especializo en desarrollo web FullStack, trabajando tanto en el frontend como en el backend. Desde interfaces de usuario interactivas con frameworks modernos hasta APIs robustas y diseño de bases de datos.",
+      "q2": "¿Cuáles son tus tecnologías favoritas?",
+      "a2": "Disfruto trabajando con TypeScript, Next.js y NestJS. También me apasiona Angular para el frontend y PostgreSQL para bases de datos — siempre explorando nuevas herramientas que mejoren mi flujo de trabajo.",
+      "q3": "¿Estás disponible para proyectos?",
+      "a3": "Sí, actualmente estoy abierto a nuevos proyectos y colaboraciones. Ya sea freelance, media jornada o jornada completa, estoy emocionado por asumir nuevos desafíos.",
+      "q4": "¿Qué tipo de proyectos te interesan?",
+      "a4": "Proyectos que involucren tecnologías web modernas — desde plataformas SaaS y e-commerce hasta aplicaciones personalizadas y APIs. Me encantan los retos que requieren resolución creativa de problemas.",
+      "q5": "¿Cuál es tu filosofía de desarrollo?",
+      "a5": "Código limpio, escalabilidad y experiencia de usuario. Creo en escribir código mantenible, seguir las mejores prácticas y poner siempre al usuario final en primer lugar.",
+      "q6": "¿Trabajas de forma remota o freelance?",
+      "a6": "Sí, completamente cómodo trabajando de forma remota con experiencia freelance. Organizado, comunicativo y acostumbrado a trabajar con equipos distribuidos.",
+      "q7": "¿Cómo te mantienes actualizado?",
+      "a7": "El aprendizaje continuo es parte de mi rutina. Sigo a líderes de la industria, leo blogs técnicos, experimento con nuevas tecnologías y creo que cada proyecto es una oportunidad para aprender."
+    }
+  },
+  "Contact": {
+    "title": "Trabajemos Juntos",
+    "description": "¿Tienes un proyecto en mente? Me encantaría conocerlo. Ya sea una aplicación web, una API o una solución digital completa — estoy aquí para ayudar.",
+    "email": "stgrecodev@gamil.com",
+    "github": "github.com/grecod28",
+    "linkedin": "linkedin.com/in/santiagogreco",
+    "location": "Ourense, Galicia, España",
+    "cta": "Ponte en Contacto"
   }
 }
