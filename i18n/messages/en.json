@@ -56,6 +56,13 @@
     "title": "Technologies",
     "description": "A comprehensive overview of the tools and technologies I work with.",
     "button": "Learn More",
+    "proficiency": "Proficiency",
+    "related_projects": "Related Projects",
+    "no_related_projects": "No projects using this technology yet.",
+    "level_1": "Learning",
+    "level_2": "Intermediate",
+    "level_3": "Advanced",
+    "level_4": "Expert",
     "items": {
       "typescript": "A typed superset of JavaScript that compiles to plain JavaScript, enabling better tooling and developer experience.",
       "javascript": "A high-level, dynamic programming language that powers the interactive web.",

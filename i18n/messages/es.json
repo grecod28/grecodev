@@ -56,6 +56,13 @@
     "title": "Tecnologías",
     "description": "Una visión general de las herramientas y tecnologías con las que trabajo.",
     "button": "Ver más",
+    "proficiency": "Nivel",
+    "related_projects": "Proyectos Relacionados",
+    "no_related_projects": "Aún no hay proyectos que usen esta tecnología.",
+    "level_1": "Aprendiendo",
+    "level_2": "Intermedio",
+    "level_3": "Avanzado",
+    "level_4": "Experto",
     "items": {
       "typescript": "Un superconjunto tipado de JavaScript que compila a JavaScript plano, permitiendo mejores herramientas y experiencia de desarrollo.",
       "javascript": "Un lenguaje de programación dinámico de alto nivel que impulsa la web interactiva.",
