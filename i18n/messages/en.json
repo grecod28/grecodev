@@ -19,30 +19,74 @@
     "description": "Some projects I've built to explore, learn, and solve real problems.",
     "github": "Repository",
     "live": "Live Demo",
+    "back": "Back to Projects",
+    "challenges_title": "Key Challenges",
     "items": {
       "ecommerce": {
         "title": "E-Commerce Platform",
-        "description": "A full-featured online store with product management, shopping cart, payment integration, and an admin dashboard. Built with a modern stack for performance and scalability."
+        "description": "A full-featured online store with product management, shopping cart, payment integration, and an admin dashboard. Built with a modern stack for performance and scalability.",
+        "detail": "A complete e-commerce solution designed to handle product catalog management, user authentication, shopping cart logic, secure payment processing, and an administrative dashboard for inventory and order management. Built with performance and SEO in mind, leveraging server-side rendering and incremental static regeneration.",
+        "challenges": [
+          "Implementing a real-time stock management system that prevents overselling during high-traffic periods.",
+          "Designing a flexible discount and coupon system that supports percentage, fixed amount, and buy-one-get-one promotions.",
+          "Optimizing database queries to handle thousands of concurrent product searches without performance degradation.",
+          "Building a responsive admin dashboard with real-time sales analytics and order tracking."
+        ]
       },
       "taskflow": {
         "title": "TaskFlow",
-        "description": "A collaborative project management tool with real-time task boards, team workspaces, drag-and-drop workflows, and activity tracking."
+        "description": "A collaborative project management tool with real-time task boards, team workspaces, drag-and-drop workflows, and activity tracking.",
+        "detail": "A project management platform inspired by tools like Trello and Notion. It enables teams to create workspaces, organize tasks in customizable boards, assign members, set deadlines, and track progress through activity logs. Real-time updates ensure everyone stays in sync.",
+        "challenges": [
+          "Implementing smooth drag-and-drop reordering across multiple boards without losing UI state.",
+          "Designing a real-time collaboration system that syncs changes across team members instantly.",
+          "Creating a flexible permission model with workspace-level and task-level access controls.",
+          "Building an activity feed that aggregates changes in a readable, chronological timeline."
+        ]
       },
       "chatify": {
         "title": "Chatify",
-        "description": "A real-time messaging application with private and group conversations, file sharing, message reactions, and online presence indicators."
+        "description": "A real-time messaging application with private and group conversations, file sharing, message reactions, and online presence indicators.",
+        "detail": "A full-featured messaging platform supporting one-on-one and group chats, message reactions, file attachments, typing indicators, and online presence. Built with WebSockets for real-time bidirectional communication and optimized for low-latency message delivery.",
+        "challenges": [
+          "Handling WebSocket reconnection gracefully when network interruptions occur.",
+          "Designing a message pagination system that loads history efficiently without disrupting the real-time flow.",
+          "Implementing file upload with progress indicators and support for images, documents, and code snippets.",
+          "Building a reliable typing indicator that debounces events to avoid flooding the server."
+        ]
       },
       "devblog": {
         "title": "DevBlog",
-        "description": "A developer blog platform with MDX support, syntax highlighting, SEO optimization, RSS feed, and a clean reading experience."
+        "description": "A developer blog platform with MDX support, syntax highlighting, SEO optimization, RSS feed, and a clean reading experience.",
+        "detail": "A modern blogging platform designed for developers. Write posts in MDX with embedded code blocks, interactive components, and custom styling. Features automatic syntax highlighting, SEO metadata generation, RSS feed, reading time estimates, and a clean, distraction-free reading experience.",
+        "challenges": [
+          "Integrating MDX with custom React components while maintaining fast page loads.",
+          "Implementing a syntax highlighting system that supports dozens of programming languages.",
+          "Building an automatic table of contents generator from heading structure.",
+          "Optimizing RSS feed generation to include full post content and metadata."
+        ]
       },
       "apihub": {
         "title": "API Hub",
-        "description": "A centralized API gateway for managing microservices, with rate limiting, authentication, request logging, and a developer dashboard."
+        "description": "A centralized API gateway for managing microservices, with rate limiting, authentication, request logging, and a developer dashboard.",
+        "detail": "A lightweight API gateway that sits in front of microservices, handling request routing, authentication, rate limiting, request logging, and API key management. Includes a developer dashboard for monitoring traffic, inspecting logs, and managing access credentials.",
+        "challenges": [
+          "Designing a routing system that dynamically resolves service endpoints from a registry.",
+          "Implementing token-based authentication that propagates user context to downstream services.",
+          "Building a rate limiter that works across multiple server instances using Redis.",
+          "Creating a log aggregation system that captures request/response data without adding latency."
+        ]
       },
       "analytix": {
         "title": "AnalytiX",
-        "description": "An analytics dashboard for visualizing business metrics with interactive charts, customizable reports, data filtering, and real-time updates."
+        "description": "An analytics dashboard for visualizing business metrics with interactive charts, customizable reports, data filtering, and real-time updates.",
+        "detail": "An analytics dashboard that ingests event data and displays it through interactive charts and customizable reports. Supports date ranges, metric filtering, data aggregation, and real-time updates. Built to handle large datasets efficiently with data caching and lazy loading.",
+        "challenges": [
+          "Rendering interactive charts that remain performant with thousands of data points.",
+          "Building a query builder that lets users create custom reports without SQL knowledge.",
+          "Implementing data caching strategies to reduce database load for repeated queries.",
+          "Designing a real-time event ingestion pipeline that processes data with minimal delay."
+        ]
       }
     }
   },

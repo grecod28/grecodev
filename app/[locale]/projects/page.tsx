@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { PROJECTS } from "@/lib/constants/projects";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
+import Link from "next/link";
 
 function getTechIcon(name: string) {
   return ALL_TECH_ICONS.find((t) => t.name === name);
@@ -30,9 +31,14 @@ export default async function ProjectsPage() {
             return (
               <div
                 key={id}
-                className="group flex flex-col rounded-xl border border-border bg-surface p-6 animate-fade-in transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-(--shadow-primary)"
+                className="group relative flex flex-col rounded-xl border border-border bg-surface p-6 animate-fade-in transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-(--shadow-primary)"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
+                {/* Enlace principal que cubre TODA la tarjeta */}
+                <Link href={`/projects/${id}`} className="absolute inset-0 z-0">
+                  <span className="sr-only">{t(`items.${id}.title`)}</span>
+                </Link>
+
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-surface-light text-text-muted transition-all duration-200 group-hover:bg-primary/10 group-hover:text-primary">
                   <Icon className="h-7 w-7" />
                 </div>
@@ -62,7 +68,8 @@ export default async function ProjectsPage() {
                   })}
                 </div>
 
-                <div className="mt-auto flex items-center gap-3 pt-4">
+                {/* Contenedor de botones con z-index alto para estar sobre el Link padre */}
+                <div className="mt-auto flex items-center gap-3 pt-4 relative z-10">
                   {githubUrl && (
                     <a
                       href={githubUrl}
