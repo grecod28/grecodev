@@ -8,6 +8,7 @@ export const TECH_STACK_ICONS = [
   { name: "Redis", src: "/images/redis-svgrepo-com.svg" },
   { name: "Tailwind CSS", src: "/images/tailwind-svgrepo-com.svg" },
   { name: "Sass", src: "/images/sass-svgrepo-com.svg" },
+  { name: "N8N", src: "/images/n8n.svg" },
 ] as const;
 
 export const ALL_TECH_ICONS = [
@@ -25,4 +26,5 @@ export const ALL_TECH_ICONS = [
   { name: "CSS3", src: "/images/css-3-svgrepo-com.svg" },
   { name: "HTML5", src: "/images/html-5-svgrepo-com.svg" },
   { name: "PHP", src: "/images/php-svgrepo-com.svg" },
+  { name: "N8N", src: "/images/n8n.svg" },
 ] as const;

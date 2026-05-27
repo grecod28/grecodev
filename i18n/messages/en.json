@@ -38,7 +38,8 @@
       "html5": "The standard markup language for creating web pages and web applications.",
       "php": "A popular general-purpose scripting language especially suited to web development.",
       "apache": "A widely used open-source web server software.",
-      "nginx": "A high-performance HTTP server and reverse proxy server."
+      "nginx": "A high-performance HTTP server and reverse proxy server.",
+      "n8n": "A open source workflow automation tool."
     }
   }
 }

@@ -2,10 +2,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
-
-function toSlug(name: string): string {
-  return name.toLowerCase().replace(/\./g, "").replace(/\s+/g, "-");
-}
+import { toSlug } from "@/lib/functions/slug";
 
 export default async function TechnologiesPage() {
   const t = await getTranslations("Technologies");
