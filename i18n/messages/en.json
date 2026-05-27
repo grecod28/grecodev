@@ -14,6 +14,38 @@
     "cta_contact": "Contact Me",
     "tech_stack": "Tech Stack"
   },
+  "Projects": {
+    "title": "Projects",
+    "description": "Some projects I've built to explore, learn, and solve real problems.",
+    "github": "Repository",
+    "live": "Live Demo",
+    "items": {
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "description": "A full-featured online store with product management, shopping cart, payment integration, and an admin dashboard. Built with a modern stack for performance and scalability."
+      },
+      "taskflow": {
+        "title": "TaskFlow",
+        "description": "A collaborative project management tool with real-time task boards, team workspaces, drag-and-drop workflows, and activity tracking."
+      },
+      "chatify": {
+        "title": "Chatify",
+        "description": "A real-time messaging application with private and group conversations, file sharing, message reactions, and online presence indicators."
+      },
+      "devblog": {
+        "title": "DevBlog",
+        "description": "A developer blog platform with MDX support, syntax highlighting, SEO optimization, RSS feed, and a clean reading experience."
+      },
+      "apihub": {
+        "title": "API Hub",
+        "description": "A centralized API gateway for managing microservices, with rate limiting, authentication, request logging, and a developer dashboard."
+      },
+      "analytix": {
+        "title": "AnalytiX",
+        "description": "An analytics dashboard for visualizing business metrics with interactive charts, customizable reports, data filtering, and real-time updates."
+      }
+    }
+  },
   "NotFound": {
     "title": "404",
     "heading": "Page Not Found",
@@ -39,7 +71,8 @@
       "html5": "The standard markup language for creating web pages and web applications.",
       "php": "A popular general-purpose scripting language especially suited to web development.",
       "apache": "A widely used open-source web server software.",
-      "nginx": "A high-performance HTTP server and reverse proxy server."
+      "nginx": "A high-performance HTTP server and reverse proxy server.",
+      "n8n": "Workflow automation platform."
     }
   },
   "About": {

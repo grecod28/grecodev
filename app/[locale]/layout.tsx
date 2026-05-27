@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/layout/header";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-
-const inter = Inter({
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   title: "Grecodev | Portfolio Web FullStack",
@@ -27,16 +22,9 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      className={`${inter.variable}  h-full antialiased bg-background text-text`}
-    >
-      <body className="min-h-full flex flex-col items-center">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <Header />
+      {children}
+    </NextIntlClientProvider>
   );
 }

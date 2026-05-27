@@ -33,6 +33,7 @@ export default async function Header() {
       {/* Acciones en escritorio */}
       <section className="hidden md:flex gap-4 text-lg">
         <LanguageSelector />
+
         <ThemeSelector />
       </section>
 

@@ -14,6 +14,38 @@
     "cta_contact": "Contacto",
     "tech_stack": "Tecnologías"
   },
+  "Projects": {
+    "title": "Proyectos",
+    "description": "Algunos proyectos que he creado para explorar, aprender y resolver problemas reales.",
+    "github": "Repositorio",
+    "live": "Demo en vivo",
+    "items": {
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "description": "Una tienda online completa con gestión de productos, carrito de compras, integración de pagos y panel de administración. Construida con un stack moderno para rendimiento y escalabilidad."
+      },
+      "taskflow": {
+        "title": "TaskFlow",
+        "description": "Una herramienta colaborativa de gestión de proyectos con tableros de tareas en tiempo real, espacios de trabajo, flujos drag-and-drop y seguimiento de actividad."
+      },
+      "chatify": {
+        "title": "Chatify",
+        "description": "Una aplicación de mensajería en tiempo real con conversaciones privadas y grupales, compartición de archivos, reacciones a mensajes e indicadores de presencia."
+      },
+      "devblog": {
+        "title": "DevBlog",
+        "description": "Una plataforma de blog para desarrolladores con soporte MDX, resaltado de sintaxis, optimización SEO, feed RSS y una experiencia de lectura limpia."
+      },
+      "apihub": {
+        "title": "API Hub",
+        "description": "Un gateway centralizado de APIs para gestionar microservicios, con limitación de tasa, autenticación, registro de peticiones y panel de desarrollador."
+      },
+      "analytix": {
+        "title": "AnalytiX",
+        "description": "Un panel de análisis para visualizar métricas de negocio con gráficos interactivos, informes personalizables, filtrado de datos y actualizaciones en tiempo real."
+      }
+    }
+  },
   "NotFound": {
     "title": "404",
     "heading": "Página No Encontrada",
@@ -39,7 +71,8 @@
       "html5": "El lenguaje de marcado estándar para crear páginas web y aplicaciones web.",
       "php": "Un popular lenguaje de scripting de propósito general especialmente adecuado para el desarrollo web.",
       "apache": "Un software de servidor web de código abierto ampliamente utilizado.",
-      "nginx": "Un servidor HTTP de alto rendimiento y proxy inverso."
+      "nginx": "Un servidor HTTP de alto rendimiento y proxy inverso.",
+      "n8n": "Plataforma de automatizacion de flujos de trabajo."
     }
   },
   "About": {

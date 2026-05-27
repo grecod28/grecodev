@@ -66,6 +66,7 @@ export default function MobileMenu({ links }: Props) {
 
         <section className="flex items-center gap-6 mt-auto text-2xl">
           <LanguageSelector />
+
           <ThemeSelector />
         </section>
       </aside>
