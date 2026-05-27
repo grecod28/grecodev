@@ -68,6 +68,8 @@ export default async function TechnologyPage({
         </div>
 
         <div className="mt-6 rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary/50">
+          <h2 className="text-primary mb-2">{t("comfort_level")}</h2>
+
           <div className="flex items-center justify-between">
             <span className="text-sm font-semibold text-text">
               {t("proficiency")}
