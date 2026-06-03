@@ -4,6 +4,15 @@ import { Link } from "@/i18n/navigation";
 import { FiGithub, FiExternalLink, FiCheck } from "react-icons/fi";
 import { PROJECTS } from "@/lib/constants/projects";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
+import {
+  pageContainer,
+  backLink,
+  detailIconBox,
+  tagChip,
+  cardContent,
+  btnOutline,
+  btnAction,
+} from "@/lib/constants/styles";
 
 function getTechIcon(name: string) {
   return ALL_TECH_ICONS.find((t) => t.name === name);
@@ -25,18 +34,18 @@ export default async function ProjectDetailPage({
   const t = await getTranslations("Projects");
 
   return (
-    <main className="flex flex-1 flex-col w-full px-4 py-12">
+    <main className={pageContainer}>
       <div className="mx-auto w-full max-w-3xl">
         <Link
           href="/projects"
-          className="inline-flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-text"
+          className={backLink}
         >
           <span aria-hidden="true">&larr;</span>
           {t("back")}
         </Link>
 
         <div className="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-surface-light text-text-muted transition-all duration-300 hover:bg-primary/10 hover:text-primary hover:scale-105">
+          <div className={`${detailIconBox} text-text-muted hover:text-primary`}>
             <project.icon className="h-10 w-10" />
           </div>
 
@@ -55,7 +64,7 @@ export default async function ProjectDetailPage({
               <Link
                 key={tech}
                 href={`/technologies/${tech.toLowerCase().replace(/\./g, "").replace(/\s+/g, "-")}`}
-                className="inline-flex items-center gap-1.5 rounded-lg bg-surface-light px-3 py-1.5 text-xs font-medium text-text-muted transition-all duration-200 hover:bg-primary/10 hover:text-primary"
+                className={tagChip}
               >
                 {icon && <img src={icon.src} alt="" className="h-3.5 w-3.5" />}
                 {tech}
@@ -64,13 +73,13 @@ export default async function ProjectDetailPage({
           })}
         </div>
 
-        <div className="mt-8 rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary/50">
+        <div className={`${cardContent} mt-8`}>
           <p className="text-base leading-relaxed text-text-muted">
             {t(`items.${project.id}.detail`)}
           </p>
         </div>
 
-        <div className="mt-6 rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary/50">
+        <div className={`${cardContent} mt-6`}>
           <h2 className="text-sm font-semibold text-text">
             {t("challenges_title")}
           </h2>
@@ -97,7 +106,7 @@ export default async function ProjectDetailPage({
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-text-muted transition-all duration-200 hover:border-primary hover:bg-primary hover:text-text"
+              className={btnOutline}
             >
               <FiGithub className="h-4 w-4" />
               {t("github")}
@@ -108,7 +117,7 @@ export default async function ProjectDetailPage({
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-text transition-all duration-200 hover:bg-primary-hover"
+              className={btnAction}
             >
               <FiExternalLink className="h-4 w-4" />
               {t("live")}
