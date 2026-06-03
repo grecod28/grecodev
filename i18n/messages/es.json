@@ -12,14 +12,21 @@
     "bio": "Construyo aplicaciones web robustas y escalables, desde la base de datos hasta la interfaz de usuario. Apasionado por el código limpio, la arquitectura moderna y crear experiencias digitales fluidas.",
     "cta_projects": "Ver Proyectos",
     "cta_contact": "Contacto",
-    "tech_stack": "Tecnologías"
+    "featured_title": "Proyectos Destacados",
+    "featured_desc": "Algunos proyectos que he creado para explorar, aprender y resolver problemas reales.",
+    "featured_cta": "Ver Todos los Proyectos",
+    "tech_stack": "Tecnologías favoritas",
+    "contact_section_title": "Trabajemos Juntos",
+    "contact_section_desc": "¿Tienes un proyecto en mente o simplemente quieres saludar? Me encantaría saber de ti. Ya sea una aplicación web, una API o una solución digital completa — estoy aquí para ayudar.",
+    "contact_section_email": "stgrecodev@gmail.com",
+    "contact_section_cta": "Ponte en Contacto"
   },
   "Projects": {
     "title": "Proyectos",
     "description": "Algunos proyectos que he creado para explorar, aprender y resolver problemas reales.",
     "github": "Repositorio",
     "live": "Demo en vivo",
-    "back": "Volver a Proyectos",
+    "back": "Ir a Proyectos",
     "challenges_title": "Principales Retos",
     "items": {
       "ecommerce": {
@@ -176,5 +183,9 @@
     "linkedin": "linkedin.com/in/santiagogreco",
     "location": "Ourense, Galicia, España",
     "cta": "Ponte en Contacto"
+  },
+  "Metadata": {
+    "title": "Santiago Greco | Desarrollador Web FullStack",
+    "description": "Desarrollador Full Stack especializado en aplicaciones web modernas y escalables. Trabajo con tecnologías como Angular, Next.js, NestJS, TypeScript y Docker, creando soluciones eficientes, seguras y centradas en la experiencia de usuario, desde el frontend hasta el backend."
   }
 }

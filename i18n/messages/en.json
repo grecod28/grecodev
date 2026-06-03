@@ -12,7 +12,14 @@
     "bio": "I build robust, scalable web applications from database to UI. Passionate about clean code, modern architecture, and creating seamless digital experiences.",
     "cta_projects": "View Projects",
     "cta_contact": "Contact Me",
-    "tech_stack": "Tech Stack"
+    "featured_title": "Featured Projects",
+    "featured_desc": "Some projects I've built to explore, learn, and solve real problems.",
+    "featured_cta": "View All Projects",
+    "tech_stack": "Tech Stack",
+    "contact_section_title": "Let's Work Together",
+    "contact_section_desc": "Have a project in mind or just want to say hi? I'd love to hear from you. Whether you need a web application, an API, or a complete digital solution — I'm here to help.",
+    "contact_section_email": "stgrecodev@gmail.com",
+    "contact_section_cta": "Get in Touch"
   },
   "Projects": {
     "title": "Projects",
@@ -177,5 +184,9 @@
     "linkedin": "linkedin.com/in/santiagogreco",
     "location": "Ourense, Galicia, Spain",
     "cta": "Get in Touch"
+  },
+  "Metadata": {
+    "title": "Santiago Greco | FullStack Web Developer",
+    "description": "FullStack Developer specialized in modern and scalable web applications. I work with technologies like Angular, Next.js, NestJS, TypeScript and Docker, creating efficient and user-focused solutions from frontend to backend."
   }
 }

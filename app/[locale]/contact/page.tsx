@@ -6,6 +6,13 @@ import {
   FiMapPin,
   FiArrowRight,
 } from "react-icons/fi";
+import {
+  section,
+  sectionCentered,
+  sectionLabel,
+  sectionTitle,
+  iconBoxSmaller,
+} from "@/lib/constants/styles";
 
 const CONTACT_ITEMS = [
   { key: "email", icon: FiMail, href: "mailto:stgrecodev@gmail.com" },
@@ -22,16 +29,16 @@ export default async function ContactPage() {
   const t = await getTranslations("Contact");
 
   return (
-    <section className="w-full border-t border-border px-4 py-20">
+    <section className={section}>
       <div
         className="mx-auto max-w-4xl animate-fade-in"
         style={{ animationDelay: "500ms" }}
       >
-        <div className="flex flex-col items-center text-center">
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+        <div className={sectionCentered}>
+          <span className={sectionLabel}>
             {t("cta")}
           </span>
-          <h2 className="mt-2 text-2xl font-bold sm:text-3xl">{t("title")}</h2>
+          <h2 className={sectionTitle}>{t("title")}</h2>
           <p className="mt-3 max-w-lg text-base leading-relaxed text-text-muted">
             {t("description")}
           </p>
@@ -44,7 +51,7 @@ export default async function ContactPage() {
 
             const content = (
               <div className="flex w-full items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all duration-200 hover:border-primary/50 hover:shadow-(--shadow-primary)">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-light transition-colors group-hover:bg-primary/10">
+                <div className={iconBoxSmaller}>
                   <Icon className="h-5 w-5 text-text-muted transition-colors group-hover:text-primary" />
                 </div>
 

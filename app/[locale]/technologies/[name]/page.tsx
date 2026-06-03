@@ -1,12 +1,18 @@
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
 import { PROJECTS } from "@/lib/constants/projects";
 import { getProficiencyLevel } from "@/lib/constants/tech-proficiency";
 import { toSlug } from "@/lib/functions/slug";
 import { FiArrowRight } from "react-icons/fi";
+import {
+  pageContainer,
+  backLink,
+  detailIconBox,
+  cardContent,
+} from "@/lib/constants/styles";
 
 export default async function TechnologyPage({
   params,
@@ -31,18 +37,18 @@ export default async function TechnologyPage({
   );
 
   return (
-    <main className="flex flex-1 flex-col w-full px-4 py-12">
+    <main className={pageContainer}>
       <div className="mx-auto w-full max-w-3xl">
         <Link
           href="/technologies"
-          className="inline-flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-text"
+          className={backLink}
         >
           <span aria-hidden="true">&larr;</span>
           Back to Technologies
         </Link>
 
         <div className="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-surface-light p-5 transition-all duration-300 hover:bg-primary/10 hover:scale-105">
+          <div className={`${detailIconBox} p-5`}>
             <Image
               src={tech.src}
               alt={tech.name}
@@ -61,13 +67,13 @@ export default async function TechnologyPage({
           </div>
         </div>
 
-        <div className="mt-8 rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary/50">
+        <div className={`${cardContent} mt-8`}>
           <p className="text-base leading-relaxed text-text-muted">
             {t(`items.${toSlug(tech.name)}`)}
           </p>
         </div>
 
-        <div className="mt-6 rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary/50">
+        <div className={`${cardContent} mt-6`}>
           <h2 className="text-primary mb-2">{t("comfort_level")}</h2>
 
           <div className="flex items-center justify-between">
@@ -94,7 +100,7 @@ export default async function TechnologyPage({
           </div>
         </div>
 
-        <div className="mt-6 rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary/50">
+        <div className={`${cardContent} mt-6`}>
           <h2 className="text-sm font-semibold text-text">
             {t("related_projects")}
           </h2>
@@ -106,7 +112,7 @@ export default async function TechnologyPage({
                 return (
                   <Link
                     key={project.id}
-                    href="/projects"
+                    href={`/projects/${project.id}`}
                     className="group/project flex items-center gap-4 rounded-lg border border-border bg-background p-4 transition-all duration-200 hover:border-primary/50 hover:shadow-(--shadow-primary)"
                   >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-light text-text-muted transition-colors group-hover/project:bg-primary/10 group-hover/project:text-primary">

@@ -1,15 +1,21 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
 import { toSlug } from "@/lib/functions/slug";
+import {
+  pageContainer,
+  sectionContainer,
+  cardHover,
+  iconBoxImage,
+} from "@/lib/constants/styles";
 
 export default async function TechnologiesPage() {
   const t = await getTranslations("Technologies");
 
   return (
-    <main className="flex flex-1 flex-col w-full px-4 py-12">
-      <div className="mx-auto w-full max-w-6xl">
+    <main className={pageContainer}>
+      <div className={`${sectionContainer} w-full`}>
         <h1 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
           {t("title")}
         </h1>
@@ -23,10 +29,10 @@ export default async function TechnologiesPage() {
             return (
               <article
                 key={name}
-                className="flex flex-col group animate-fade-in rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-(--shadow-primary)"
+                className={`${cardHover} animate-fade-in`}
                 style={{ animationDelay: `${index * 75}ms` }}
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-surface-light p-3 transition-all duration-200 group-hover:bg-primary/10 group-hover:scale-110">
+                <div className={iconBoxImage}>
                   <Image
                     src={src}
                     alt={name}

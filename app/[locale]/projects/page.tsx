@@ -2,7 +2,14 @@ import { getTranslations } from "next-intl/server";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { PROJECTS } from "@/lib/constants/projects";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import {
+  pageContainer,
+  sectionContainer,
+  sectionCentered,
+  cardHover,
+  iconBoxLarge,
+} from "@/lib/constants/styles";
 
 function getTechIcon(name: string) {
   return ALL_TECH_ICONS.find((t) => t.name === name);
@@ -12,10 +19,10 @@ export default async function ProjectsPage() {
   const t = await getTranslations("Projects");
 
   return (
-    <main className="flex flex-1 flex-col w-full px-4 py-12">
-      <div className="mx-auto w-full max-w-6xl">
+    <main className={pageContainer}>
+      <div className={`${sectionContainer} w-full`}>
         <div
-          className="flex flex-col items-center text-center animate-fade-in"
+          className={`${sectionCentered} animate-fade-in`}
           style={{ animationDelay: "0ms" }}
         >
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -31,7 +38,7 @@ export default async function ProjectsPage() {
             return (
               <div
                 key={id}
-                className="group relative flex flex-col rounded-xl border border-border bg-surface p-6 animate-fade-in transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-(--shadow-primary)"
+                className={`${cardHover} relative animate-fade-in`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Enlace principal que cubre TODA la tarjeta */}
@@ -39,7 +46,7 @@ export default async function ProjectsPage() {
                   <span className="sr-only">{t(`items.${id}.title`)}</span>
                 </Link>
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-surface-light text-text-muted transition-all duration-200 group-hover:bg-primary/10 group-hover:text-primary">
+                <div className={`${iconBoxLarge} text-text-muted group-hover:text-primary`}>
                   <Icon className="h-7 w-7" />
                 </div>
 
