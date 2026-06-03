@@ -2,18 +2,26 @@ import type { Metadata } from "next";
 import "../globals.css";
 import Header from "@/components/layout/header";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
   variable: "--font-inter",
 });
 
-export const metadata: Metadata = {
-  title: "Grecodev | Portfolio Web FullStack",
-  description:
-    "Desarrollador Full Stack especializado en aplicaciones web modernas y escalables. Trabajo con tecnologías como Angular, Next.js, NestJS, TypeScript y Docker, creando soluciones eficientes, seguras y centradas en la experiencia de usuario, desde el frontend hasta el backend.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default async function LocaleLayout({
   children,

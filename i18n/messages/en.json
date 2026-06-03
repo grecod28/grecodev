@@ -184,5 +184,9 @@
     "linkedin": "linkedin.com/in/santiagogreco",
     "location": "Ourense, Galicia, Spain",
     "cta": "Get in Touch"
+  },
+  "Metadata": {
+    "title": "Santiago Greco | FullStack Web Developer",
+    "description": "FullStack Developer specialized in modern and scalable web applications. I work with technologies like Angular, Next.js, NestJS, TypeScript and Docker, creating efficient and user-focused solutions from frontend to backend."
   }
 }

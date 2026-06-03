@@ -36,7 +36,7 @@ export default async function Home() {
             Santiago Greco
           </h1>
 
-          <p className="mt-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-lg font-semibold text-transparent sm:text-xl">
+          <p className="mt-2 bg-linear-to-r from-primary to-accent bg-clip-text text-lg font-semibold text-transparent sm:text-xl">
             {t("role")}
           </p>
 
@@ -76,16 +76,17 @@ export default async function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredProjects.map((project, index) => {
+          <div className="mt-10 flex flex-wrap justify-center gap-6">
+            {featuredProjects.map((project) => {
               const Icon = project.icon;
+
               return (
                 <Link
                   key={project.id}
                   href={`/projects/${project.id}`}
-                  className="group flex flex-col rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-(--shadow-primary)"
+                  className="group flex min-h-65 w-full flex-col rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-(--shadow-primary) sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-surface-light text-text-muted transition-all duration-200 group-hover:bg-primary/10 group-hover:text-primary group-hover:scale-110">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-surface-light text-text-muted transition-all duration-200 group-hover:scale-110 group-hover:bg-primary/10 group-hover:text-primary">
                     <Icon className="h-7 w-7" />
                   </div>
 
@@ -171,7 +172,7 @@ export default async function Home() {
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:justify-center">
+          <div className="mt-10 flex flex-col items-center gap-6">
             <div className="flex items-center gap-3 rounded-xl border border-border bg-surface px-5 py-3 transition-all duration-200 hover:border-primary/50">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-light">
                 <FiMail className="h-5 w-5 text-text-muted" />
