@@ -5,6 +5,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { FiArrowRight, FiMail } from "react-icons/fi";
+import Reveal from "@/components/ui/reveal";
 
 const featuredProjects = PROJECTS.filter((p) => p.featured);
 
@@ -15,6 +16,7 @@ export default async function Home() {
   return (
     <main className="flex flex-1 flex-col items-center w-full">
       {/* ── Hero ── */}
+      <Reveal>
       <section className="flex flex-col items-center justify-center w-full px-4 pt-16 pb-16">
         <div className="flex flex-col items-center text-center max-w-3xl">
           <div className="relative mb-6">
@@ -32,7 +34,7 @@ export default async function Home() {
             />
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight text-text sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Santiago Greco
           </h1>
 
@@ -47,28 +49,30 @@ export default async function Home() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/projects"
-              className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-text transition-all duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="text-white inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-medium transition-all duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {t("cta_projects")}
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-lg border border-border-strong px-6 py-3 text-sm font-medium text-text transition-all duration-200 hover:bg-surface-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-flex items-center justify-center rounded-lg border border-border-strong px-6 py-3 text-sm font-medium transition-all duration-200 hover:bg-surface-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {t("cta_contact")}
             </Link>
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* ── Featured Projects ── */}
+      <Reveal delay={100}>
       <section className="w-full border-t border-border px-4 py-20">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col items-center text-center">
             <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
               {t("featured_title")}
             </span>
-            <h2 className="mt-2 text-2xl font-bold text-text sm:text-3xl">
+            <h2 className="mt-2 text-2xl font-bold  sm:text-3xl">
               {t("featured_title")}
             </h2>
             <p className="mt-3 max-w-lg text-text-muted">
@@ -90,7 +94,7 @@ export default async function Home() {
                     <Icon className="h-7 w-7" />
                   </div>
 
-                  <h3 className="mt-4 text-lg font-semibold text-text">
+                  <h3 className="mt-4 text-lg font-semibold">
                     {projectT(`items.${project.id}.title`)}
                   </h3>
 
@@ -110,7 +114,7 @@ export default async function Home() {
           <div className="mt-10 flex justify-center">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 rounded-lg border border-border-strong px-6 py-3 text-sm font-medium text-text transition-all duration-200 hover:bg-surface-light"
+              className="inline-flex items-center gap-2 rounded-lg border border-border-strong px-6 py-3 text-sm font-medium transition-all duration-200 hover:bg-surface-light"
             >
               {t("featured_cta")}
               <FiArrowRight className="h-4 w-4" />
@@ -118,15 +122,17 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* ── Tech Stack ── */}
+      <Reveal delay={200}>
       <section className="w-full border-t border-border px-4 py-20">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col items-center text-center">
             <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
               {t("tech_stack")}
             </span>
-            <h2 className="mt-2 text-2xl font-bold text-text sm:text-3xl">
+            <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
               {t("tech_stack")}
             </h2>
           </div>
@@ -156,15 +162,17 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* ── Contact ── */}
+      <Reveal delay={300}>
       <section className="w-full border-t border-border px-4 py-20">
         <div className="mx-auto max-w-2xl">
           <div className="flex flex-col items-center text-center">
             <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
               {t("contact_section_title")}
             </span>
-            <h2 className="mt-2 text-2xl font-bold text-text sm:text-3xl">
+            <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
               {t("contact_section_title")}
             </h2>
             <p className="mt-3 max-w-lg text-text-muted">
@@ -177,14 +185,14 @@ export default async function Home() {
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-light">
                 <FiMail className="h-5 w-5 text-text-muted" />
               </div>
-              <span className="text-sm font-medium text-text">
+              <span className="text-sm font-medium">
                 {t("contact_section_email")}
               </span>
             </div>
 
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-text transition-all duration-200 hover:bg-primary-hover hover:shadow-(--shadow-primary)"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium  transition-all duration-200 hover:bg-primary-hover hover:shadow-(--shadow-primary)"
             >
               {t("contact_section_cta")}
               <FiArrowRight className="h-4 w-4" />
@@ -192,6 +200,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
     </main>
   );
 }
