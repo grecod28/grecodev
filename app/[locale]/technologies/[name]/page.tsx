@@ -106,7 +106,7 @@ export default async function TechnologyPage({
                 return (
                   <Link
                     key={project.id}
-                    href="/projects"
+                    href={`/projects/${project.id}`}
                     className="group/project flex items-center gap-4 rounded-lg border border-border bg-background p-4 transition-all duration-200 hover:border-primary/50 hover:shadow-(--shadow-primary)"
                   >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-light text-text-muted transition-colors group-hover/project:bg-primary/10 group-hover/project:text-primary">
