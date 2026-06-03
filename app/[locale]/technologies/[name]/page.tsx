@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
 import { PROJECTS } from "@/lib/constants/projects";
 import { getProficiencyLevel } from "@/lib/constants/tech-proficiency";

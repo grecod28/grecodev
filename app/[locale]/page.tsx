@@ -3,7 +3,7 @@ import { PROJECTS } from "@/lib/constants/projects";
 import { toSlug } from "@/lib/functions/slug";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { FiArrowRight, FiMail } from "react-icons/fi";
 
 const featuredProjects = PROJECTS.filter((p) => p.featured);

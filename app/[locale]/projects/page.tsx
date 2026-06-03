@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { PROJECTS } from "@/lib/constants/projects";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 function getTechIcon(name: string) {
   return ALL_TECH_ICONS.find((t) => t.name === name);

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
 
 import LanguageSelector from "@/components/i18n/languale-selector";

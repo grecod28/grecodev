@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { FiGithub, FiExternalLink, FiCheck } from "react-icons/fi";
 import { PROJECTS } from "@/lib/constants/projects";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
