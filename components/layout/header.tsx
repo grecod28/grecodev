@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import LanguageSelector from "@/components/i18n/languale-selector";
-import ThemeSelector from "@/components/i18n/theme-selector";
+import ThemeSelector from "@/components/theme/theme-selector";
 import MobileMenu from "@/components/layout/mobile-menu";
 
 export default function Header() {

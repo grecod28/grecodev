@@ -4,6 +4,7 @@ import Header from "@/components/layout/header";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { Inter } from "next/font/google";
+import ThemeProvider from "@/components/theme/theme-provider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -41,10 +42,25 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col items-center">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
-          {children}
-        </NextIntlClientProvider>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var theme = localStorage.getItem("theme");
+                var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+                if (theme === "light" || (!theme && prefersLight)) {
+                  document.documentElement.classList.add("light");
+                }
+              })();
+            `,
+          }}
+        />
+        <ThemeProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Header />
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

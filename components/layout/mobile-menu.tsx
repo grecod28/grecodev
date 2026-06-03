@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
 
 import LanguageSelector from "@/components/i18n/languale-selector";
-import ThemeSelector from "@/components/i18n/theme-selector";
+import ThemeSelector from "@/components/theme/theme-selector";
 
 type LinkItem = {
   href: string;
