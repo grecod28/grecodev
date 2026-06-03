@@ -12,7 +12,14 @@
     "bio": "Construyo aplicaciones web robustas y escalables, desde la base de datos hasta la interfaz de usuario. Apasionado por el código limpio, la arquitectura moderna y crear experiencias digitales fluidas.",
     "cta_projects": "Ver Proyectos",
     "cta_contact": "Contacto",
-    "tech_stack": "Tecnologías"
+    "featured_title": "Proyectos Destacados",
+    "featured_desc": "Algunos proyectos que he creado para explorar, aprender y resolver problemas reales.",
+    "featured_cta": "Ver Todos los Proyectos",
+    "tech_stack": "Tecnologías favoritas",
+    "contact_section_title": "Trabajemos Juntos",
+    "contact_section_desc": "¿Tienes un proyecto en mente o simplemente quieres saludar? Me encantaría saber de ti. Ya sea una aplicación web, una API o una solución digital completa — estoy aquí para ayudar.",
+    "contact_section_email": "stgrecodev@gmail.com",
+    "contact_section_cta": "Ponte en Contacto"
   },
   "Projects": {
     "title": "Proyectos",

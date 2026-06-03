@@ -14,6 +14,7 @@ export const PROJECTS = [
     techStack: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
     githubUrl: "https://github.com/santiagogreco/ecommerce",
     liveUrl: "https://ecommerce-demo.vercel.app",
+    featured: true,
   },
   {
     id: "taskflow",
@@ -21,6 +22,7 @@ export const PROJECTS = [
     techStack: ["Angular", "NestJS", "MongoDB", "Redis"],
     githubUrl: "https://github.com/santiagogreco/taskflow",
     liveUrl: undefined,
+    featured: true,
   },
   {
     id: "chatify",
@@ -28,6 +30,7 @@ export const PROJECTS = [
     techStack: ["Next.js", "NestJS", "PostgreSQL", "Redis"],
     githubUrl: "https://github.com/santiagogreco/chatify",
     liveUrl: "https://chatify-demo.vercel.app",
+    featured: true,
   },
   {
     id: "devblog",
@@ -35,6 +38,7 @@ export const PROJECTS = [
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
     githubUrl: "https://github.com/santiagogreco/devblog",
     liveUrl: "https://devblog-demo.vercel.app",
+    featured: false,
   },
   {
     id: "apihub",
@@ -42,6 +46,7 @@ export const PROJECTS = [
     techStack: ["NestJS", "TypeScript", "PostgreSQL", "Redis"],
     githubUrl: "https://github.com/santiagogreco/apihub",
     liveUrl: undefined,
+    featured: false,
   },
   {
     id: "analytix",
@@ -49,5 +54,6 @@ export const PROJECTS = [
     techStack: ["Next.js", "NestJS", "MongoDB", "Docker"],
     githubUrl: "https://github.com/santiagogreco/analytix",
     liveUrl: "https://analytix-demo.vercel.app",
+    featured: false,
   },
 ] as const;
