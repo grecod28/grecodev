@@ -1,22 +1,15 @@
 // ── Page layout ──
-export const pageContainer =
-  "flex flex-1 flex-col w-full px-4 py-12";
+export const pageContainer = "flex flex-1 flex-col w-full px-4 py-12";
 
 // ── Section ──
-export const section =
-  "w-full border-t border-border px-4 py-20";
-export const sectionCentered =
-  "flex flex-col items-center text-center";
+export const section = "w-full border-t border-border px-4 py-20";
+export const sectionCentered = "flex flex-col items-center text-center";
 export const sectionLabel =
   "text-xs font-medium uppercase tracking-[0.2em] text-primary";
-export const sectionTitle =
-  "mt-2 text-2xl font-bold sm:text-3xl";
-export const sectionDesc =
-  "mt-3 max-w-lg text-text-muted";
-export const sectionContainer =
-  "mx-auto max-w-6xl";
-export const bodyText =
-  "text-base leading-relaxed text-text-muted";
+export const sectionTitle = "mt-2 text-2xl font-bold sm:text-3xl";
+export const sectionDesc = "mt-3 max-w-lg text-text-muted";
+export const sectionContainer = "mx-auto max-w-6xl";
+export const bodyText = "text-base leading-relaxed text-text-muted";
 
 // ── Buttons ──
 export const btnPrimary =
@@ -26,7 +19,7 @@ export const btnSecondary =
 export const btnLink =
   "inline-flex items-center gap-2 rounded-lg border border-border-strong px-6 py-3 text-sm font-medium transition-all duration-200 hover:bg-surface-light";
 export const btnPrimarySimple =
-  "inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium transition-all duration-200 hover:bg-primary-hover hover:shadow-(--shadow-primary)";
+  "text-white inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium transition-all duration-200 hover:bg-primary-hover hover:shadow-(--shadow-primary)";
 export const btnOutline =
   "inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-text-muted transition-all duration-200 hover:border-primary hover:bg-primary hover:text-text";
 export const btnAction =

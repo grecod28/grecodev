@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Base */
+  /* Base (Sin cambios, como pediste) */
   --color-background: #0b1020;
   --color-surface: #121a2b;
   --color-surface-light: #1b2640;
@@ -38,49 +38,48 @@
 
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
-
   --gradient-surface: linear-gradient(180deg, #121a2b 0%, #0b1020 100%);
 }
+
 .light {
-  /* Base */
-  --color-background: #edf2f7;
-  --color-surface: #f8fafc;
-  --color-surface-light: #e2e8f0;
+  /* Base - Oscurecido para reducir contraste extremo */
+  --color-background: #cbd5e1; /* Un gris medio-claro (Slate 300) */
+  --color-surface: #e2e8f0; /* (Slate 200) */
+  --color-surface-light: #f1f5f9; /* (Slate 100) */
 
-  /* Text */
+  /* Text - Ajustado para el nuevo fondo */
   --color-text: #0f172a;
-  --color-text-muted: #475569;
+  --color-text-muted: #334155;
 
-  /* Primary */
-  --color-primary: #5b5cf0;
-  --color-primary-hover: #7075ff;
-  --color-primary-active: #4c46d3;
+  /* Primary - Mantenemos consistencia */
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-primary-active: #3730a3;
 
   /* Secondary */
-  --color-secondary: #16a34a;
-  --color-secondary-hover: #22c55e;
+  --color-secondary: #059669;
+  --color-secondary-hover: #047857;
 
   /* Accent */
   --color-accent: #0891b2;
-  --color-accent-hover: #06b6d4;
+  --color-accent-hover: #0e7490;
 
-  /* Borders */
-  --color-border: rgba(15, 23, 42, 0.1);
-  --color-border-strong: rgba(15, 23, 42, 0.18);
+  /* Borders - Un poco más visibles sobre el gris */
+  --color-border: rgba(15, 23, 42, 0.15);
+  --color-border-strong: rgba(15, 23, 42, 0.25);
 
   /* States */
-  --color-success: #16a34a;
+  --color-success: #059669;
   --color-warning: #d97706;
-  --color-danger: #dc2626;
+  --color-danger: #b91c1c;
 
   /* Effects */
-  --shadow-primary: 0 10px 30px rgba(91, 92, 240, 0.14);
-  --shadow-surface: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --shadow-primary: 0 10px 30px rgba(79, 70, 229, 0.2);
+  --shadow-surface: 0 10px 30px rgba(0, 0, 0, 0.12);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #5b5cf0 0%, #0891b2 100%);
-
-  --gradient-surface: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+  --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #0891b2 100%);
+  --gradient-surface: linear-gradient(180deg, #e2e8f0 0%, #cbd5e1 100%);
 }
 
 @theme {
@@ -107,10 +106,12 @@
   --color-success: var(--color-success);
   --color-warning: var(--color-warning);
   --color-danger: var(--color-danger);
+
   --animate-float: float 3s ease-in-out infinite;
   --animate-fade-in: fade-in 0.5s ease-out forwards;
 }
 
+/* Animaciones y estilos base se mantienen igual... */
 @keyframes float {
   0%,
   100% {
@@ -135,7 +136,6 @@
 a {
   transition: transform 0.3s ease;
 }
-
 a:hover {
   transform: scale(1.005);
 }
@@ -144,7 +144,6 @@ button {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-
 button:hover {
   transform: scale(1.1);
 }
