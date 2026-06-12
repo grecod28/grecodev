@@ -20,6 +20,7 @@ export const ALL_TECH_ICONS = [
   { name: "Redis", src: "/images/redis-svgrepo-com.svg" },
   { name: "Apache", src: "/images/apache-svgrepo-com.svg" },
   { name: "Nginx", src: "/images/nginx-svgrepo-com.svg" },
+  { name: "Docker", src: "/images/docker-svgrepo-com.svg" },
   { name: "TypeScript", src: "/images/typescript-svgrepo-com.svg" },
   { name: "Tailwind CSS", src: "/images/tailwind-svgrepo-com.svg" },
   { name: "Sass", src: "/images/sass-svgrepo-com.svg" },
