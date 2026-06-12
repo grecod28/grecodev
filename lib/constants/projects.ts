@@ -14,6 +14,7 @@ export const PROJECTS = [
     icon: FiBarChart2,
     techStack: ["Next.js", "PostgreSQL", "Docker"],
     githubUrl: "https://github.com/grecod28/devmirror",
+    liveUrl: undefined,
     featured: true,
   },
   {
