@@ -40,59 +40,36 @@
           "Construir un panel de administración responsivo con análisis de ventas en tiempo real y seguimiento de pedidos."
         ]
       },
-      "taskflow": {
-        "title": "TaskFlow",
-        "description": "Una herramienta colaborativa de gestión de proyectos con tableros de tareas en tiempo real, espacios de trabajo, flujos drag-and-drop y seguimiento de actividad.",
-        "detail": "Una plataforma de gestión de proyectos inspirada en herramientas como Trello y Notion. Permite a los equipos crear espacios de trabajo, organizar tareas en tableros personalizables, asignar miembros, establecer fechas límite y realizar un seguimiento del progreso a través de registros de actividad. Las actualizaciones en tiempo real aseguran que todos estén sincronizados.",
+      "umbrachat": {
+        "title": "UmbraChat",
+        "description": "Una plataforma de chat en tiempo real con comunicación por WebSocket, hilos de mensajes, anonimato de usuarios e historial con expiración.",
+        "detail": "Una aplicación de mensajería en tiempo real full-stack construida con Next.js en el frontend y NestJS en el backend, usando PostgreSQL para la persistencia de mensajes y WebSockets para comunicación bidireccional de baja latencia. Soporta salas públicas y privadas, hilos de conversación y detección de presencia en línea.",
         "challenges": [
-          "Implementar reorganización drag-and-drop fluida entre múltiples tableros sin perder el estado de la interfaz.",
-          "Diseñar un sistema de colaboración en tiempo real que sincronice cambios entre miembros del equipo al instante.",
-          "Crear un modelo de permisos flexible con controles de acceso a nivel de espacio de trabajo y de tarea.",
-          "Construir un feed de actividad que agregue cambios en una línea de tiempo cronológica y legible."
+          "Diseñar un sistema de hilos de mensajes que organice las respuestas en una estructura jerárquica.",
+          "Optimizar las consultas de PostgreSQL para una recuperación rápida de mensajes en historiales extensos.",
+          "Construir indicadores de escritura y seguimiento de presencia en tiempo real sin saturar la conexión WebSocket."
         ]
       },
-      "chatify": {
-        "title": "Chatify",
-        "description": "Una aplicación de mensajería en tiempo real con conversaciones privadas y grupales, compartición de archivos, reacciones a mensajes e indicadores de presencia.",
-        "detail": "Una plataforma de mensajería completa que admite chats uno a uno y grupales, reacciones a mensajes, archivos adjuntos, indicadores de escritura y presencia en línea. Construida con WebSockets para comunicación bidireccional en tiempo real y optimizada para entrega de mensajes de baja latencia.",
+      "devmirror": {
+        "title": "DevMirror",
+        "description": "Un analizador de perfiles de GitHub con IA que evalúa tu stack tecnológico, identifica carencias de habilidades y proporciona recomendaciones personalizadas de mejora.",
+        "detail": "Una plataforma de análisis para desarrolladores que se conecta a perfiles y repositorios de GitHub para analizar la actividad de código, la composición del stack tecnológico y los patrones de contribución. Usando IA, genera recomendaciones personalizadas para mejorar habilidades, sugiere tecnologías relevantes para aprender a continuación y proporciona una visión general de fortalezas y áreas de mejora. Construida con Next.js para el frontend, NestJS para los servicios API, MongoDB para el almacenamiento de datos y Docker para despliegue contenerizado.",
         "challenges": [
-          "Manejar la reconexión de WebSocket de forma elegante cuando ocurren interrupciones de red.",
-          "Diseñar un sistema de paginación de mensajes que cargue el historial de manera eficiente sin interrumpir el flujo en tiempo real.",
-          "Implementar carga de archivos con indicadores de progreso y soporte para imágenes, documentos y fragmentos de código.",
-          "Construir un indicador de escritura confiable que limite los eventos para no saturar el servidor."
+          "Integrar la API de GitHub para extraer y procesar datos de repositorios, historial de commits y estadísticas de lenguajes en múltiples perfiles.",
+          "Diseñar un motor de recomendaciones con IA que analice la composición del stack tecnológico y sugiera tecnologías complementarias.",
+          "Construir un sistema de puntuación de perfiles que evalúe la actividad, consistencia y diversidad de habilidades del desarrollador.",
+          "Implementar estrategias eficientes de caché de datos para manejar los límites de la API de GitHub manteniendo análisis actualizados."
         ]
       },
-      "devblog": {
-        "title": "DevBlog",
-        "description": "Una plataforma de blog para desarrolladores con soporte MDX, resaltado de sintaxis, optimización SEO, feed RSS y una experiencia de lectura limpia.",
-        "detail": "Una plataforma de blogging moderna diseñada para desarrolladores. Escribe posts en MDX con bloques de código incrustados, componentes interactivos y estilos personalizados. Cuenta con resaltado de sintaxis automático, generación de metadatos SEO, feed RSS, estimaciones de tiempo de lectura y una experiencia de lectura limpia y sin distracciones.",
+      "devfolio": {
+        "title": "DevFolio",
+        "description": "Un portafolio de desarrollador moderno y multi-idioma construido con Next.js e internacionalización, con diseño responsive y tema claro/oscuro.",
+        "detail": "Un sitio web de portafolio personal que muestra proyectos, tecnologías y experiencia. Construido con Next.js App Router, next-intl para soporte multi-idioma (inglés y español), Tailwind CSS para estilos con soporte de tema claro/oscuro y un diseño limpio y responsive optimizado para rendimiento y accesibilidad.",
         "challenges": [
-          "Integrar MDX con componentes personalizados de React manteniendo la velocidad de carga.",
-          "Implementar un sistema de resaltado de sintaxis que soporte docenas de lenguajes de programación.",
-          "Construir un generador automático de tabla de contenidos a partir de la estructura de encabezados.",
-          "Optimizar la generación del feed RSS para incluir el contenido completo del post y metadatos."
-        ]
-      },
-      "apihub": {
-        "title": "API Hub",
-        "description": "Un gateway centralizado de APIs para gestionar microservicios, con limitación de tasa, autenticación, registro de peticiones y panel de desarrollador.",
-        "detail": "Un gateway de APIs ligero que se sitúa frente a los microservicios, gestionando enrutamiento de peticiones, autenticación, limitación de tasa, registro de peticiones y gestión de claves API. Incluye un panel de desarrollador para monitorizar tráfico, inspeccionar registros y gestionar credenciales de acceso.",
-        "challenges": [
-          "Diseñar un sistema de enrutamiento que resuelva dinámicamente los endpoints de servicios desde un registro.",
-          "Implementar autenticación basada en tokens que propague el contexto de usuario a los servicios descendentes.",
-          "Construir un limitador de tasa que funcione en múltiples instancias de servidor usando Redis.",
-          "Crear un sistema de agregación de registros que capture datos de petición/respuesta sin añadir latencia."
-        ]
-      },
-      "analytix": {
-        "title": "AnalytiX",
-        "description": "Un panel de análisis para visualizar métricas de negocio con gráficos interactivos, informes personalizables, filtrado de datos y actualizaciones en tiempo real.",
-        "detail": "Un panel de análisis que ingiere datos de eventos y los muestra a través de gráficos interactivos e informes personalizables. Soporta rangos de fechas, filtrado por métricas, agregación de datos y actualizaciones en tiempo real. Construido para manejar grandes conjuntos de datos de manera eficiente con caché y carga diferida.",
-        "challenges": [
-          "Renderizar gráficos interactivos que sigan siendo eficientes con miles de puntos de datos.",
-          "Construir un constructor de consultas que permita a los usuarios crear informes personalizados sin conocimientos de SQL.",
-          "Implementar estrategias de caché para reducir la carga de la base de datos en consultas repetidas.",
-          "Diseñar un pipeline de ingesta de eventos en tiempo real que procese datos con un retardo mínimo."
+          "Implementar internacionalización completa con segmentos de ruta dinámicos y metadatos localizados.",
+          "Diseñar un sistema de temas con propiedades CSS personalizadas que soporte modo claro y oscuro sin interrupciones.",
+          "Construir un layout responsive que se adapte con elegancia desde móvil hasta escritorio manteniendo la jerarquía visual.",
+          "Crear patrones de componentes reutilizables y constantes de estilo compartidas para mantener la consistencia en todo el sitio."
         ]
       }
     }

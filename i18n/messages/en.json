@@ -40,59 +40,36 @@
           "Building a responsive admin dashboard with real-time sales analytics and order tracking."
         ]
       },
-      "taskflow": {
-        "title": "TaskFlow",
-        "description": "A collaborative project management tool with real-time task boards, team workspaces, drag-and-drop workflows, and activity tracking.",
-        "detail": "A project management platform inspired by tools like Trello and Notion. It enables teams to create workspaces, organize tasks in customizable boards, assign members, set deadlines, and track progress through activity logs. Real-time updates ensure everyone stays in sync.",
+      "umbrachat": {
+        "title": "UmbraChat",
+        "Description": "A real-time chat platform with WebSocket communication, message threads, user anonymity, and expiring message history.",
+        "Detail": "A full-stack real-time messaging application built with Next.js on the frontend and NestJS on the backend, using PostgreSQL for message persistence and WebSockets for low-latency, bidirectional communication. It supports public and private chat rooms, conversation threads, and online presence detection.",
         "challenges": [
-          "Implementing smooth drag-and-drop reordering across multiple boards without losing UI state.",
-          "Designing a real-time collaboration system that syncs changes across team members instantly.",
-          "Creating a flexible permission model with workspace-level and task-level access controls.",
-          "Building an activity feed that aggregates changes in a readable, chronological timeline."
+          "Designing a message threading system that organizes replies in a hierarchical structure.",
+          "Optimizing PostgreSQL queries for fast message retrieval across large conversation histories.",
+          "Building real-time typing indicators and presence tracking without flooding the WebSocket connection."
         ]
       },
-      "chatify": {
-        "title": "Chatify",
-        "description": "A real-time messaging application with private and group conversations, file sharing, message reactions, and online presence indicators.",
-        "detail": "A full-featured messaging platform supporting one-on-one and group chats, message reactions, file attachments, typing indicators, and online presence. Built with WebSockets for real-time bidirectional communication and optimized for low-latency message delivery.",
+      "devmirror": {
+        "title": "DevMirror",
+        "description": "An AI-powered GitHub profile analyzer that evaluates your tech stack, identifies skill gaps, and provides personalized improvement recommendations.",
+        "detail": "A developer analytics platform that connects to GitHub profiles and repositories to analyze coding activity, tech stack composition, and contribution patterns. Using AI, it generates personalized recommendations for skill improvement, suggests relevant technologies to learn next, and provides a comprehensive overview of strengths and areas for growth. Built with Next.js for the frontend, NestJS for API services, MongoDB for data storage, and Docker for containerized deployment.",
         "challenges": [
-          "Handling WebSocket reconnection gracefully when network interruptions occur.",
-          "Designing a message pagination system that loads history efficiently without disrupting the real-time flow.",
-          "Implementing file upload with progress indicators and support for images, documents, and code snippets.",
-          "Building a reliable typing indicator that debounces events to avoid flooding the server."
+          "Integrating GitHub's API to extract and process repository data, commit history, and language statistics across multiple profiles.",
+          "Designing an AI recommendation engine that analyzes tech stack composition and suggests complementary technologies.",
+          "Building a profile scoring system that evaluates developer activity, consistency, and skill diversity.",
+          "Implementing efficient data caching strategies to handle GitHub API rate limits while maintaining up-to-date analysis."
         ]
       },
-      "devblog": {
-        "title": "DevBlog",
-        "description": "A developer blog platform with MDX support, syntax highlighting, SEO optimization, RSS feed, and a clean reading experience.",
-        "detail": "A modern blogging platform designed for developers. Write posts in MDX with embedded code blocks, interactive components, and custom styling. Features automatic syntax highlighting, SEO metadata generation, RSS feed, reading time estimates, and a clean, distraction-free reading experience.",
+      "devfolio": {
+        "title": "DevFolio",
+        "description": "A modern, multi-language developer portfolio built with Next.js and internationalization, featuring a clean dark/light theme and responsive design.",
+        "detail": "A personal developer portfolio website showcasing projects, technologies, and experience. Built with Next.js App Router, next-intl for multi-language support, Tailwind CSS for styling with dark/light theme support, and a clean, responsive design optimized for performance and accessibility.",
         "challenges": [
-          "Integrating MDX with custom React components while maintaining fast page loads.",
-          "Implementing a syntax highlighting system that supports dozens of programming languages.",
-          "Building an automatic table of contents generator from heading structure.",
-          "Optimizing RSS feed generation to include full post content and metadata."
-        ]
-      },
-      "apihub": {
-        "title": "API Hub",
-        "description": "A centralized API gateway for managing microservices, with rate limiting, authentication, request logging, and a developer dashboard.",
-        "detail": "A lightweight API gateway that sits in front of microservices, handling request routing, authentication, rate limiting, request logging, and API key management. Includes a developer dashboard for monitoring traffic, inspecting logs, and managing access credentials.",
-        "challenges": [
-          "Designing a routing system that dynamically resolves service endpoints from a registry.",
-          "Implementing token-based authentication that propagates user context to downstream services.",
-          "Building a rate limiter that works across multiple server instances using Redis.",
-          "Creating a log aggregation system that captures request/response data without adding latency."
-        ]
-      },
-      "analytix": {
-        "title": "AnalytiX",
-        "description": "An analytics dashboard for visualizing business metrics with interactive charts, customizable reports, data filtering, and real-time updates.",
-        "detail": "An analytics dashboard that ingests event data and displays it through interactive charts and customizable reports. Supports date ranges, metric filtering, data aggregation, and real-time updates. Built to handle large datasets efficiently with data caching and lazy loading.",
-        "challenges": [
-          "Rendering interactive charts that remain performant with thousands of data points.",
-          "Building a query builder that lets users create custom reports without SQL knowledge.",
-          "Implementing data caching strategies to reduce database load for repeated queries.",
-          "Designing a real-time event ingestion pipeline that processes data with minimal delay."
+          "Implementing full internationalization with dynamic route segments and localized metadata.",
+          "Designing a theme system with CSS custom properties that supports both dark and light mode seamlessly.",
+          "Building a responsive layout that adapts gracefully from mobile to desktop while maintaining visual hierarchy.",
+          "Creating reusable component patterns and shared style constants to maintain consistency across the site."
         ]
       }
     }
