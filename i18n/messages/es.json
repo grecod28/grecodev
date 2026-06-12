@@ -52,13 +52,13 @@
       },
       "devmirror": {
         "title": "DevMirror",
-        "description": "Una herramienta de análisis de portafolio para desarrolladores que rastrea contribuciones de GitHub, analiza la actividad de código y genera visualizaciones interactivas.",
-        "detail": "Una plataforma de análisis para desarrolladores que se conecta a GitHub para rastrear contribuciones, visualizar patrones de actividad y generar dashboards de portafolio compartibles. Construida con Next.js para el frontend, NestJS para los servicios API, MongoDB para el almacenamiento de datos y Docker para despliegue contenerizado.",
+        "description": "Un analizador de perfiles de GitHub con IA que evalúa tu stack tecnológico, identifica carencias de habilidades y proporciona recomendaciones personalizadas de mejora.",
+        "detail": "Una plataforma de análisis para desarrolladores que se conecta a perfiles y repositorios de GitHub para analizar la actividad de código, la composición del stack tecnológico y los patrones de contribución. Usando IA, genera recomendaciones personalizadas para mejorar habilidades, sugiere tecnologías relevantes para aprender a continuación y proporciona una visión general de fortalezas y áreas de mejora. Construida con Next.js para el frontend, NestJS para los servicios API, MongoDB para el almacenamiento de datos y Docker para despliegue contenerizado.",
         "challenges": [
-          "Integrar la API de GitHub con estrategias de limitación de tasa y caché para manejar grandes volúmenes de datos de contribuciones.",
-          "Diseñar un pipeline eficiente de agregación de datos que procese eventos de Git en métricas significativas.",
-          "Construir gráficos y visualizaciones interactivas que muestren métricas de rendimiento y mapas de calor de contribuciones.",
-          "Implementar contenerización con Docker para un despliegue consistente en entornos de desarrollo y producción."
+          "Integrar la API de GitHub para extraer y procesar datos de repositorios, historial de commits y estadísticas de lenguajes en múltiples perfiles.",
+          "Diseñar un motor de recomendaciones con IA que analice la composición del stack tecnológico y sugiera tecnologías complementarias.",
+          "Construir un sistema de puntuación de perfiles que evalúe la actividad, consistencia y diversidad de habilidades del desarrollador.",
+          "Implementar estrategias eficientes de caché de datos para manejar los límites de la API de GitHub manteniendo análisis actualizados."
         ]
       },
       "devfolio": {
