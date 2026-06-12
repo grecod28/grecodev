@@ -36,16 +36,15 @@ export default async function ProjectDetailPage({
   return (
     <main className={pageContainer}>
       <div className="mx-auto w-full max-w-3xl">
-        <Link
-          href="/projects"
-          className={backLink}
-        >
+        <Link href="/projects" className={backLink}>
           <span aria-hidden="true">&larr;</span>
           {t("back")}
         </Link>
 
         <div className="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-          <div className={`${detailIconBox} text-text-muted hover:text-primary`}>
+          <div
+            className={`${detailIconBox} text-text-muted hover:text-primary`}
+          >
             <project.icon className="h-10 w-10" />
           </div>
 
