@@ -43,7 +43,7 @@ export default function MobileMenu({ links }: Props) {
       {/* Navegación */}
       <aside
         className={`
-    fixed top-0 left-0 h-screen w-60
+    fixed top-0 left-0 h-dvh w-60
     bg-surface border-r border-border
     z-50
     transform transition-transform duration-300
