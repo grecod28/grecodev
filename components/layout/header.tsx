@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between max-w-260 w-full mt-16 mb-4 px-4">
       {/* Navegación de escritorio */}
-      <nav className="hidden xl:flex gap-6 text-lg">
+      <nav className="hidden xl:flex xl:gap-6 text-lg">
         {links.map((link) => (
           <Link
             key={link.href}
