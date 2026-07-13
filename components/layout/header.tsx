@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between max-w-260 w-full mt-16 mb-4 px-4">
       {/* Navegación de escritorio */}
-      <nav className="hidden md:flex gap-6 text-lg">
+      <nav className="hidden xl:flex gap-6 text-lg">
         {links.map((link) => (
           <Link
             key={link.href}
@@ -55,13 +55,13 @@ export default function Header() {
       </nav>
 
       {/* Acciones en escritorio */}
-      <section className="hidden md:flex gap-4 text-lg">
+      <section className="hidden xl:flex gap-4 text-lg">
         <LanguageSelector />
         <ThemeSelector />
       </section>
 
       {/* Mobile */}
-      <div className="md:hidden">
+      <div className="xl:hidden">
         <MobileMenu links={links} />
       </div>
     </header>
