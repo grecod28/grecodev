@@ -15,12 +15,14 @@ export default async function TechnologiesPage() {
 
   return (
     <main className={pageContainer}>
-      <div className={`${sectionContainer} w-full`}>
-        <h1 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
-          {t("title")}
-        </h1>
+      <section className={`${sectionContainer} w-full`}>
+        <header className="text-center">
+          <h1 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
+            {t("title")}
+          </h1>
 
-        <p className="mt-2 text-text-muted">{t("description")}</p>
+          <p className="mt-2 text-text-muted">{t("description")}</p>
+        </header>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {ALL_TECH_ICONS.map(({ name, src }, index) => {
@@ -65,7 +67,7 @@ export default async function TechnologiesPage() {
             );
           })}
         </div>
-      </div>
+      </section>
     </main>
   );
 }

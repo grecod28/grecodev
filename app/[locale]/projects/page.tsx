@@ -6,7 +6,6 @@ import { Link } from "@/i18n/navigation";
 import {
   pageContainer,
   sectionContainer,
-  sectionCentered,
   cardHover,
   iconBoxLarge,
 } from "@/lib/constants/styles";
@@ -20,16 +19,16 @@ export default async function ProjectsPage() {
 
   return (
     <main className={pageContainer}>
-      <div className={`${sectionContainer} w-full`}>
-        <div
-          className={`${sectionCentered} animate-fade-in`}
+      <section className={`${sectionContainer} w-full`}>
+        <header
+          className={`text-center animate-fade-in`}
           style={{ animationDelay: "0ms" }}
         >
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
             {t("title")}
           </h1>
-          <p className="mt-2 max-w-lg text-text-muted">{t("description")}</p>
-        </div>
+          <p className="mt-2 text-text-muted">{t("description")}</p>
+        </header>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project, index) => {
@@ -46,7 +45,9 @@ export default async function ProjectsPage() {
                   <span className="sr-only">{t(`items.${id}.title`)}</span>
                 </Link>
 
-                <div className={`${iconBoxLarge} text-text-muted group-hover:text-primary`}>
+                <div
+                  className={`${iconBoxLarge} text-text-muted group-hover:text-primary`}
+                >
                   <Icon className="h-7 w-7" />
                 </div>
 
@@ -106,7 +107,7 @@ export default async function ProjectsPage() {
             );
           })}
         </div>
-      </div>
+      </section>
     </main>
   );
 }

@@ -9,7 +9,7 @@
   "Index": {
     "title": "Full Stack Web Developer",
     "role": "FullStack Developer",
-    "bio": "I build robust, scalable web applications from database to UI. Passionate about clean code, modern architecture, and creating seamless digital experiences.",
+    "bio": "I build robust, scalable web applications from database to UI, with experience deploying and managing cloud infrastructure on AWS. Passionate about clean code, modern architecture, and creating seamless digital experiences.",
     "cta_projects": "View Projects",
     "cta_contact": "Contact Me",
     "featured_title": "Featured Projects",
@@ -108,7 +108,8 @@
       "php": "A popular general-purpose scripting language especially suited to web development.",
       "apache": "A widely used open-source web server software.",
       "nginx": "A high-performance HTTP server and reverse proxy server.",
-      "n8n": "Workflow automation platform."
+      "n8n": "Workflow automation platform.",
+      "aws": "A comprehensive cloud computing platform offering on-demand infrastructure services, from virtual servers and storage to serverless computing and machine learning."
     }
   },
   "About": {
