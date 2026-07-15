@@ -20,6 +20,7 @@ export const TECH_PROFICIENCY: Record<string, number> = {
   "Node.js": 3,
   Express: 3,
   Git: 4,
+  AWS: 3,
 };
 
 export function getProficiencyLevel(name: string): number {

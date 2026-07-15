@@ -9,7 +9,7 @@
   "Index": {
     "title": "Desarrollador Web Full Stack",
     "role": "Desarrollador FullStack",
-    "bio": "Construyo aplicaciones web robustas y escalables, desde la base de datos hasta la interfaz de usuario. Apasionado por el código limpio, la arquitectura moderna y crear experiencias digitales fluidas.",
+    "bio": "Construyo aplicaciones web robustas y escalables, desde la base de datos hasta la interfaz de usuario, con experiencia desplegando y gestionando infraestructura cloud en AWS. Apasionado por el código limpio, la arquitectura moderna y crear experiencias digitales fluidas.",
     "cta_projects": "Ver Proyectos",
     "cta_contact": "Contacto",
     "featured_title": "Proyectos Destacados",
@@ -108,7 +108,8 @@
       "php": "Un popular lenguaje de scripting de propósito general especialmente adecuado para el desarrollo web.",
       "apache": "Un software de servidor web de código abierto ampliamente utilizado.",
       "nginx": "Un servidor HTTP de alto rendimiento y proxy inverso.",
-      "n8n": "Plataforma de automatizacion de flujos de trabajo."
+      "n8n": "Plataforma de automatizacion de flujos de trabajo.",
+      "aws": "Una plataforma integral de computación en la nube que ofrece servicios de infraestructura bajo demanda, desde servidores virtuales y almacenamiento hasta computación serverless y machine learning."
     }
   },
   "About": {
