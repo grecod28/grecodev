@@ -1,4 +1,5 @@
 export const TECH_STACK_ICONS = [
+  { name: "AWS", src: "/images/aws-svgrepo-com.svg" },
   { name: "TypeScript", src: "/images/typescript-svgrepo-com.svg" },
   { name: "Next.js", src: "/images/nextjs-fill-svgrepo-com.svg" },
   { name: "NestJS", src: "/images/nestjs-svgrepo-com.svg" },
@@ -6,22 +7,22 @@ export const TECH_STACK_ICONS = [
   { name: "PostgreSQL", src: "/images/pgsql-svgrepo-com.svg" },
   { name: "MongoDB", src: "/images/mongo-svgrepo-com.svg" },
   { name: "Redis", src: "/images/redis-svgrepo-com.svg" },
+  { name: "Docker", src: "/images/docker-svgrepo-com.svg" },
   { name: "Tailwind CSS", src: "/images/tailwind-svgrepo-com.svg" },
   { name: "Sass", src: "/images/sass-svgrepo-com.svg" },
-  { name: "N8N", src: "/images/n8n.svg" },
-  { name: "AWS", src: "/images/aws-svgrepo-com.svg" },
 ] as const;
 
 export const ALL_TECH_ICONS = [
+  { name: "AWS", src: "/images/aws-svgrepo-com.svg" },
   { name: "Next.js", src: "/images/nextjs-fill-svgrepo-com.svg" },
   { name: "NestJS", src: "/images/nestjs-svgrepo-com.svg" },
   { name: "Angular", src: "/images/angular-svgrepo-com.svg" },
   { name: "PostgreSQL", src: "/images/pgsql-svgrepo-com.svg" },
   { name: "MongoDB", src: "/images/mongo-svgrepo-com.svg" },
+  { name: "Docker", src: "/images/docker-svgrepo-com.svg" },
   { name: "Redis", src: "/images/redis-svgrepo-com.svg" },
   { name: "Apache", src: "/images/apache-svgrepo-com.svg" },
   { name: "Nginx", src: "/images/nginx-svgrepo-com.svg" },
-  { name: "Docker", src: "/images/docker-svgrepo-com.svg" },
   { name: "TypeScript", src: "/images/typescript-svgrepo-com.svg" },
   { name: "Tailwind CSS", src: "/images/tailwind-svgrepo-com.svg" },
   { name: "Sass", src: "/images/sass-svgrepo-com.svg" },
@@ -29,5 +30,4 @@ export const ALL_TECH_ICONS = [
   { name: "HTML5", src: "/images/html-5-svgrepo-com.svg" },
   { name: "PHP", src: "/images/php-svgrepo-com.svg" },
   { name: "N8N", src: "/images/n8n.svg" },
-  { name: "AWS", src: "/images/aws-svgrepo-com.svg" },
 ] as const;
