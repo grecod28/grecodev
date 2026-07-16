@@ -83,10 +83,11 @@
   "Technologies": {
     "title": "Technologies",
     "description": "A comprehensive overview of the tools and technologies I work with.",
+    "back": "Back to Technologies",
     "button": "Learn More",
     "proficiency": "Proficiency",
     "related_projects": "Related Projects",
-    "no_related_projects": "No projects using this technology yet.",
+    "no_related_projects": "I do not have any public projects using this technology.",
     "comfort_level": "Comfort level",
     "level_1": "Getting Familiar",
     "level_2": "Comfortable",
@@ -109,7 +110,8 @@
       "apache": "A widely used open-source web server software.",
       "nginx": "A high-performance HTTP server and reverse proxy server.",
       "n8n": "Workflow automation platform.",
-      "aws": "A comprehensive cloud computing platform offering on-demand infrastructure services, from virtual servers and storage to serverless computing and machine learning."
+      "aws": "A comprehensive cloud computing platform offering on-demand infrastructure services, from virtual servers and storage to serverless computing and machine learning.",
+      "docker": "A platform for developing, shipping, and running applications inside lightweight, portable containers that run consistently across any environment."
     }
   },
   "About": {
@@ -117,13 +119,13 @@
       "title": "FullStack Developer",
       "greeting": "Santiago Greco",
       "subtitle": "Building Scalable Digital Experiences",
-      "description": "I'm a FullStack Developer passionate about creating modern web applications. I specialize in building robust, scalable solutions from database to UI — always focusing on clean code, performance, and exceptional user experiences."
+      "description": "I'm a FullStack Developer passionate about creating modern web applications. I specialize in building robust, scalable solutions from database to UI, with experience in cloud infrastructure on AWS — always focusing on clean code, performance, and exceptional user experiences."
     },
     "about": {
       "title": "About Me",
       "subtitle": "Crafting Code with Purpose",
-      "p1": "Graduate in Web Application Development (CFGS DAW) with a deep passion for technology. Throughout my training I specialized in FullStack web development, working with modern technologies across the entire stack — from interactive frontends with frameworks like Angular, Next.js and React, to robust backends with Node.js, NestJS and APIs.",
-      "p2": "My approach combines solid technical skills with a focus on solving real problems. I enjoy creating scalable, efficient applications, optimizing performance, and designing intuitive interfaces that make a difference in the user experience.",
+      "p1": "Graduate in Web Application Development (CFGS DAW) with a deep passion for technology. Throughout my training I specialized in FullStack web development, working with modern technologies across the entire stack — from interactive frontends with frameworks like Angular, Next.js and React, to robust backends with Node.js, NestJS and APIs, and cloud services on AWS.",
+      "p2": "My approach combines solid technical skills with a focus on solving real problems. I enjoy creating scalable, efficient applications, deploying them on AWS cloud infrastructure, optimizing performance, and designing intuitive interfaces that make a difference in the user experience.",
       "p3": "I firmly believe in continuous learning. The tech world moves fast, and I love keeping up with new trends, tools, and methodologies to always deliver the best solutions."
     },
 
@@ -141,7 +143,7 @@
       "q1": "What type of development do you do?",
       "a1": "I specialize in FullStack web development, working on both the frontend and backend of web applications. From interactive user interfaces with modern frameworks to robust APIs and database design.",
       "q2": "What are your favorite technologies?",
-      "a2": "I enjoy working with TypeScript, Next.js, and NestJS. I'm also passionate about Angular for frontend and PostgreSQL for databases — always exploring new tools that can improve my workflow.",
+      "a2": "I enjoy working with TypeScript, Next.js, and NestJS. I'm also passionate about Angular for frontend, PostgreSQL for databases, and AWS for cloud infrastructure — always exploring new tools that can improve my workflow.",
       "q3": "Are you available for projects?",
       "a3": "Yes, I'm currently open to new projects and collaborations. Whether freelance, part-time, or full-time opportunities, I'm excited to take on new challenges.",
       "q4": "What type of projects interest you?",
