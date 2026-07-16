@@ -27,28 +27,18 @@ export default async function AboutPage() {
       {/* Sobre mí */}
       <section className={section}>
         <div
-          className="mx-auto max-w-4xl animate-fade-in"
+          className="text-center mx-auto max-w-4xl animate-fade-in"
           style={{ animationDelay: "100ms" }}
         >
           <div className={sectionCentered}>
-            <span className={sectionLabel}>
-              {t("about.title")}
-            </span>
-            <h2 className={sectionTitle}>
-              {t("about.subtitle")}
-            </h2>
+            <span className={sectionLabel}>{t("about.title")}</span>
+            <h2 className={sectionTitle}>{t("about.subtitle")}</h2>
           </div>
 
           <div className="mt-10 space-y-5">
-            <p className={bodyText}>
-              {t("about.p1")}
-            </p>
-            <p className={bodyText}>
-              {t("about.p2")}
-            </p>
-            <p className={bodyText}>
-              {t("about.p3")}
-            </p>
+            <p className={bodyText}>{t("about.p1")}</p>
+            <p className={bodyText}>{t("about.p2")}</p>
+            <p className={bodyText}>{t("about.p3")}</p>
           </div>
         </div>
       </section>
@@ -60,19 +50,17 @@ export default async function AboutPage() {
           style={{ animationDelay: "300ms" }}
         >
           <div className={sectionCentered}>
-            <span className={sectionLabel}>
-              {t("education.title")}
-            </span>
-            <h2 className={sectionTitle}>
-              {t("education.subtitle")}
-            </h2>
+            <span className={sectionLabel}>{t("education.title")}</span>
+            <h2 className={sectionTitle}>{t("education.subtitle")}</h2>
           </div>
 
           <div className="mt-10">
             <div className="relative border-l border-border pl-8">
               <div className="absolute -left-1.25 top-1 h-2.5 w-2.5 rounded-full bg-primary ring-2 ring-background" />
 
-              <div className={`${cardContent} hover:shadow-(--shadow-primary)`}>
+              <div
+                className={`${cardContent} text-ccenter hover:shadow-(--shadow-primary)`}
+              >
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                   <h3 className="text-lg font-semibold">
                     {t("education.degree")}
@@ -103,12 +91,8 @@ export default async function AboutPage() {
           style={{ animationDelay: "400ms" }}
         >
           <div className={sectionCentered}>
-            <span className={sectionLabel}>
-              FAQ
-            </span>
-            <h2 className={sectionTitle}>
-              {t("faq.title")}
-            </h2>
+            <span className={sectionLabel}>FAQ</span>
+            <h2 className={sectionTitle}>{t("faq.title")}</h2>
           </div>
 
           <div className="mt-10 space-y-3">

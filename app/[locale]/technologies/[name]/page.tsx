@@ -39,12 +39,9 @@ export default async function TechnologyPage({
   return (
     <main className={pageContainer}>
       <div className="mx-auto w-full max-w-3xl">
-        <Link
-          href="/technologies"
-          className={backLink}
-        >
+        <Link href="/technologies" className={backLink}>
           <span aria-hidden="true">&larr;</span>
-          Back to Technologies
+          {t("back")}
         </Link>
 
         <div className="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
@@ -63,7 +60,6 @@ export default async function TechnologyPage({
             <h1 className="text-3xl font-bold tracking-tight text-text">
               {tech.name}
             </h1>
-            <p className="mt-1 text-sm text-primary">Technology</p>
           </div>
         </div>
 
