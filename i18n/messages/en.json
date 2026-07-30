@@ -6,6 +6,14 @@
     "about": "About me",
     "contact": "Contact"
   },
+  "Common": {
+    "back": "Go back",
+    "learn_more": "Learn more",
+    "view_all": "View all",
+    "scroll": "Scroll",
+    "send": "Send",
+    "close": "Close"
+  },
   "Index": {
     "title": "Full Stack Web Developer",
     "role": "FullStack Developer",
@@ -15,7 +23,7 @@
     "featured_title": "Featured Projects",
     "featured_desc": "Some projects I've built to explore, learn, and solve real problems.",
     "featured_cta": "View All Projects",
-    "tech_stack": "Favorite technologies",
+    "tech_stack": "My Stack",
     "contact_section_title": "Let's Work Together",
     "contact_section_desc": "Have a project in mind or just want to say hi? I'd love to hear from you. Whether you need a web application, an API, or a complete digital solution — I'm here to help.",
     "contact_section_email": "stgrecodev@gmail.com",

@@ -2,12 +2,12 @@ import { TECH_STACK_ICONS } from "@/lib/constants/icons";
 import { PROJECTS } from "@/lib/constants/projects";
 import { toSlug } from "@/lib/functions/slug";
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { FiArrowRight, FiMail } from "react-icons/fi";
 import Reveal from "@/components/ui/reveal";
 import CanvasDots from "@/components/hero/canvas-dots";
 import ProfilePhoto from "@/components/hero/profile-photo";
+import SkillsGrid from "@/components/ui/skills-grid";
 import {
   section,
   sectionCentered,
@@ -17,7 +17,6 @@ import {
   sectionDesc,
   cardHover,
   iconBoxLarge,
-  iconBoxSmall,
   contactInfoBox,
 } from "@/lib/constants/styles";
 
@@ -34,7 +33,10 @@ export default async function Home() {
         <CanvasDots />
 
         <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
-          <div className="animate-fade-in-up mb-8" style={{ animationDelay: "100ms" }}>
+          <div
+            className="animate-fade-in-up mb-8"
+            style={{ animationDelay: "100ms" }}
+          >
             <ProfilePhoto />
           </div>
 
@@ -138,35 +140,16 @@ export default async function Home() {
       <Reveal delay={200}>
         <section className={section}>
           <div className={sectionContainer}>
-            <div className={sectionCentered}>
+            <header className={sectionCentered}>
               <span className={sectionLabel}>{t("tech_stack")}</span>
               <h2 className={sectionTitle}>{t("tech_stack")}</h2>
-            </div>
+            </header>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
-              {TECH_STACK_ICONS.map(({ name, src }) => (
-                <Link
-                  key={name}
-                  href={`/technologies/${toSlug(name)}`}
-                  className="group flex flex-col items-center gap-2"
-                >
-                  <div
-                    className={`${iconBoxSmall} ring-1 ring-border transition-shadow duration-200 group-hover:shadow-(--shadow-primary)`}
-                  >
-                    <Image
-                      src={src}
-                      alt={name}
-                      width={28}
-                      height={28}
-                      className="h-7 w-7"
-                      unoptimized
-                    />
-                  </div>
-                  <span className="text-[10px] font-medium text-text-muted transition-colors group-hover:text-text">
-                    {name}
-                  </span>
-                </Link>
-              ))}
+            <div className="mt-10 flex justify-center">
+              <SkillsGrid
+                skills={TECH_STACK_ICONS.map((s) => ({ ...s, slug: toSlug(s.name) }))}
+                linkPrefix="/technologies"
+              />
             </div>
           </div>
         </section>

@@ -4,9 +4,9 @@ import { Link } from "@/i18n/navigation";
 import { FiGithub, FiExternalLink, FiCheck } from "react-icons/fi";
 import { PROJECTS } from "@/lib/constants/projects";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
+import BackLink from "@/components/ui/back-link";
 import {
   pageContainer,
-  backLink,
   detailIconBox,
   tagChip,
   cardContent,
@@ -36,10 +36,7 @@ export default async function ProjectDetailPage({
   return (
     <main className={pageContainer}>
       <div className="mx-auto w-full max-w-3xl">
-        <Link href="/projects" className={backLink}>
-          <span aria-hidden="true">&larr;</span>
-          {t("back")}
-        </Link>
+        <BackLink />
 
         <div className="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
           <div

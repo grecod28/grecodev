@@ -6,6 +6,14 @@
     "about": "Sobre mí",
     "contact": "Contacto"
   },
+  "Common": {
+    "back": "Volver atrás",
+    "learn_more": "Ver más",
+    "view_all": "Ver todos",
+    "scroll": "Desplazar",
+    "send": "Enviar",
+    "close": "Cerrar"
+  },
   "Index": {
     "title": "Desarrollador Web Full Stack",
     "role": "Desarrollador FullStack",
@@ -15,7 +23,7 @@
     "featured_title": "Proyectos Destacados",
     "featured_desc": "Algunos proyectos que he creado para explorar, aprender y resolver problemas reales.",
     "featured_cta": "Ver Todos los Proyectos",
-    "tech_stack": "Tecnologías favoritas",
+    "tech_stack": "Mi Stack",
     "contact_section_title": "Trabajemos Juntos",
     "contact_section_desc": "¿Tienes un proyecto en mente o simplemente quieres saludar? Me encantaría saber de ti. Ya sea una aplicación web, una API o una solución digital completa — estoy aquí para ayudar.",
     "contact_section_email": "stgrecodev@gmail.com",

@@ -1,12 +1,15 @@
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
+import { TECH_STACK_ICONS } from "@/lib/constants/icons";
+import { toSlug } from "@/lib/functions/slug";
+import SkillsGrid from "@/components/ui/skills-grid";
 import {
   section,
+  sectionContainer,
   sectionCentered,
   sectionLabel,
   sectionTitle,
-  bodyText,
-  cardContent,
 } from "@/lib/constants/styles";
 
 const FAQ_KEYS = [
@@ -19,35 +22,78 @@ const FAQ_KEYS = [
   { q: "q7", a: "a7" },
 ] as const;
 
+const SKILLS_WITH_SLUGS = TECH_STACK_ICONS.map((s) => ({
+  ...s,
+  slug: toSlug(s.name),
+}));
+
 export default async function AboutPage() {
   const t = await getTranslations("About");
 
   return (
     <main className="flex flex-1 flex-col w-full">
-      {/* Sobre mí */}
+      {/* ── Profile + Skills ── */}
       <section className={section}>
         <div
-          className="text-center mx-auto max-w-4xl animate-fade-in"
+          className={`${sectionContainer} animate-fade-in`}
           style={{ animationDelay: "100ms" }}
         >
-          <div className={sectionCentered}>
-            <span className={sectionLabel}>{t("about.title")}</span>
-            <h2 className={sectionTitle}>{t("about.subtitle")}</h2>
-          </div>
+          <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-16">
+            {/* Left — Profile */}
+            <div className="flex flex-col items-center text-center lg:w-1/2 lg:items-start lg:text-left">
+              <div className="mx-auto mb-6 lg:mx-0">
+                <div className="relative">
+                  <div
+                    className="absolute -inset-4 rounded-full bg-primary/20 blur-2xl"
+                    aria-hidden="true"
+                  />
+                  <Image
+                    src="/images/foto_perfil.png"
+                    alt="Santiago Greco"
+                    width={160}
+                    height={160}
+                    className="relative rounded-full object-cover ring-4 ring-primary/30 shadow-(--shadow-primary)"
+                    priority
+                  />
+                </div>
+              </div>
 
-          <div className="mt-10 space-y-5">
-            <p className={bodyText}>{t("about.p1")}</p>
-            <p className={bodyText}>{t("about.p2")}</p>
-            <p className={bodyText}>{t("about.p3")}</p>
+              <h2 className="text-2xl font-bold sm:text-3xl">
+                {t("about.subtitle")}
+              </h2>
+
+              <div className="mt-6 space-y-4">
+                <p className="text-base leading-relaxed text-text-muted">
+                  {t("about.p1")}
+                </p>
+                <p className="text-base leading-relaxed text-text-muted">
+                  {t("about.p2")}
+                </p>
+                <p className="text-base leading-relaxed text-text-muted">
+                  {t("about.p3")}
+                </p>
+              </div>
+            </div>
+
+            {/* Right — Skills */}
+            <div className="flex flex-col items-center lg:w-1/2">
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-text-muted">
+                Tech Stack
+              </h3>
+              <SkillsGrid
+                skills={SKILLS_WITH_SLUGS}
+                linkPrefix="/technologies"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Estudios */}
+      {/* ── Education ── */}
       <section className={section}>
         <div
           className="mx-auto max-w-3xl animate-fade-in"
-          style={{ animationDelay: "300ms" }}
+          style={{ animationDelay: "200ms" }}
         >
           <div className={sectionCentered}>
             <span className={sectionLabel}>{t("education.title")}</span>
@@ -58,9 +104,7 @@ export default async function AboutPage() {
             <div className="relative border-l border-border pl-8">
               <div className="absolute -left-1.25 top-1 h-2.5 w-2.5 rounded-full bg-primary ring-2 ring-background" />
 
-              <div
-                className={`${cardContent} text-ccenter hover:shadow-(--shadow-primary)`}
-              >
+              <div className="rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-(--shadow-primary)">
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                   <h3 className="text-lg font-semibold">
                     {t("education.degree")}
@@ -69,12 +113,10 @@ export default async function AboutPage() {
                     {t("education.period")}
                   </span>
                 </div>
-
                 <p className="mt-1 text-sm text-primary">
                   {t("education.institution")} &middot;{" "}
                   {t("education.location")}
                 </p>
-
                 <p className="mt-3 text-sm leading-relaxed text-text-muted">
                   {t("education.description")}
                 </p>
@@ -88,7 +130,7 @@ export default async function AboutPage() {
       <section className={section}>
         <div
           className="mx-auto max-w-3xl animate-fade-in"
-          style={{ animationDelay: "400ms" }}
+          style={{ animationDelay: "300ms" }}
         >
           <div className={sectionCentered}>
             <span className={sectionLabel}>FAQ</span>
@@ -101,7 +143,7 @@ export default async function AboutPage() {
                 key={q}
                 className="group rounded-xl border border-border bg-surface transition-all duration-200 open:border-primary/50 [&_summary::-webkit-details-marker]:hidden"
               >
-                <summary className="flex cursor-pointer items-center justify-between px-5 py-4 text-sm font-medium  transition-colors hover:text-primary">
+                <summary className="flex cursor-pointer items-center justify-between px-5 py-4 text-sm font-medium transition-colors hover:text-primary">
                   {t(`faq.${q}`)}
                   <FiArrowRight className="h-4 w-4 shrink-0 text-text-muted transition-all duration-200 group-open:rotate-90 group-open:text-primary" />
                 </summary>
