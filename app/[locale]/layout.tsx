@@ -41,7 +41,7 @@ export default async function LocaleLayout({
       className={`${inter.variable} h-full antialiased bg-background text-text`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col items-center">
+      <body className="min-h-full flex flex-col items-center pt-16">
         <script
           dangerouslySetInnerHTML={{
             __html: `

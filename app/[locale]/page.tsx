@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { FiArrowRight, FiMail } from "react-icons/fi";
 import Reveal from "@/components/ui/reveal";
+import CanvasDots from "@/components/hero/canvas-dots";
 import {
   section,
   sectionCentered,
@@ -13,10 +14,6 @@ import {
   sectionLabel,
   sectionTitle,
   sectionDesc,
-  btnPrimary,
-  btnSecondary,
-  btnLink,
-  btnPrimarySimple,
   cardHover,
   iconBoxLarge,
   iconBoxSmall,
@@ -32,47 +29,74 @@ export default async function Home() {
   return (
     <main className="flex flex-1 flex-col items-center w-full">
       {/* ── Hero ── */}
-      <Reveal>
-        <section className="flex flex-col items-center justify-center w-full px-4 pt-16 pb-16">
-          <div className="flex flex-col items-center text-center max-w-3xl">
-            <div className="relative mb-6">
-              <div
-                className="absolute -inset-4 rounded-full bg-primary/20 blur-2xl"
-                aria-hidden="true"
-              />
-              <Image
-                src="/images/foto_perfil.png"
-                alt="Santiago Greco"
-                width={120}
-                height={120}
-                className="relative rounded-full object-cover ring-4 ring-border-strong shadow-surface"
-                priority
-              />
-            </div>
+      <section className="relative flex flex-col items-center justify-center w-full min-h-screen px-4 -mt-16">
+        <CanvasDots />
 
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Santiago Greco
-            </h1>
-
-            <p className="mt-2 bg-linear-to-r from-primary to-accent bg-clip-text text-lg font-semibold text-transparent sm:text-xl">
-              {t("role")}
-            </p>
-
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-text-muted sm:text-lg">
-              {t("bio")}
-            </p>
-
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link href="/projects" className={btnPrimary}>
-                {t("cta_projects")}
-              </Link>
-              <Link href="/contact" className={btnSecondary}>
-                {t("cta_contact")}
-              </Link>
-            </div>
+        <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
+          <div
+            className="animate-fade-in-up relative mb-8"
+            style={{ animationDelay: "100ms" }}
+          >
+            <div
+              className="absolute -inset-6 rounded-full bg-primary/20 blur-3xl animate-float"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute -inset-2 rounded-full bg-linear-to-r from-primary via-accent to-primary opacity-30 blur-xl animate-float"
+              aria-hidden="true"
+              style={{ animationDelay: "500ms" }}
+            />
+            <Image
+              src="/images/foto_perfil.png"
+              alt="Santiago Greco"
+              width={140}
+              height={140}
+              className="relative rounded-full object-cover ring-4 ring-primary/30 shadow-(--shadow-primary)"
+              priority
+            />
           </div>
-        </section>
-      </Reveal>
+
+          <h1
+            className="animate-fade-in-left text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+            style={{ animationDelay: "300ms" }}
+          >
+            Santiago Greco
+          </h1>
+
+          <p
+            className="mt-3 bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-xl font-semibold text-transparent sm:text-2xl lg:text-3xl bg-size-[200%_200%] animate-gradient"
+            style={{ animationDelay: "500ms" }}
+          >
+            {t("role")}
+          </p>
+
+          <p
+            className="animate-fade-in-up mt-6 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg"
+            style={{ animationDelay: "700ms" }}
+          >
+            {t("bio")}
+          </p>
+
+          <div
+            className="animate-scale-in mt-10 flex flex-col gap-4 sm:flex-row"
+            style={{ animationDelay: "900ms" }}
+          >
+            <Link
+              href="/projects"
+              className="btn-glow text-white inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold"
+            >
+              {t("cta_projects")}
+              <FiArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+            </Link>
+            <Link
+              href="/contact"
+              className="btn-glow inline-flex items-center justify-center gap-2 rounded-lg border-2 border-primary px-8 py-3.5 text-sm font-semibold text-primary transition-colors duration-200 hover:bg-primary hover:text-white"
+            >
+              {t("cta_contact")}
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ── Featured Projects ── */}
       <Reveal delay={100}>
@@ -116,9 +140,12 @@ export default async function Home() {
             </div>
 
             <div className="mt-10 flex justify-center">
-              <Link href="/projects" className={btnLink}>
+              <Link
+                href="/projects"
+                className="btn-fill inline-flex items-center gap-2 rounded-lg border border-border-strong px-6 py-3 text-sm font-medium text-text transition-all duration-200 hover:text-white"
+              >
                 {t("featured_cta")}
-                <FiArrowRight className="h-4 w-4" />
+                <FiArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
@@ -139,9 +166,11 @@ export default async function Home() {
                 <Link
                   key={name}
                   href={`/technologies/${toSlug(name)}`}
-                  className="group flex flex-col items-center gap-2 animate-fade-in"
+                  className="group flex flex-col items-center gap-2"
                 >
-                  <div className={iconBoxSmall}>
+                  <div
+                    className={`${iconBoxSmall} ring-1 ring-border transition-shadow duration-200 group-hover:shadow-(--shadow-primary)`}
+                  >
                     <Image
                       src={src}
                       alt={name}
@@ -181,9 +210,12 @@ export default async function Home() {
                 </span>
               </div>
 
-              <Link href="/contact" className={btnPrimarySimple}>
+              <Link
+                href="/contact"
+                className="btn-fill inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:shadow-(--shadow-primary)"
+              >
                 {t("contact_section_cta")}
-                <FiArrowRight className="h-4 w-4" />
+                <FiArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
