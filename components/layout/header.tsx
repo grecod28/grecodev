@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import LanguageSelector from "@/components/i18n/languale-selector";
-import ThemeSelector from "@/components/theme/theme-selector";
 import MobileMenu from "@/components/layout/mobile-menu";
 
 export default function Header() {
@@ -72,7 +71,6 @@ export default function Header() {
       {/* Acciones en escritorio */}
       <section className="hidden xl:flex items-center gap-5 text-lg">
         <LanguageSelector />
-        <ThemeSelector />
       </section>
 
       {/* Mobile */}

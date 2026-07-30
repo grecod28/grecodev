@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { FiArrowRight, FiMail } from "react-icons/fi";
 import Reveal from "@/components/ui/reveal";
 import CanvasDots from "@/components/hero/canvas-dots";
+import ProfilePhoto from "@/components/hero/profile-photo";
 import {
   section,
   sectionCentered,
@@ -33,27 +34,8 @@ export default async function Home() {
         <CanvasDots />
 
         <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
-          <div
-            className="animate-fade-in-up relative mb-8"
-            style={{ animationDelay: "100ms" }}
-          >
-            <div
-              className="absolute -inset-6 rounded-full bg-primary/20 blur-3xl animate-float"
-              aria-hidden="true"
-            />
-            <div
-              className="absolute -inset-2 rounded-full bg-linear-to-r from-primary via-accent to-primary opacity-30 blur-xl animate-float"
-              aria-hidden="true"
-              style={{ animationDelay: "500ms" }}
-            />
-            <Image
-              src="/images/foto_perfil.png"
-              alt="Santiago Greco"
-              width={140}
-              height={140}
-              className="relative rounded-full object-cover ring-4 ring-primary/30 shadow-(--shadow-primary)"
-              priority
-            />
+          <div className="animate-fade-in-up mb-8" style={{ animationDelay: "100ms" }}>
+            <ProfilePhoto />
           </div>
 
           <h1
@@ -154,7 +136,7 @@ export default async function Home() {
 
       {/* ── Tech Stack ── */}
       <Reveal delay={200}>
-        <section className={`${section} bg-surface`}>
+        <section className={section}>
           <div className={sectionContainer}>
             <div className={sectionCentered}>
               <span className={sectionLabel}>{t("tech_stack")}</span>
@@ -192,7 +174,7 @@ export default async function Home() {
 
       {/* ── Contact ── */}
       <Reveal delay={300}>
-        <section className={`${section} bg-surface`}>
+        <section className={section}>
           <div className="mx-auto max-w-2xl">
             <div className={sectionCentered}>
               <span className={sectionLabel}>{t("contact_section_title")}</span>
