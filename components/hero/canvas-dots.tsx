@@ -7,6 +7,8 @@ interface Point {
   y: number;
   vx: number;
   vy: number;
+  originX: number;
+  originY: number;
 }
 
 export default function CanvasDots() {
@@ -21,9 +23,12 @@ export default function CanvasDots() {
 
     let animationId: number;
     let points: Point[] = [];
+    let mouse = { x: -1000, y: -1000 };
     const DOT_COUNT = 80;
     const MAX_DIST = 150;
     const DOT_RADIUS = 2;
+    const MOUSE_REPEL = 120;
+    const REPEL_FORCE = 3;
 
     function resize() {
       canvas!.width = window.innerWidth;
@@ -36,7 +41,13 @@ export default function CanvasDots() {
         y: Math.random() * canvas!.height,
         vx: (Math.random() - 0.5) * 0.4,
         vy: (Math.random() - 0.5) * 0.4,
+        originX: 0,
+        originY: 0,
       }));
+      for (const p of points) {
+        p.originX = p.x;
+        p.originY = p.y;
+      }
     }
 
     function draw() {
@@ -45,11 +56,31 @@ export default function CanvasDots() {
       for (let i = 0; i < points.length; i++) {
         const p = points[i];
 
+        // Mouse repulsion
+        const mdx = p.x - mouse.x;
+        const mdy = p.y - mouse.y;
+        const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+        if (mdist < MOUSE_REPEL && mdist > 0) {
+          const force = (MOUSE_REPEL - mdist) / MOUSE_REPEL;
+          p.vx += (mdx / mdist) * force * REPEL_FORCE * 0.1;
+          p.vy += (mdy / mdist) * force * REPEL_FORCE * 0.1;
+        }
+
+        // Return to origin force
+        const odx = p.originX - p.x;
+        const ody = p.originY - p.y;
+        p.vx += odx * 0.001;
+        p.vy += ody * 0.001;
+
+        // Damping
+        p.vx *= 0.99;
+        p.vy *= 0.99;
+
         p.x += p.vx;
         p.y += p.vy;
 
-        if (p.x < 0 || p.x > canvas!.width) p.vx *= -1;
-        if (p.y < 0 || p.y > canvas!.height) p.vy *= -1;
+        if (p.x < 0 || p.x > canvas!.width) { p.vx *= -1; p.x = Math.max(0, Math.min(canvas!.width, p.x)); }
+        if (p.y < 0 || p.y > canvas!.height) { p.vy *= -1; p.y = Math.max(0, Math.min(canvas!.height, p.y)); }
 
         ctx!.beginPath();
         ctx!.arc(p.x, p.y, DOT_RADIUS, 0, Math.PI * 2);
@@ -77,10 +108,23 @@ export default function CanvasDots() {
       animationId = requestAnimationFrame(draw);
     }
 
+    function onMouseMove(e: MouseEvent) {
+      const rect = canvas!.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    }
+
+    function onMouseLeave() {
+      mouse.x = -1000;
+      mouse.y = -1000;
+    }
+
     resize();
     initPoints();
     draw();
 
+    canvas.addEventListener("mousemove", onMouseMove);
+    canvas.addEventListener("mouseleave", onMouseLeave);
     window.addEventListener("resize", () => {
       resize();
       initPoints();
@@ -88,6 +132,8 @@ export default function CanvasDots() {
 
     return () => {
       cancelAnimationFrame(animationId);
+      canvas.removeEventListener("mousemove", onMouseMove);
+      canvas.removeEventListener("mouseleave", onMouseLeave);
       window.removeEventListener("resize", resize);
     };
   }, []);

@@ -29,7 +29,7 @@ export default async function Home() {
   return (
     <main className="flex flex-1 flex-col items-center w-full">
       {/* ── Hero ── */}
-      <section className="relative flex flex-col items-center justify-center w-full min-h-screen px-4 -mt-16">
+      <section className="relative flex flex-col items-center justify-center w-full min-h-dvh px-4 sm:px-6 -mt-16">
         <CanvasDots />
 
         <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
@@ -154,7 +154,7 @@ export default async function Home() {
 
       {/* ── Tech Stack ── */}
       <Reveal delay={200}>
-        <section className={section}>
+        <section className={`${section} bg-surface`}>
           <div className={sectionContainer}>
             <div className={sectionCentered}>
               <span className={sectionLabel}>{t("tech_stack")}</span>
@@ -192,7 +192,7 @@ export default async function Home() {
 
       {/* ── Contact ── */}
       <Reveal delay={300}>
-        <section className={section}>
+        <section className={`${section} bg-surface`}>
           <div className="mx-auto max-w-2xl">
             <div className={sectionCentered}>
               <span className={sectionLabel}>{t("contact_section_title")}</span>

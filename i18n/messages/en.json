@@ -163,7 +163,18 @@
     "github": "github.com/grecod28",
     "linkedin": "linkedin.com/in/santiagogreco",
     "location": "Ourense, Galicia, Spain",
-    "cta": "Get in Touch"
+    "cta": "Get in Touch",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_subject": "Subject",
+    "form_subject_placeholder": "Project collaboration",
+    "form_message": "Message",
+    "form_message_placeholder": "Tell me about your project or idea...",
+    "form_send": "Send Message",
+    "form_sending": "Sending...",
+    "form_success": "Message sent! I'll get back to you soon.",
+    "form_send_another": "Send another message",
+    "form_error": "Something went wrong. Please try again or email me directly."
   },
   "Metadata": {
     "title": "Santiago Greco | FullStack Web Developer",

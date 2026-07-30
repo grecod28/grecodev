@@ -162,7 +162,18 @@
     "github": "github.com/grecod28",
     "linkedin": "linkedin.com/in/santiagogreco",
     "location": "Ourense, Galicia, España",
-    "cta": "Ponte en Contacto"
+    "cta": "Ponte en Contacto",
+    "form_name": "Nombre",
+    "form_email": "Correo electrónico",
+    "form_subject": "Asunto",
+    "form_subject_placeholder": "Colaboración en proyecto",
+    "form_message": "Mensaje",
+    "form_message_placeholder": "Cuéntame sobre tu proyecto o idea...",
+    "form_send": "Enviar Mensaje",
+    "form_sending": "Enviando...",
+    "form_success": "¡Mensaje enviado! Te responderé pronto.",
+    "form_send_another": "Enviar otro mensaje",
+    "form_error": "Algo salió mal. Inténtalo de nuevo o escríbeme directamente."
   },
   "Metadata": {
     "title": "Santiago Greco | Desarrollador Web FullStack",
