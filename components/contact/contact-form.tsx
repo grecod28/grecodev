@@ -6,15 +6,22 @@ import { FiSend, FiCheck, FiAlertCircle } from "react-icons/fi";
 
 export default function ContactForm() {
   const t = useTranslations("Contact");
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     setStatus("sending");
 
     try {
-      const res = await fetch("https://formspree.io/f/ID_PLACEHOLDER", {
+      const res = await fetch("https://formspree.io/f/xpqvnvvk", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -50,7 +57,10 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-muted">
+          <label
+            htmlFor="name"
+            className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-muted"
+          >
             {t("form_name")}
           </label>
           <input
@@ -65,7 +75,10 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="email" className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-muted">
+          <label
+            htmlFor="email"
+            className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-muted"
+          >
             {t("form_email")}
           </label>
           <input
@@ -82,7 +95,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="subject" className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-muted">
+        <label
+          htmlFor="subject"
+          className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-muted"
+        >
           {t("form_subject")}
         </label>
         <input
@@ -98,7 +114,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-muted">
+        <label
+          htmlFor="message"
+          className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-muted"
+        >
           {t("form_message")}
         </label>
         <textarea
