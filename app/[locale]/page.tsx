@@ -4,7 +4,6 @@ import { toSlug } from "@/lib/functions/slug";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { FiArrowRight, FiMail } from "react-icons/fi";
-import Reveal from "@/components/ui/reveal";
 import CanvasDots from "@/components/hero/canvas-dots";
 import ProfilePhoto from "@/components/hero/profile-photo";
 import SkillsGrid from "@/components/ui/skills-grid";
@@ -83,8 +82,7 @@ export default async function Home() {
       </section>
 
       {/* ── Featured Projects ── */}
-      <Reveal delay={100}>
-        <section className={section}>
+        <section className={`${section} reveal-up`}>
           <div className={sectionContainer}>
             <div className={sectionCentered}>
               <span className={sectionLabel}>{t("featured_title")}</span>
@@ -134,11 +132,9 @@ export default async function Home() {
             </div>
           </div>
         </section>
-      </Reveal>
 
       {/* ── Tech Stack ── */}
-      <Reveal delay={200}>
-        <section className={section}>
+        <section className={`${section} reveal-scale`}>
           <div className={sectionContainer}>
             <header className={sectionCentered}>
               <span className={sectionLabel}>{t("tech_stack")}</span>
@@ -153,11 +149,9 @@ export default async function Home() {
             </div>
           </div>
         </section>
-      </Reveal>
 
       {/* ── Contact ── */}
-      <Reveal delay={300}>
-        <section className={section}>
+        <section className={`${section} reveal-up`}>
           <div className="mx-auto max-w-2xl">
             <div className={sectionCentered}>
               <span className={sectionLabel}>{t("contact_section_title")}</span>
@@ -185,7 +179,6 @@ export default async function Home() {
             </div>
           </div>
         </section>
-      </Reveal>
     </main>
   );
 }
