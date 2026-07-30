@@ -29,7 +29,6 @@ export default async function TechnologyPage({
 
   const t = await getTranslations("Technologies");
   const projectT = await getTranslations("Projects");
-  const common = await getTranslations("Common");
   const level = getProficiencyLevel(tech.name);
 
   const relatedProjects = PROJECTS.filter((p) =>
@@ -80,7 +79,7 @@ export default async function TechnologyPage({
 
           <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-surface-light">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-primary to-accent transition-all duration-700 ease-out"
+              className="h-full rounded-full bg-linear-to-r from-primary to-accent transition-all duration-700 ease-out"
               style={{ width: `${(level / 4) * 100}%` }}
             />
           </div>
