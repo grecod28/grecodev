@@ -1,9 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { FiArrowRight } from "react-icons/fi";
 import { TECH_STACK_ICONS } from "@/lib/constants/icons";
 import { toSlug } from "@/lib/functions/slug";
 import SkillsGrid from "@/components/ui/skills-grid";
+import FAQ from "@/components/ui/faq";
 import {
   section,
   sectionContainer,
@@ -40,8 +40,8 @@ export default async function AboutPage() {
         >
           <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-16">
             {/* Left — Profile */}
-            <div className="flex flex-col items-center text-center lg:w-1/2 lg:items-start lg:text-left">
-              <div className="mx-auto mb-6 lg:mx-0">
+            <div className="flex w-full flex-col items-center text-center lg:w-1/2">
+              <div className="mb-6">
                 <div className="relative">
                   <div
                     className="absolute -inset-4 rounded-full bg-primary/20 blur-2xl"
@@ -137,23 +137,13 @@ export default async function AboutPage() {
             <h2 className={sectionTitle}>{t("faq.title")}</h2>
           </div>
 
-          <div className="mt-10 space-y-3">
-            {FAQ_KEYS.map(({ q, a }) => (
-              <details
-                key={q}
-                className="group rounded-xl border border-border bg-surface transition-all duration-200 open:border-primary/50 [&_summary::-webkit-details-marker]:hidden"
-              >
-                <summary className="flex cursor-pointer items-center justify-between px-5 py-4 text-sm font-medium transition-colors hover:text-primary">
-                  {t(`faq.${q}`)}
-                  <FiArrowRight className="h-4 w-4 shrink-0 text-text-muted transition-all duration-200 group-open:rotate-90 group-open:text-primary" />
-                </summary>
-                <div className="border-t border-border px-5 pb-4 pt-3">
-                  <p className="text-sm leading-relaxed text-text-muted">
-                    {t(`faq.${a}`)}
-                  </p>
-                </div>
-              </details>
-            ))}
+          <div className="mt-10">
+            <FAQ
+              items={FAQ_KEYS.map(({ q, a }) => ({
+                question: t(`faq.${q}`),
+                answer: <p className="text-sm leading-relaxed text-text-muted">{t(`faq.${a}`)}</p>,
+              }))}
+            />
           </div>
         </div>
       </section>

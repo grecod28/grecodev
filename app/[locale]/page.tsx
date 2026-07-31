@@ -16,7 +16,6 @@ import {
   sectionLabel,
   sectionTitle,
   sectionDesc,
-  contactInfoBox,
 } from "@/lib/constants/styles";
 
 const featuredProjects = PROJECTS.filter((p) => p.featured);
@@ -200,19 +199,20 @@ export default async function Home() {
               <p className={sectionDesc}>{t("contact_section_desc")}</p>
             </div>
 
-            <div className="mt-10 flex flex-col items-center gap-6">
-              <div className={contactInfoBox}>
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-light">
-                  <FiMail className="h-5 w-5 text-text-muted" />
+            <div className="mt-12 flex flex-col items-center gap-8">
+              <div className="flex items-center gap-4 rounded-2xl border border-border bg-surface px-6 py-4 transition-all duration-200 hover:border-primary/50 hover:shadow-(--shadow-primary)">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                  <FiMail className="h-6 w-6 text-primary" />
                 </div>
-                <span className="text-sm font-medium">
-                  {t("contact_section_email")}
-                </span>
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-wider text-text-muted">Email</p>
+                  <p className="text-sm font-medium">{t("contact_section_email")}</p>
+                </div>
               </div>
 
               <Link
                 href="/contact"
-                className="btn-fill inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:shadow-(--shadow-primary)"
+                className="btn-glow inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:shadow-(--shadow-primary)"
               >
                 {t("contact_section_cta")}
                 <FiArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />

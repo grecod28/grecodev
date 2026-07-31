@@ -165,6 +165,10 @@ button:hover {
   transform: scale(1.1);
 }
 
+button.no-scale-hover:hover {
+  transform: scale(1) !important;
+}
+
 /* ── Hero glow button ── */
 .btn-glow {
   position: relative;
