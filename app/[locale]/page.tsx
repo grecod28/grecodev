@@ -1,7 +1,9 @@
 import { TECH_STACK_ICONS } from "@/lib/constants/icons";
+import { ALL_TECH_ICONS } from "@/lib/constants/icons";
 import { PROJECTS } from "@/lib/constants/projects";
 import { toSlug } from "@/lib/functions/slug";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { FiArrowRight, FiMail } from "react-icons/fi";
 import CanvasDots from "@/components/hero/canvas-dots";
@@ -14,12 +16,14 @@ import {
   sectionLabel,
   sectionTitle,
   sectionDesc,
-  cardHover,
-  iconBoxLarge,
   contactInfoBox,
 } from "@/lib/constants/styles";
 
 const featuredProjects = PROJECTS.filter((p) => p.featured);
+
+function getTechIconFromAll(name: string) {
+  return ALL_TECH_ICONS.find((t) => t.name === name);
+}
 
 export default async function Home() {
   const t = await getTranslations("Index");
@@ -90,38 +94,75 @@ export default async function Home() {
               <p className={sectionDesc}>{t("featured_desc")}</p>
             </div>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-6">
-              {featuredProjects.map((project) => {
+            <div className="mt-10 flex flex-col gap-20 lg:gap-28">
+              {featuredProjects.map((project, index) => {
                 const Icon = project.icon;
+                const isLeft = index % 2 === 0;
 
                 return (
-                  <Link
+                  <div
                     key={project.id}
-                    href={`/projects/${project.id}`}
-                    className={`${cardHover} min-h-65 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]`}
+                    className={`flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-14 ${
+                      isLeft ? "" : "lg:flex-row-reverse"
+                    }`}
                   >
-                    <div className={`${iconBoxLarge} text-text-muted`}>
-                      <Icon className="h-7 w-7" />
+                    <Link href={`/projects/${project.id}`} className="reveal-left group/image block w-full shrink-0 overflow-hidden rounded-2xl lg:w-[60%]">
+                      {project.ImageSrc ? (
+                        <div className="relative aspect-[16/9]">
+                          <Image
+                            src={project.ImageSrc}
+                            alt={projectT(`items.${project.id}.title`)}
+                            fill
+                            className="object-contain transition-transform duration-500 group-hover/image:scale-105"
+                            sizes="(max-width: 1024px) 100vw, 60vw"
+                          />
+                        </div>
+                      ) : (
+                        <div className="flex aspect-[16/9] items-center justify-center bg-linear-to-br from-primary/20 to-accent/20 transition-transform duration-500 group-hover/image:scale-105">
+                          <Icon className="h-20 w-20 text-primary/30" />
+                        </div>
+                      )}
+                    </Link>
+
+                    <div className={`reveal-right flex flex-col lg:w-[40%] ${isLeft ? "" : "lg:text-right lg:items-end"}`}>
+                      <Link href={`/projects/${project.id}`} className="group/title">
+                        <h3 className="text-2xl font-bold transition-colors group-hover/title:text-primary sm:text-3xl">
+                          {projectT(`items.${project.id}.title`)}
+                        </h3>
+                      </Link>
+
+                      <p className="mt-4 text-base leading-relaxed text-text-muted">
+                        {projectT(`items.${project.id}.description`)}
+                      </p>
+
+                      <div className={`mt-5 flex flex-wrap gap-1.5 ${isLeft ? "" : "lg:justify-end"}`}>
+                        {project.techStack.map((tech) => {
+                          const icon = getTechIconFromAll(tech);
+                          return (
+                            <span key={tech} className="inline-flex items-center gap-1 rounded-md bg-surface-light px-2 py-1 text-[10px] font-medium text-text-muted">
+                              {icon && <img src={icon.src} alt="" className="h-3 w-3" />}
+                              {tech}
+                            </span>
+                          );
+                        })}
+                      </div>
+
+                      <div className="mt-7">
+                        <Link
+                          href={`/projects/${project.id}`}
+                          className="btn-fill inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-text transition-all duration-200 hover:text-white"
+                        >
+                          More details
+                          <FiArrowRight className="h-4 w-4" />
+                        </Link>
+                      </div>
                     </div>
-
-                    <h3 className="mt-4 text-lg font-semibold">
-                      {projectT(`items.${project.id}.title`)}
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-relaxed text-text-muted line-clamp-2">
-                      {projectT(`items.${project.id}.description`)}
-                    </p>
-
-                    <div className="mt-auto flex items-center gap-1.5 pt-4 text-xs font-medium text-primary">
-                      More details
-                      <FiArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
-                    </div>
-                  </Link>
+                  </div>
                 );
               })}
             </div>
 
-            <div className="mt-10 flex justify-center">
+            <div className="mt-14 flex justify-center">
               <Link
                 href="/projects"
                 className="btn-fill inline-flex items-center gap-2 rounded-lg border border-border-strong px-6 py-3 text-sm font-medium text-text transition-all duration-200 hover:text-white"
