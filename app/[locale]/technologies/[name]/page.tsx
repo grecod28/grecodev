@@ -7,9 +7,9 @@ import { PROJECTS } from "@/lib/constants/projects";
 import { getProficiencyLevel } from "@/lib/constants/tech-proficiency";
 import { toSlug } from "@/lib/functions/slug";
 import { FiArrowRight } from "react-icons/fi";
+import BackLink from "@/components/ui/back-link";
 import {
   pageContainer,
-  backLink,
   detailIconBox,
   cardContent,
 } from "@/lib/constants/styles";
@@ -29,7 +29,6 @@ export default async function TechnologyPage({
 
   const t = await getTranslations("Technologies");
   const projectT = await getTranslations("Projects");
-
   const level = getProficiencyLevel(tech.name);
 
   const relatedProjects = PROJECTS.filter((p) =>
@@ -39,10 +38,7 @@ export default async function TechnologyPage({
   return (
     <main className={pageContainer}>
       <div className="mx-auto w-full max-w-3xl">
-        <Link href="/technologies" className={backLink}>
-          <span aria-hidden="true">&larr;</span>
-          {t("back")}
-        </Link>
+        <BackLink />
 
         <div className="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
           <div className={`${detailIconBox} p-5`}>
@@ -83,7 +79,7 @@ export default async function TechnologyPage({
 
           <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-surface-light">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-primary to-accent transition-all duration-700 ease-out"
+              className="h-full rounded-full bg-linear-to-r from-primary to-accent transition-all duration-700 ease-out"
               style={{ width: `${(level / 4) * 100}%` }}
             />
           </div>

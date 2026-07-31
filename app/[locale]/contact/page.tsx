@@ -3,26 +3,34 @@ import {
   FiMail,
   FiGithub,
   FiLinkedin,
-  FiMapPin,
-  FiArrowRight,
 } from "react-icons/fi";
 import {
   section,
   sectionCentered,
   sectionLabel,
   sectionTitle,
-  iconBoxSmaller,
 } from "@/lib/constants/styles";
+import ContactForm from "@/components/contact/contact-form";
 
-const CONTACT_ITEMS = [
-  { key: "email", icon: FiMail, href: "mailto:stgrecodev@gmail.com" },
-  { key: "github", icon: FiGithub, href: "https://github.com/grecod28" },
+const SOCIAL_LINKS = [
+  {
+    key: "github",
+    icon: FiGithub,
+    href: "https://github.com/grecod28",
+    label: "GitHub",
+  },
   {
     key: "linkedin",
     icon: FiLinkedin,
     href: "https://linkedin.com/in/santiago-greco-dominguez-681588348",
+    label: "LinkedIn",
   },
-  { key: "location", icon: FiMapPin, href: null },
+  {
+    key: "email",
+    icon: FiMail,
+    href: "mailto:stgrecodev@gmail.com",
+    label: "Email",
+  },
 ] as const;
 
 export default async function ContactPage() {
@@ -30,76 +38,42 @@ export default async function ContactPage() {
 
   return (
     <section className={section}>
-      <div
-        className="mx-auto max-w-4xl animate-fade-in"
-        style={{ animationDelay: "500ms" }}
-      >
+      <div className="mx-auto max-w-4xl animate-fade-in" style={{ animationDelay: "200ms" }}>
         <div className={sectionCentered}>
-          <span className={sectionLabel}>
-            {t("cta")}
-          </span>
+          <span className={sectionLabel}>{t("cta")}</span>
           <h2 className={sectionTitle}>{t("title")}</h2>
           <p className="mt-3 max-w-lg text-base leading-relaxed text-text-muted">
             {t("description")}
           </p>
         </div>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          {CONTACT_ITEMS.map(({ key, icon: Icon, href }) => {
-            const value = t(`${key}`);
-            const isLink = href !== null;
-
-            const content = (
-              <div className="flex w-full items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all duration-200 hover:border-primary/50 hover:shadow-(--shadow-primary)">
-                <div className={iconBoxSmaller}>
-                  <Icon className="h-5 w-5 text-text-muted transition-colors group-hover:text-primary" />
-                </div>
-
-                <div className="min-w-0">
-                  <p className="text-xs font-medium uppercase tracking-wider text-text-muted">
-                    {key}
-                  </p>
-
-                  <p className="mt-0.5 truncate text-sm font-medium">{value}</p>
-                </div>
-              </div>
-            );
-
-            const wrapperClass =
-              "group block flex-1 min-w-[260px] max-w-[320px]";
-
-            if (isLink) {
-              const isExternal = href.startsWith("http");
-
-              return (
-                <a
-                  key={key}
-                  href={href}
-                  target={isExternal ? "_blank" : undefined}
-                  rel={isExternal ? "noopener noreferrer" : undefined}
-                  className={wrapperClass}
-                >
-                  {content}
-                </a>
-              );
-            }
-
-            return (
-              <div key={key} className={wrapperClass}>
-                {content}
-              </div>
-            );
-          })}
+        <div className="mt-12 flex flex-col items-center">
+          <ContactForm />
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <a
-            href="mailto:hello@santiagogreco.dev"
-            className="text-white inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-medium transition-all duration-200 hover:bg-primary-hover hover:shadow-(--shadow-primary)"
-          >
-            {t("cta")}
-            <FiArrowRight className="h-4 w-4" />
-          </a>
+        <div className="mt-12 border-t border-border pt-10">
+          <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-text-muted">
+            {t("location")}
+          </p>
+
+          <div className="mt-6 flex items-center justify-center gap-6">
+            {SOCIAL_LINKS.map((item) => (
+              <a
+                key={item.key}
+                href={item.href}
+                target={item.key !== "email" ? "_blank" : undefined}
+                rel={item.key !== "email" ? "noopener noreferrer" : undefined}
+                className="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-110"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-surface-light transition-all duration-200 group-hover:bg-primary/10 group-hover:text-primary">
+                  <item.icon className="h-6 w-6 text-text-muted transition-colors group-hover:text-primary" />
+                </div>
+                <span className="text-[10px] font-medium uppercase tracking-wider text-text-muted transition-colors group-hover:text-primary">
+                  {item.label}
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

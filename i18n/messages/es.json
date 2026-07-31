@@ -6,6 +6,14 @@
     "about": "Sobre mí",
     "contact": "Contacto"
   },
+  "Common": {
+    "back": "Volver atrás",
+    "learn_more": "Ver más",
+    "view_all": "Ver todos",
+    "scroll": "Desplazar",
+    "send": "Enviar",
+    "close": "Cerrar"
+  },
   "Index": {
     "title": "Desarrollador Web Full Stack",
     "role": "Desarrollador FullStack",
@@ -15,7 +23,7 @@
     "featured_title": "Proyectos Destacados",
     "featured_desc": "Algunos proyectos que he creado para explorar, aprender y resolver problemas reales.",
     "featured_cta": "Ver Todos los Proyectos",
-    "tech_stack": "Tecnologías favoritas",
+    "tech_stack": "Mi Stack",
     "contact_section_title": "Trabajemos Juntos",
     "contact_section_desc": "¿Tienes un proyecto en mente o simplemente quieres saludar? Me encantaría saber de ti. Ya sea una aplicación web, una API o una solución digital completa — estoy aquí para ayudar.",
     "contact_section_email": "stgrecodev@gmail.com",
@@ -109,9 +117,12 @@
       "php": "Un popular lenguaje de scripting de propósito general especialmente adecuado para el desarrollo web.",
       "apache": "Un software de servidor web de código abierto ampliamente utilizado.",
       "nginx": "Un servidor HTTP de alto rendimiento y proxy inverso.",
+      "nodejs": "Un entorno de ejecución JavaScript construido sobre el motor V8 de Chrome para crear aplicaciones de red rápidas y escalables.",
       "n8n": "Plataforma de automatizacion de flujos de trabajo.",
+      "react": "Una biblioteca de JavaScript para construir interfaces de usuario basadas en componentes reutilizables.",
       "aws": "Una plataforma integral de computación en la nube que ofrece servicios de infraestructura bajo demanda, desde servidores virtuales y almacenamiento hasta computación serverless y machine learning.",
-      "docker": "Una plataforma para desarrollar, desplegar y ejecutar aplicaciones dentro de contenedores ligeros y portables que se ejecutan de forma consistente en cualquier entorno."
+      "docker": "Una plataforma para desarrollar, desplegar y ejecutar aplicaciones dentro de contenedores ligeros y portables que se ejecutan de forma consistente en cualquier entorno.",
+      "expressjs": "Un framework de aplicaciones web Node.js minimalista y flexible que proporciona un conjunto robusto de características para aplicaciones web y móviles."
     }
   },
   "About": {
@@ -124,7 +135,7 @@
     "about": {
       "title": "Sobre Mí",
       "subtitle": "Creando Código con Propósito",
-      "p1": "Graduado en Desarrollo de Aplicaciones Web (CFGS DAW) con una profunda pasión por la tecnología. Durante mi formación me especialicé en desarrollo web FullStack, trabajando con tecnologías modernas en todo el stack — desde frontends interactivos con frameworks como Angular, Next.js y React, hasta backends robustos con Node.js, NestJS y APIs, y servicios cloud en AWS.",
+      "p1": "Graduado en Desarrollo de Aplicaciones Web (CFGS DAW) con una profunda pasión por la tecnología. Durante mi formación me especialicé en desarrollo web FullStack, trabajando con tecnologías modernas en todo el stack — desde frontends interactivos con frameworks como Next.js y React, hasta backends robustos con Node.js, NestJS y APIs, y servicios cloud en AWS.",
       "p2": "Mi enfoque combina sólidas habilidades técnicas con una orientación a resolver problemas reales. Disfruto creando aplicaciones escalables y eficientes, desplegándolas en infraestructura cloud de AWS, optimizando el rendimiento y diseñando interfaces intuitivas que marcan la diferencia en la experiencia del usuario.",
       "p3": "Creo firmemente en el aprendizaje continuo. El mundo tecnológico avanza rápido y me encanta mantenerme al día con nuevas tendencias, herramientas y metodologías para ofrecer siempre las mejores soluciones."
     },
@@ -142,7 +153,7 @@
       "q1": "¿Qué tipo de desarrollo realizas?",
       "a1": "Me especializo en desarrollo web FullStack, trabajando tanto en el frontend como en el backend. Desde interfaces de usuario interactivas con frameworks modernos hasta APIs robustas y diseño de bases de datos.",
       "q2": "¿Cuáles son tus tecnologías favoritas?",
-      "a2": "Disfruto trabajando con TypeScript, Next.js y NestJS. También me apasiona Angular para el frontend, PostgreSQL para bases de datos y AWS para infraestructura cloud — siempre explorando nuevas herramientas que mejoren mi flujo de trabajo.",
+      "a2": "Disfruto trabajando con TypeScript, Next.js y NestJS. También me apasiona React para el frontend, PostgreSQL para bases de datos y AWS para infraestructura cloud — siempre explorando nuevas herramientas que mejoren mi flujo de trabajo.",
       "q3": "¿Estás disponible para proyectos?",
       "a3": "Sí, actualmente estoy abierto a nuevos proyectos y colaboraciones. Ya sea freelance, media jornada o jornada completa, estoy emocionado por asumir nuevos desafíos.",
       "q4": "¿Qué tipo de proyectos te interesan?",
@@ -162,10 +173,21 @@
     "github": "github.com/grecod28",
     "linkedin": "linkedin.com/in/santiagogreco",
     "location": "Ourense, Galicia, España",
-    "cta": "Ponte en Contacto"
+    "cta": "Ponte en Contacto",
+    "form_name": "Nombre",
+    "form_email": "Correo electrónico",
+    "form_subject": "Asunto",
+    "form_subject_placeholder": "Colaboración en proyecto",
+    "form_message": "Mensaje",
+    "form_message_placeholder": "Cuéntame sobre tu proyecto o idea...",
+    "form_send": "Enviar Mensaje",
+    "form_sending": "Enviando...",
+    "form_success": "¡Mensaje enviado! Te responderé pronto.",
+    "form_send_another": "Enviar otro mensaje",
+    "form_error": "Algo salió mal. Inténtalo de nuevo o escríbeme directamente."
   },
   "Metadata": {
     "title": "Santiago Greco | Desarrollador Web FullStack",
-    "description": "Desarrollador Full Stack especializado en aplicaciones web modernas y escalables. Trabajo con tecnologías como Angular, Next.js, NestJS, TypeScript y Docker, creando soluciones eficientes, seguras y centradas en la experiencia de usuario, desde el frontend hasta el backend."
+    "description": "Desarrollador Full Stack especializado en aplicaciones web modernas y escalables. Trabajo con tecnologías como React, Next.js, NestJS, TypeScript y Docker, creando soluciones eficientes, seguras y centradas en la experiencia de usuario, desde el frontend hasta el backend."
   }
 }

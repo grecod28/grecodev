@@ -1,11 +1,14 @@
 import { TECH_STACK_ICONS } from "@/lib/constants/icons";
+import { ALL_TECH_ICONS } from "@/lib/constants/icons";
 import { PROJECTS } from "@/lib/constants/projects";
 import { toSlug } from "@/lib/functions/slug";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { FiArrowRight, FiMail } from "react-icons/fi";
-import Reveal from "@/components/ui/reveal";
+import CanvasDots from "@/components/hero/canvas-dots";
+import ProfilePhoto from "@/components/hero/profile-photo";
+import SkillsGrid from "@/components/ui/skills-grid";
 import {
   section,
   sectionCentered,
@@ -13,17 +16,13 @@ import {
   sectionLabel,
   sectionTitle,
   sectionDesc,
-  btnPrimary,
-  btnSecondary,
-  btnLink,
-  btnPrimarySimple,
-  cardHover,
-  iconBoxLarge,
-  iconBoxSmall,
-  contactInfoBox,
 } from "@/lib/constants/styles";
 
 const featuredProjects = PROJECTS.filter((p) => p.featured);
+
+function getTechIconFromAll(name: string) {
+  return ALL_TECH_ICONS.find((t) => t.name === name);
+}
 
 export default async function Home() {
   const t = await getTranslations("Index");
@@ -32,51 +31,61 @@ export default async function Home() {
   return (
     <main className="flex flex-1 flex-col items-center w-full">
       {/* ── Hero ── */}
-      <Reveal>
-        <section className="flex flex-col items-center justify-center w-full px-4 pt-16 pb-16">
-          <div className="flex flex-col items-center text-center max-w-3xl">
-            <div className="relative mb-6">
-              <div
-                className="absolute -inset-4 rounded-full bg-primary/20 blur-2xl"
-                aria-hidden="true"
-              />
-              <Image
-                src="/images/foto_perfil.png"
-                alt="Santiago Greco"
-                width={120}
-                height={120}
-                className="relative rounded-full object-cover ring-4 ring-border-strong shadow-surface"
-                priority
-              />
-            </div>
+      <section className="relative flex flex-col items-center justify-center w-full min-h-dvh px-4 sm:px-6 -mt-16">
+        <CanvasDots />
 
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Santiago Greco
-            </h1>
-
-            <p className="mt-2 bg-linear-to-r from-primary to-accent bg-clip-text text-lg font-semibold text-transparent sm:text-xl">
-              {t("role")}
-            </p>
-
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-text-muted sm:text-lg">
-              {t("bio")}
-            </p>
-
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link href="/projects" className={btnPrimary}>
-                {t("cta_projects")}
-              </Link>
-              <Link href="/contact" className={btnSecondary}>
-                {t("cta_contact")}
-              </Link>
-            </div>
+        <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
+          <div
+            className="animate-fade-in-up mb-8"
+            style={{ animationDelay: "100ms" }}
+          >
+            <ProfilePhoto />
           </div>
-        </section>
-      </Reveal>
+
+          <h1
+            className="animate-fade-in-left text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+            style={{ animationDelay: "300ms" }}
+          >
+            Santiago Greco
+          </h1>
+
+          <p
+            className="mt-3 bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-xl font-semibold text-transparent sm:text-2xl lg:text-3xl bg-size-[200%_200%] animate-gradient"
+            style={{ animationDelay: "500ms" }}
+          >
+            {t("role")}
+          </p>
+
+          <p
+            className="animate-fade-in-up mt-6 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg"
+            style={{ animationDelay: "700ms" }}
+          >
+            {t("bio")}
+          </p>
+
+          <div
+            className="animate-scale-in mt-10 flex flex-col gap-4 sm:flex-row"
+            style={{ animationDelay: "900ms" }}
+          >
+            <Link
+              href="/projects"
+              className="btn-glow text-white inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold"
+            >
+              {t("cta_projects")}
+              <FiArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+            </Link>
+            <Link
+              href="/contact"
+              className="btn-glow inline-flex items-center justify-center gap-2 rounded-lg border-2 border-primary px-8 py-3.5 text-sm font-semibold text-primary transition-colors duration-200 hover:bg-primary hover:text-white"
+            >
+              {t("cta_contact")}
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ── Featured Projects ── */}
-      <Reveal delay={100}>
-        <section className={section}>
+        <section className={`${section} reveal-up`}>
           <div className={sectionContainer}>
             <div className={sectionCentered}>
               <span className={sectionLabel}>{t("featured_title")}</span>
@@ -84,86 +93,105 @@ export default async function Home() {
               <p className={sectionDesc}>{t("featured_desc")}</p>
             </div>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-6">
-              {featuredProjects.map((project) => {
+            <div className="mt-10 flex flex-col gap-20 lg:gap-28">
+              {featuredProjects.map((project, index) => {
                 const Icon = project.icon;
+                const isLeft = index % 2 === 0;
 
                 return (
-                  <Link
+                  <div
                     key={project.id}
-                    href={`/projects/${project.id}`}
-                    className={`${cardHover} min-h-65 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]`}
+                    className={`flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-14 ${
+                      isLeft ? "" : "lg:flex-row-reverse"
+                    }`}
                   >
-                    <div className={`${iconBoxLarge} text-text-muted`}>
-                      <Icon className="h-7 w-7" />
+                    <Link href={`/projects/${project.id}`} className="reveal-left group/image block w-full shrink-0 overflow-hidden rounded-2xl lg:w-[60%]">
+                      {project.ImageSrc ? (
+                        <div className="relative aspect-[16/9]">
+                          <Image
+                            src={project.ImageSrc}
+                            alt={projectT(`items.${project.id}.title`)}
+                            fill
+                            className="object-contain transition-transform duration-500 group-hover/image:scale-105"
+                            sizes="(max-width: 1024px) 100vw, 60vw"
+                          />
+                        </div>
+                      ) : (
+                        <div className="flex aspect-[16/9] items-center justify-center bg-linear-to-br from-primary/20 to-accent/20 transition-transform duration-500 group-hover/image:scale-105">
+                          <Icon className="h-20 w-20 text-primary/30" />
+                        </div>
+                      )}
+                    </Link>
+
+                    <div className={`reveal-right flex flex-col lg:w-[40%] ${isLeft ? "" : "lg:text-right lg:items-end"}`}>
+                      <Link href={`/projects/${project.id}`} className="group/title">
+                        <h3 className="text-2xl font-bold transition-colors group-hover/title:text-primary sm:text-3xl">
+                          {projectT(`items.${project.id}.title`)}
+                        </h3>
+                      </Link>
+
+                      <p className="mt-4 text-base leading-relaxed text-text-muted">
+                        {projectT(`items.${project.id}.description`)}
+                      </p>
+
+                      <div className={`mt-5 flex flex-wrap gap-1.5 ${isLeft ? "" : "lg:justify-end"}`}>
+                        {project.techStack.map((tech) => {
+                          const icon = getTechIconFromAll(tech);
+                          return (
+                            <span key={tech} className="inline-flex items-center gap-1 rounded-md bg-surface-light px-2 py-1 text-[10px] font-medium text-text-muted">
+                              {icon && <img src={icon.src} alt="" className="h-3 w-3" />}
+                              {tech}
+                            </span>
+                          );
+                        })}
+                      </div>
+
+                      <div className="mt-7">
+                        <Link
+                          href={`/projects/${project.id}`}
+                          className="btn-fill inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-text transition-all duration-200 hover:text-white"
+                        >
+                          More details
+                          <FiArrowRight className="h-4 w-4" />
+                        </Link>
+                      </div>
                     </div>
-
-                    <h3 className="mt-4 text-lg font-semibold">
-                      {projectT(`items.${project.id}.title`)}
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-relaxed text-text-muted line-clamp-2">
-                      {projectT(`items.${project.id}.description`)}
-                    </p>
-
-                    <div className="mt-auto flex items-center gap-1.5 pt-4 text-xs font-medium text-primary">
-                      More details
-                      <FiArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
-                    </div>
-                  </Link>
+                  </div>
                 );
               })}
             </div>
 
-            <div className="mt-10 flex justify-center">
-              <Link href="/projects" className={btnLink}>
+            <div className="mt-14 flex justify-center">
+              <Link
+                href="/projects"
+                className="btn-fill inline-flex items-center gap-2 rounded-lg border border-border-strong px-6 py-3 text-sm font-medium text-text transition-all duration-200 hover:text-white"
+              >
                 {t("featured_cta")}
-                <FiArrowRight className="h-4 w-4" />
+                <FiArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
         </section>
-      </Reveal>
 
       {/* ── Tech Stack ── */}
-      <Reveal delay={200}>
-        <section className={section}>
+        <section className={`${section} reveal-scale`}>
           <div className={sectionContainer}>
-            <div className={sectionCentered}>
+            <header className={sectionCentered}>
               <span className={sectionLabel}>{t("tech_stack")}</span>
               <h2 className={sectionTitle}>{t("tech_stack")}</h2>
-            </div>
+            </header>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
-              {TECH_STACK_ICONS.map(({ name, src }) => (
-                <Link
-                  key={name}
-                  href={`/technologies/${toSlug(name)}`}
-                  className="group flex flex-col items-center gap-2 animate-fade-in"
-                >
-                  <div className={iconBoxSmall}>
-                    <Image
-                      src={src}
-                      alt={name}
-                      width={28}
-                      height={28}
-                      className="h-7 w-7"
-                      unoptimized
-                    />
-                  </div>
-                  <span className="text-[10px] font-medium text-text-muted transition-colors group-hover:text-text">
-                    {name}
-                  </span>
-                </Link>
-              ))}
+            <div className="mt-10 flex justify-center">
+              <SkillsGrid
+                skills={TECH_STACK_ICONS.map((s) => ({ ...s, slug: toSlug(s.name) }))}
+                linkPrefix="/technologies"
+              />
             </div>
           </div>
         </section>
-      </Reveal>
 
       {/* ── Contact ── */}
-      <Reveal delay={300}>
-        <section className={section}>
+        <section className={`${section} reveal-up`}>
           <div className="mx-auto max-w-2xl">
             <div className={sectionCentered}>
               <span className={sectionLabel}>{t("contact_section_title")}</span>
@@ -171,24 +199,27 @@ export default async function Home() {
               <p className={sectionDesc}>{t("contact_section_desc")}</p>
             </div>
 
-            <div className="mt-10 flex flex-col items-center gap-6">
-              <div className={contactInfoBox}>
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-light">
-                  <FiMail className="h-5 w-5 text-text-muted" />
+            <div className="mt-12 flex flex-col items-center gap-8">
+              <div className="flex items-center gap-4 rounded-2xl border border-border bg-surface px-6 py-4 transition-all duration-200 hover:border-primary/50 hover:shadow-(--shadow-primary)">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                  <FiMail className="h-6 w-6 text-primary" />
                 </div>
-                <span className="text-sm font-medium">
-                  {t("contact_section_email")}
-                </span>
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-wider text-text-muted">Email</p>
+                  <p className="text-sm font-medium">{t("contact_section_email")}</p>
+                </div>
               </div>
 
-              <Link href="/contact" className={btnPrimarySimple}>
+              <Link
+                href="/contact"
+                className="btn-glow inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:shadow-(--shadow-primary)"
+              >
                 {t("contact_section_cta")}
-                <FiArrowRight className="h-4 w-4" />
+                <FiArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
         </section>
-      </Reveal>
     </main>
   );
 }

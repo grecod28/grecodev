@@ -1,16 +1,23 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import LanguageSelector from "@/components/i18n/languale-selector";
-import ThemeSelector from "@/components/theme/theme-selector";
 import MobileMenu from "@/components/layout/mobile-menu";
 
 export default function Header() {
   const t = useTranslations("Header");
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const links = [
     { href: "/", label: t("home") },
@@ -20,10 +27,8 @@ export default function Header() {
     { href: "/contact", label: t("contact") },
   ];
 
-  // elimina el locale (/es, /en, etc.)
   const getPathWithoutLocale = (path: string) => {
     const segments = path.split("/");
-    // ['', 'es', 'projects']
     if (segments.length > 1 && segments[1].length === 2) {
       return "/" + segments.slice(2).join("/");
     }
@@ -38,26 +43,34 @@ export default function Header() {
   };
 
   return (
-    <header className="flex items-center justify-between max-w-260 w-full mt-16 mb-4 px-4">
+    <header
+      className={`nav-overlay flex items-center justify-between w-full px-6 py-4 ${
+        scrolled ? "scrolled" : ""
+      }`}
+    >
       {/* Navegación de escritorio */}
-      <nav className="hidden xl:flex xl:gap-6 text-lg">
+      <nav className="hidden xl:flex xl:gap-8 text-base">
         {links.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className={`transition-colors hover:text-primary ${
-              isActive(link.href) ? "text-primary font-medium" : ""
+            className={`relative transition-colors hover:text-primary ${
+              isActive(link.href)
+                ? "text-primary font-semibold"
+                : "text-text-muted"
             }`}
           >
             {link.label}
+            {isActive(link.href) && (
+              <span className="absolute -bottom-1 left-1/2 h-0.5 w-4 -translate-x-1/2 rounded-full bg-primary" />
+            )}
           </Link>
         ))}
       </nav>
 
       {/* Acciones en escritorio */}
-      <section className="hidden xl:flex gap-4 text-lg">
+      <section className="hidden xl:flex items-center gap-5 text-lg">
         <LanguageSelector />
-        <ThemeSelector />
       </section>
 
       {/* Mobile */}

@@ -17,6 +17,7 @@ export const PROJECTS = [
     ],
     githubUrl: "https://github.com/grecod28/umbrachat",
     liveUrl: "https://umbrachat.org",
+    ImageSrc: "/images/projects/umbrachat.png",
     featured: true,
   },
   {
@@ -32,6 +33,7 @@ export const PROJECTS = [
     ],
     githubUrl: "https://github.com/grecod28/devmirror",
     liveUrl: undefined,
+    ImageSrc: "",
     featured: true,
   },
   {
@@ -40,6 +42,7 @@ export const PROJECTS = [
     techStack: ["Next.js", "Tailwind CSS", "TypeScript", "HTML5", "CSS3"],
     githubUrl: "https://github.com/grecod28/grecodev",
     liveUrl: "https://grecodev.vercel.app",
+    ImageSrc: "",
     featured: false,
   },
 ] as const;
