@@ -1,12 +1,22 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { FiHelpCircle } from "react-icons/fi";
 
 export default function ProfilePhoto() {
+  const [flipped, setFlipped] = useState(false);
+
   return (
-    <div className="group relative mx-auto h-35 w-35 cursor-pointer perspective-200">
-      <div className="relative h-full w-full transition-transform duration-700 transform-3d group-hover:transform-[rotateY(180deg)]">
+    <div
+      className="group relative mx-auto h-35 w-35 cursor-pointer perspective-200"
+      onClick={() => setFlipped(!flipped)}
+    >
+      <div
+        className={`relative h-full w-full transition-transform duration-700 transform-3d ${
+          flipped ? "transform-[rotateY(180deg)]" : "group-hover:transform-[rotateY(180deg)]"
+        }`}
+      >
         {/* Front — question mark */}
         <div className="absolute inset-0 flex items-center justify-center rounded-full bg-surface ring-4 ring-primary/30 shadow-(--shadow-primary) backface-hidden">
           <div
@@ -32,7 +42,7 @@ export default function ProfilePhoto() {
           />
         </div>
       </div>
-      {/* Photo indicator */}
+      {/* Indicator */}
       <div className="absolute -right-1 -top-1 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-primary shadow-(--shadow-primary) transition-transform duration-300 group-hover:scale-0">
         <span className="text-xs font-bold text-white">ME</span>
       </div>
