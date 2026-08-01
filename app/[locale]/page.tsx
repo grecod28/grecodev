@@ -31,7 +31,7 @@ export default async function Home() {
   return (
     <main className="flex flex-1 flex-col items-center w-full">
       {/* ── Hero ── */}
-      <section className="relative flex flex-col items-center justify-center w-full min-h-dvh px-4 sm:px-6 -mt-16">
+      <section className="relative flex flex-col items-center justify-center w-full min-h-dvh px-4 sm:px-6 -mt-10 sm:-mt-16">
         <CanvasDots />
 
         <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
