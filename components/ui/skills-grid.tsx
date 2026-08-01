@@ -43,7 +43,7 @@ function SkillCard({
 }) {
   const card = (
     <div
-      className="group flex w-26.25 flex-col items-center justify-center gap-1 rounded-xl border-2 border-transparent bg-surface px-2 py-3 animate-fade-in transition-all duration-300 hover:scale-105 hover:shadow-(--shadow-primary) sm:w-41.25 sm:gap-1.5 sm:px-3"
+      className="group flex w-22.5 flex-col items-center justify-center gap-1 rounded-xl border-2 border-transparent bg-surface px-1 py-2 animate-fade-in transition-all duration-300 hover:scale-105 hover:shadow-(--shadow-primary) sm:w-41.25 sm:gap-1.5 sm:px-3 sm:py-3"
       style={{
         backgroundImage:
           "linear-gradient(var(--color-surface), var(--color-surface)), radial-gradient(circle at top left, var(--color-primary), var(--color-accent))",
@@ -53,17 +53,17 @@ function SkillCard({
         animationFillMode: "backwards",
       }}
     >
-      <div className="flex h-9 w-9 items-center justify-center sm:h-14 sm:w-14">
+      <div className="flex h-8 w-8 items-center justify-center sm:h-14 sm:w-14">
         <Image
           src={skill.src}
           alt={skill.name}
           width={40}
           height={40}
-          className="h-7 w-7 transition-transform duration-200 group-hover:scale-110 sm:h-11 sm:w-11"
+          className="h-6 w-6 transition-transform duration-200 group-hover:scale-110 sm:h-11 sm:w-11"
           unoptimized
         />
       </div>
-      <span className="text-[8px] font-semibold uppercase tracking-wider text-text-muted transition-colors group-hover:text-text sm:text-xs">
+      <span className="text-[7px] font-semibold uppercase tracking-wider text-text-muted transition-colors group-hover:text-text sm:text-xs">
         {skill.name}
       </span>
     </div>
@@ -90,14 +90,14 @@ export default function SkillsGrid({
 
   return (
     <div
-      className={`flex items-stretch justify-center gap-3 sm:gap-6 ${className}`}
+      className={`flex items-stretch justify-center gap-2 sm:gap-6 ${className}`}
     >
       {cols.map((col, colIdx) => {
         const isSide = colIdx !== 1;
         return (
           <div
             key={colIdx}
-            className={`flex flex-col gap-3 sm:gap-6 ${isSide ? "justify-center" : ""}`}
+            className={`flex flex-col gap-2 sm:gap-6 ${isSide ? "justify-center" : ""}`}
           >
             {col.map((skill) => {
               const i = globalIdx++;
