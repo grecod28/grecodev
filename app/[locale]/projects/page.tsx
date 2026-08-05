@@ -87,7 +87,7 @@ export default async function ProjectsPage() {
                 }`}
               >
                 <div className="reveal-left relative w-full shrink-0 lg:w-[55%]">
-                  <Link href={`/projects/${id}`} className="group/image block">
+                  <Link href={`/projects/${id}`} className="group/image block transition-transform duration-500 hover:scale-[1.02]">
                     <div
                       className={`overflow-hidden rounded-2xl ring-1 ${glow.ring} transition-all duration-300 ${glow.hoverRing}`}
                       style={{ boxShadow: `0 0 18px ${glow.shadow}` }}
@@ -98,12 +98,12 @@ export default async function ProjectsPage() {
                           alt={t(`items.${id}.title`)}
                           width={1200}
                           height={675}
-                          className="h-auto w-full object-contain transition-transform duration-500 group-hover/image:scale-105"
+                          className="h-auto w-full object-contain"
                           sizes="(max-width: 1024px) 100vw, 55vw"
                         />
                       ) : (
                         <div
-                          className={`flex aspect-video items-center justify-center bg-linear-to-br ${gradient} transition-transform duration-500 group-hover/image:scale-105`}
+                          className={`flex aspect-video items-center justify-center bg-linear-to-br ${gradient}`}
                         >
                           <Icon className="h-28 w-28 text-white/20" />
                         </div>

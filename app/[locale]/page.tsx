@@ -26,6 +26,7 @@ function getTechIconFromAll(name: string) {
 
 export default async function Home() {
   const t = await getTranslations("Index");
+  const c = await getTranslations("Common");
   const projectT = await getTranslations("Projects");
 
   return (
@@ -109,7 +110,7 @@ export default async function Home() {
                 >
                   <Link
                     href={`/projects/${project.id}`}
-                    className="reveal-left group/image block w-full shrink-0 overflow-hidden rounded-2xl shadow-lg lg:w-[60%]"
+                    className="reveal-left group/image block w-full shrink-0 overflow-hidden rounded-2xl shadow-lg lg:w-[60%] transition-transform duration-500 hover:scale-[1.02]"
                     style={
                       {
                         "--reveal-delay": `${150 + index * 100}ms`,
@@ -117,16 +118,16 @@ export default async function Home() {
                     }
                   >
                     {project.ImageSrc ? (
-                        <Image
-                          src={project.ImageSrc}
-                          alt={projectT(`items.${project.id}.title`)}
-                          width={1200}
-                          height={675}
-                          className="h-auto w-full object-contain transition-transform duration-500 group-hover/image:scale-105"
-                          sizes="(max-width: 1024px) 100vw, 60vw"
-                        />
+                      <Image
+                        src={project.ImageSrc}
+                        alt={projectT(`items.${project.id}.title`)}
+                        width={1200}
+                        height={675}
+                        className="h-auto w-full object-contain"
+                        sizes="(max-width: 1024px) 100vw, 60vw"
+                      />
                     ) : (
-                      <div className="flex aspect-video items-center justify-center bg-linear-to-br from-primary/20 to-accent/20 transition-transform duration-500 group-hover/image:scale-105">
+                      <div className="flex aspect-video items-center justify-center bg-linear-to-br from-primary/20 to-accent/20">
                         <Icon className="h-20 w-20 text-primary/30" />
                       </div>
                     )}
@@ -177,7 +178,7 @@ export default async function Home() {
                         href={`/projects/${project.id}`}
                         className="btn-fill inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-text transition-all duration-200 hover:text-white"
                       >
-                        More details
+                        {c("learn_more")}
                         <FiArrowRight className="h-4 w-4" />
                       </Link>
                     </div>
