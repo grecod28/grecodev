@@ -23,10 +23,17 @@ export const PROJECTS = [
   {
     id: "knowmeet",
     icon: FiSmartphone,
-    techStack: ["React Native", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
+    techStack: [
+      "React Native",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+    ],
     githubUrl: undefined,
-    liveUrl: "https://play.google.com/store/apps/details?id=com.grecod28.knowmeetapp",
-    ImageSrc: "",
+    liveUrl:
+      "https://play.google.com/store/apps/details?id=com.grecod28.knowmeetapp",
+    ImageSrc: "/images/projects/knowmeet.png",
     featured: true,
   },
   {
