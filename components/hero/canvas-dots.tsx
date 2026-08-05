@@ -79,8 +79,14 @@ export default function CanvasDots() {
         p.x += p.vx;
         p.y += p.vy;
 
-        if (p.x < 0 || p.x > canvas!.width) { p.vx *= -1; p.x = Math.max(0, Math.min(canvas!.width, p.x)); }
-        if (p.y < 0 || p.y > canvas!.height) { p.vy *= -1; p.y = Math.max(0, Math.min(canvas!.height, p.y)); }
+        if (p.x < 0 || p.x > canvas!.width) {
+          p.vx *= -1;
+          p.x = Math.max(0, Math.min(canvas!.width, p.x));
+        }
+        if (p.y < 0 || p.y > canvas!.height) {
+          p.vy *= -1;
+          p.y = Math.max(0, Math.min(canvas!.height, p.y));
+        }
 
         ctx!.beginPath();
         ctx!.arc(p.x, p.y, DOT_RADIUS, 0, Math.PI * 2);
@@ -114,6 +120,11 @@ export default function CanvasDots() {
       mouse.y = e.clientY - rect.top;
     }
 
+    const handleResize = () => {
+      resize();
+      initPoints();
+    };
+
     function onMouseLeave() {
       mouse.x = -1000;
       mouse.y = -1000;
@@ -125,16 +136,13 @@ export default function CanvasDots() {
 
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mouseleave", onMouseLeave);
-    window.addEventListener("resize", () => {
-      resize();
-      initPoints();
-    });
+    window.addEventListener("resize", handleResize);
 
     return () => {
       cancelAnimationFrame(animationId);
       canvas.removeEventListener("mousemove", onMouseMove);
       canvas.removeEventListener("mouseleave", onMouseLeave);
-      window.removeEventListener("resize", resize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

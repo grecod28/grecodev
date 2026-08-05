@@ -37,10 +37,10 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${inter.variable} h-full antialiased bg-background text-text overflow-x-hidden`}
+      className={`${inter.variable} h-full antialiased bg-background text-text`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col items-center w-full max-w-full overflow-x-hidden pt-16">
+      <body className="min-h-full flex flex-col items-center w-full max-w-full pt-16">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           {children}

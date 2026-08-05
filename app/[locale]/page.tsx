@@ -30,7 +30,7 @@ export default async function Home() {
 
   return (
     <main className="flex flex-1 flex-col items-center w-full">
-      <section className="relative flex flex-col items-center justify-center w-full min-h-dvh px-4 sm:px-6 -mt-10 sm:-mt-16">
+      <section className="relative flex flex-col items-center justify-center w-full overflow-hidden min-h-screen px-4 sm:px-6 -mt-10 sm:-mt-16">
         <CanvasDots />
 
         <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
@@ -117,7 +117,7 @@ export default async function Home() {
                     }
                   >
                     {project.ImageSrc ? (
-                      <div className="relative aspect-[16/9]">
+                      <div className="relative aspect-video">
                         <Image
                           src={project.ImageSrc}
                           alt={projectT(`items.${project.id}.title`)}
@@ -127,7 +127,7 @@ export default async function Home() {
                         />
                       </div>
                     ) : (
-                      <div className="flex aspect-[16/9] items-center justify-center bg-linear-to-br from-primary/20 to-accent/20 transition-transform duration-500 group-hover/image:scale-105">
+                      <div className="flex aspect-video items-center justify-center bg-linear-to-br from-primary/20 to-accent/20 transition-transform duration-500 group-hover/image:scale-105">
                         <Icon className="h-20 w-20 text-primary/30" />
                       </div>
                     )}
