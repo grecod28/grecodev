@@ -58,15 +58,15 @@
           "Construir indicadores de escritura y seguimiento de presencia en tiempo real sin saturar la conexión WebSocket."
         ]
       },
-      "devmirror": {
-        "title": "DevMirror",
-        "description": "Un analizador de perfiles de GitHub con IA que evalúa tu stack tecnológico, identifica carencias de habilidades y proporciona recomendaciones personalizadas de mejora.",
-        "detail": "Una plataforma de análisis para desarrolladores que se conecta a perfiles y repositorios de GitHub para analizar la actividad de código, la composición del stack tecnológico y los patrones de contribución. Usando IA, genera recomendaciones personalizadas para mejorar habilidades, sugiere tecnologías relevantes para aprender a continuación y proporciona una visión general de fortalezas y áreas de mejora. Construida con Next.js para el frontend, NestJS para los servicios API, MongoDB para el almacenamiento de datos y Docker para despliegue contenerizado.",
+      "knowmeet": {
+        "title": "KnowMeet",
+        "description": "Una app móvil para compartir tarjetas de presentación digitales y enlaces a redes sociales mediante códigos QR. Construida con React Native.",
+        "detail": "Una aplicación móvil en React Native que permite crear y compartir tarjetas de presentación digitales con generación instantánea de QR. Cada tarjeta agrupa perfiles de redes sociales, enlaces de contacto y un QR escaneable para conectar al instante. Diseñada para eventos de networking, meetups y el día a día profesional.",
         "challenges": [
-          "Integrar la API de GitHub para extraer y procesar datos de repositorios, historial de commits y estadísticas de lenguajes en múltiples perfiles.",
-          "Diseñar un motor de recomendaciones con IA que analice la composición del stack tecnológico y sugiera tecnologías complementarias.",
-          "Construir un sistema de puntuación de perfiles que evalúe la actividad, consistencia y diversidad de habilidades del desarrollador.",
-          "Implementar estrategias eficientes de caché de datos para manejar los límites de la API de GitHub manteniendo análisis actualizados."
+          "Construir un sistema de generación y escaneo de QR que funcione sin conexión a internet.",
+          "Diseñar un motor de personalización de tarjetas con múltiples plantillas y paletas de colores.",
+          "Implementar deep linking para que cada tarjeta compartida abra directamente la app al escanear.",
+          "Optimizar la carga de tarjetas para manejar cientos de contactos compartidos sin lag."
         ]
       },
       "devfolio": {
@@ -120,6 +120,7 @@
       "nodejs": "Un entorno de ejecución JavaScript construido sobre el motor V8 de Chrome para crear aplicaciones de red rápidas y escalables.",
       "n8n": "Plataforma de automatizacion de flujos de trabajo.",
       "react": "Una biblioteca de JavaScript para construir interfaces de usuario basadas en componentes reutilizables.",
+      "react-native": "Un framework para construir aplicaciones móviles nativas usando React y JavaScript.",
       "aws": "Una plataforma integral de computación en la nube que ofrece servicios de infraestructura bajo demanda, desde servidores virtuales y almacenamiento hasta computación serverless y machine learning.",
       "docker": "Una plataforma para desarrollar, desplegar y ejecutar aplicaciones dentro de contenedores ligeros y portables que se ejecutan de forma consistente en cualquier entorno.",
       "expressjs": "Un framework de aplicaciones web Node.js minimalista y flexible que proporciona un conjunto robusto de características para aplicaciones web y móviles."

@@ -16,6 +16,7 @@ export const TECH_PROFICIENCY: Record<string, number> = {
   N8N: 1,
   JavaScript: 4,
   React: 4,
+  "React Native": 3,
   Docker: 2,
   "Node.js": 4,
   Express: 4,

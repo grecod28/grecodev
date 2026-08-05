@@ -1,4 +1,4 @@
-import { FiMessageCircle, FiBarChart2 } from "react-icons/fi";
+import { FiMessageCircle, FiBarChart2, FiSmartphone } from "react-icons/fi";
 
 export const PROJECTS = [
   {
@@ -21,18 +21,11 @@ export const PROJECTS = [
     featured: true,
   },
   {
-    id: "devmirror",
-    icon: FiBarChart2,
-    techStack: [
-      "Next.js",
-      "PostgreSQL",
-      "Docker",
-      "TypeScript",
-      "HTML5",
-      "CSS3",
-    ],
-    githubUrl: "https://github.com/grecod28/devmirror",
-    liveUrl: undefined,
+    id: "knowmeet",
+    icon: FiSmartphone,
+    techStack: ["React Native", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
+    githubUrl: undefined,
+    liveUrl: "https://play.google.com/store/apps/details?id=com.grecod28.knowmeetapp",
     ImageSrc: "",
     featured: true,
   },
