@@ -41,8 +41,7 @@ export const PROJECTS = [
     icon: FiBarChart2,
     techStack: ["Next.js", "Tailwind CSS", "TypeScript", "HTML5", "CSS3"],
     githubUrl: "https://github.com/grecod28/grecodev",
-    liveUrl: "https://grecodev.vercel.app",
-    ImageSrc: "",
+    ImageSrc: "/images/projects/devfolio.png",
     featured: false,
   },
-] as const;
+];

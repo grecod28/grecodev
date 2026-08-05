@@ -109,7 +109,7 @@ export default async function Home() {
                 >
                   <Link
                     href={`/projects/${project.id}`}
-                    className="reveal-left group/image block w-full shrink-0 overflow-hidden rounded-2xl lg:w-[60%]"
+                    className="reveal-left group/image block w-full shrink-0 overflow-hidden rounded-2xl shadow-lg lg:w-[60%]"
                     style={
                       {
                         "--reveal-delay": `${150 + index * 100}ms`,
@@ -117,15 +117,14 @@ export default async function Home() {
                     }
                   >
                     {project.ImageSrc ? (
-                      <div className="relative aspect-video">
                         <Image
                           src={project.ImageSrc}
                           alt={projectT(`items.${project.id}.title`)}
-                          fill
-                          className="object-contain transition-transform duration-500 group-hover/image:scale-105"
+                          width={1200}
+                          height={675}
+                          className="h-auto w-full object-contain transition-transform duration-500 group-hover/image:scale-105"
                           sizes="(max-width: 1024px) 100vw, 60vw"
                         />
-                      </div>
                     ) : (
                       <div className="flex aspect-video items-center justify-center bg-linear-to-br from-primary/20 to-accent/20 transition-transform duration-500 group-hover/image:scale-105">
                         <Icon className="h-20 w-20 text-primary/30" />
