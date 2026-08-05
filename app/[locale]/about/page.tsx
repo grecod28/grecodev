@@ -32,14 +32,12 @@ export default async function AboutPage() {
 
   return (
     <main className="flex flex-1 flex-col w-full">
-      {/* ── Profile + Skills ── */}
       <section className={section}>
         <div
           className={`${sectionContainer} animate-fade-in`}
           style={{ animationDelay: "100ms" }}
         >
           <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-16">
-            {/* Left — Profile */}
             <div className="flex w-full flex-col items-center text-center lg:w-1/2">
               <div className="mb-6">
                 <div className="relative">
@@ -75,7 +73,6 @@ export default async function AboutPage() {
               </div>
             </div>
 
-            {/* Right — Skills */}
             <div className="flex flex-col items-center lg:w-1/2">
               <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-text-muted">
                 Tech Stack
@@ -89,7 +86,6 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* ── Education ── */}
       <section className={section}>
         <div
           className="mx-auto max-w-3xl animate-fade-in"
@@ -126,7 +122,6 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* ── FAQ ── */}
       <section className={section}>
         <div
           className="mx-auto max-w-3xl animate-fade-in"

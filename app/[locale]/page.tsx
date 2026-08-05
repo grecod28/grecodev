@@ -30,7 +30,6 @@ export default async function Home() {
 
   return (
     <main className="flex flex-1 flex-col items-center w-full">
-      {/* ── Hero ── */}
       <section className="relative flex flex-col items-center justify-center w-full min-h-dvh px-4 sm:px-6 -mt-10 sm:-mt-16">
         <CanvasDots />
 
@@ -84,7 +83,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ── Featured Projects ── */}
+      {/* Featured Projects */}
         <section className={`${section} reveal-up`} style={{ "--reveal-delay": "100ms" } as React.CSSProperties}>
           <div className={sectionContainer}>
             <div className={sectionCentered}>
@@ -173,7 +172,7 @@ export default async function Home() {
           </div>
         </section>
 
-      {/* ── Tech Stack ── */}
+      {/* Tech Stack */}
         <section className={`${section} reveal-scale`} style={{ "--reveal-delay": "150ms" } as React.CSSProperties}>
           <div className={sectionContainer}>
             <header className={sectionCentered}>
@@ -190,7 +189,7 @@ export default async function Home() {
           </div>
         </section>
 
-      {/* ── Contact ── */}
+      {/* Contact */}
         <section className={`${section} reveal-up`} style={{ "--reveal-delay": "200ms" } as React.CSSProperties}>
           <div className="mx-auto max-w-2xl">
             <div className={sectionCentered}>

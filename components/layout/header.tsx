@@ -48,7 +48,6 @@ export default function Header() {
         scrolled ? "scrolled" : ""
       }`}
     >
-      {/* Navegación de escritorio */}
       <nav className="hidden xl:flex xl:gap-8 text-base">
         {links.map((link) => (
           <Link
@@ -68,12 +67,10 @@ export default function Header() {
         ))}
       </nav>
 
-      {/* Acciones en escritorio */}
       <section className="hidden xl:flex items-center gap-5 text-lg">
         <LanguageSelector />
       </section>
 
-      {/* Mobile */}
       <div className="xl:hidden">
         <MobileMenu links={links} />
       </div>

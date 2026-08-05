@@ -44,8 +44,7 @@ export default async function ProjectsPage() {
                   isLeft ? "" : "lg:flex-row-reverse"
                 }`}
               >
-                {/* Image */}
-                <div className="reveal-left w-full shrink-0 lg:w-[55%]">
+                <div className="reveal-left relative w-full shrink-0 lg:w-[55%]">
                   <Link href={`/projects/${id}`} className="group/image block">
                     <div className="overflow-hidden rounded-2xl">
                       {ImageSrc ? (
@@ -67,7 +66,6 @@ export default async function ProjectsPage() {
                   </Link>
                 </div>
 
-                {/* Info */}
                 <div className={`reveal-right flex flex-col lg:w-[45%] ${isLeft ? "" : "lg:text-right lg:items-end"}`}>
                   <Link href={`/projects/${id}`} className="group/title">
                     <h2 className="text-2xl font-bold transition-colors group-hover/title:text-primary sm:text-3xl">

@@ -35,11 +35,11 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-      <html
-        lang={locale}
-        className={`${inter.variable} h-full antialiased bg-background text-text overflow-x-hidden`}
-        suppressHydrationWarning
-      >
+    <html
+      lang={locale}
+      className={`${inter.variable} h-full antialiased bg-background text-text overflow-x-hidden`}
+      suppressHydrationWarning
+    >
       <body className="min-h-full flex flex-col items-center w-full max-w-full overflow-x-hidden pt-16">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
