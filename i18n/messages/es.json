@@ -8,6 +8,7 @@
   },
   "Common": {
     "back": "Volver atrás",
+    "live": "Demo en vivo",
     "learn_more": "Ver más",
     "view_all": "Ver todos",
     "scroll": "Desplazar",
@@ -33,7 +34,6 @@
     "title": "Proyectos",
     "description": "Algunos proyectos que he creado para explorar, aprender y resolver problemas reales.",
     "github": "Repositorio",
-    "live": "Demo en vivo",
     "back": "Ir a Proyectos",
     "challenges_title": "Principales Retos",
     "items": {

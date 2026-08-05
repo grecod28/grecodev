@@ -5,6 +5,7 @@ import { toSlug } from "@/lib/functions/slug";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { FiGithub } from "react-icons/fi";
 import { FiArrowRight, FiMail } from "react-icons/fi";
 import CanvasDots from "@/components/hero/canvas-dots";
 import ProfilePhoto from "@/components/hero/profile-photo";
@@ -99,6 +100,7 @@ export default async function Home() {
           <div className="mt-10 flex flex-col gap-20 lg:gap-28">
             {featuredProjects.map((project, index) => {
               const Icon = project.icon;
+              const { githubUrl, liveUrl } = project;
               const isLeft = index % 2 === 0;
 
               return (
@@ -173,14 +175,36 @@ export default async function Home() {
                       })}
                     </div>
 
-                    <div className="mt-7">
+                    <div className="mt-7 flex gap-3">
+                      {liveUrl && (
+                        <Link
+                          href={liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-primary hover:bg-primary/90 rounded-lg px-5 py-2.5 text-sm font-medium text-text"
+                        >
+                          {c("live")}
+                        </Link>
+                      )}
+
                       <Link
                         href={`/projects/${project.id}`}
                         className="btn-fill inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-text transition-all duration-200 hover:text-white"
                       >
                         {c("learn_more")}
-                        <FiArrowRight className="h-4 w-4" />
                       </Link>
+
+                      {githubUrl && (
+                        <a
+                          href={githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-text-muted transition-all duration-200 hover:border-primary hover:bg-primary hover:text-text"
+                        >
+                          <FiGithub className="h-4 w-4" />
+                          {t("github")}
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

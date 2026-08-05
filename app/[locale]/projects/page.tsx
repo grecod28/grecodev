@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { FiGithub } from "react-icons/fi";
 import { PROJECTS } from "@/lib/constants/projects";
 import { ALL_TECH_ICONS } from "@/lib/constants/icons";
 import { Link } from "@/i18n/navigation";
@@ -87,7 +87,10 @@ export default async function ProjectsPage() {
                 }`}
               >
                 <div className="reveal-left relative w-full shrink-0 lg:w-[55%]">
-                  <Link href={`/projects/${id}`} className="group/image block transition-transform duration-500 hover:scale-[1.02]">
+                  <Link
+                    href={`/projects/${id}`}
+                    className="group/image block transition-transform duration-500 hover:scale-[1.02]"
+                  >
                     <div
                       className={`overflow-hidden rounded-2xl ring-1 ${glow.ring} transition-all duration-300 ${glow.hoverRing}`}
                       style={{ boxShadow: `0 0 18px ${glow.shadow}` }}
@@ -152,7 +155,7 @@ export default async function ProjectsPage() {
                         rel="noopener noreferrer"
                         className="bg-primary hover:bg-primary/90 rounded-lg px-5 py-2.5 text-sm font-medium text-text"
                       >
-                        {t("live")}
+                        {c("live")}
                       </Link>
                     )}
 
