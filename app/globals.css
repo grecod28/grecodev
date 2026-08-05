@@ -253,44 +253,21 @@ button.no-scale-hover:hover {
 }
 
 /* ── scroll reveal  ── */
-.reveal-up,
-.reveal-left,
-.reveal-right,
+.reveal-up {
+  animation: reveal-up 0.5s ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+.reveal-left {
+  animation: reveal-left 0.5s ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+.reveal-right {
+  animation: reveal-right 0.5s ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
 .reveal-scale {
-  opacity: 0;
-}
-
-@supports (animation-timeline: view()) {
-  .reveal-up {
-    animation: reveal-up linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 100%;
-  }
-  .reveal-left {
-    animation: reveal-left linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 100%;
-  }
-  .reveal-right {
-    animation: reveal-right linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 100%;
-  }
-  .reveal-scale {
-    animation: reveal-scale linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 85%;
-  }
-}
-
-/* Fallback para navegadores sin soporte para animation-timeline */
-@supports not (animation-timeline: view()) {
-  .reveal-up,
-  .reveal-left,
-  .reveal-right,
-  .reveal-scale {
-    opacity: 1;
-  }
+  animation: reveal-scale 0.4s ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
 }
 
 @keyframes reveal-up {

@@ -24,11 +24,11 @@ export default function CanvasDots() {
     let animationId: number;
     let points: Point[] = [];
     let mouse = { x: -1000, y: -1000 };
-    const DOT_COUNT = 80;
-    const MAX_DIST = 150;
+    const DOT_COUNT = window.innerWidth >= 1024 ? 120 : 80;
+    const MAX_DIST = window.innerWidth >= 1024 ? 180 : 150;
     const DOT_RADIUS = 2;
-    const MOUSE_REPEL = 120;
-    const REPEL_FORCE = 3;
+    const MOUSE_REPEL = 140;
+    const REPEL_FORCE = 4;
 
     function resize() {
       canvas!.width = window.innerWidth;
@@ -39,8 +39,8 @@ export default function CanvasDots() {
       points = Array.from({ length: DOT_COUNT }, () => ({
         x: Math.random() * canvas!.width,
         y: Math.random() * canvas!.height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
+        vx: (Math.random() - 0.5) * 0.7,
+        vy: (Math.random() - 0.5) * 0.7,
         originX: 0,
         originY: 0,
       }));
