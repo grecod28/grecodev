@@ -71,10 +71,7 @@ export default async function Home() {
       </section>
 
       {/* Featured Projects */}
-      <section
-        className={`${section} reveal-up`}
-        style={{ "--reveal-delay": "100ms" } as React.CSSProperties}
-      >
+      <section className={`${section} reveal-scroll-up`}>
         <div className={sectionContainer}>
           <div className={sectionCentered}>
             <span className={sectionLabel}>{t("featured_title")}</span>
@@ -97,12 +94,7 @@ export default async function Home() {
                 >
                   <Link
                     href={`/projects/${project.id}`}
-                    className="reveal-left group/image block w-full shrink-0 overflow-hidden rounded-2xl shadow-lg lg:w-[60%] transition-transform duration-500 hover:scale-[1.02]"
-                    style={
-                      {
-                        "--reveal-delay": `${150 + index * 100}ms`,
-                      } as React.CSSProperties
-                    }
+                    className="reveal-scroll-left group/image block w-full shrink-0 overflow-hidden rounded-2xl shadow-lg lg:w-[60%] transition-transform duration-500 hover:scale-[1.02]"
                   >
                     {project.ImageSrc ? (
                       <Image
@@ -121,7 +113,7 @@ export default async function Home() {
                   </Link>
 
                   <div
-                    className={`reveal-right flex flex-col lg:w-[40%] ${isLeft ? "" : "lg:text-right lg:items-end"}`}
+                    className={`reveal-scroll-right flex flex-col lg:w-[40%] ${isLeft ? "" : "lg:text-right lg:items-end"}`}
                     style={
                       {
                         "--reveal-delay": `${180 + index * 100}ms`,
@@ -210,10 +202,7 @@ export default async function Home() {
       </section>
 
       {/* Tech Stack */}
-      <section
-        className={`${section} reveal-scale`}
-        style={{ "--reveal-delay": "150ms" } as React.CSSProperties}
-      >
+      <section className={`${section} reveal-scroll-scale`}>
         <div className={sectionContainer}>
           <header className={sectionCentered}>
             <span className={sectionLabel}>{t("tech_stack")}</span>
@@ -233,10 +222,7 @@ export default async function Home() {
       </section>
 
       {/* Contact */}
-      <section
-        className={`${section} reveal-up`}
-        style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
-      >
+      <section className={`${section} reveal-scroll-up`}>
         <div className="mx-auto max-w-2xl">
           <div className={sectionCentered}>
             <span className={sectionLabel}>{t("contact_section_title")}</span>

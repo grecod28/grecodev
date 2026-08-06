@@ -253,8 +253,6 @@ button.no-scale-hover:hover {
   border-bottom-color: var(--color-border);
 }
 
-/* reveal on scroll, delays via custom property */
-
 .reveal-up {
   animation: reveal-up 0.5s ease-out both;
   animation-delay: var(--reveal-delay, 0ms);
@@ -270,6 +268,34 @@ button.no-scale-hover:hover {
 .reveal-scale {
   animation: reveal-scale 0.4s ease-out both;
   animation-delay: var(--reveal-delay, 0ms);
+}
+
+/* scroll-driven: animan al entrar y salir del viewport (Chrome 115+) */
+@supports (animation-timeline: view()) {
+  .reveal-scroll-up {
+    animation: reveal-up linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 20%;
+    animation-delay: 0s;
+  }
+  .reveal-scroll-left {
+    animation: reveal-left linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 20%;
+    animation-delay: 0s;
+  }
+  .reveal-scroll-right {
+    animation: reveal-right linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 20%;
+    animation-delay: 0s;
+  }
+  .reveal-scroll-scale {
+    animation: reveal-scale linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 15%;
+    animation-delay: 0s;
+  }
 }
 
 @keyframes reveal-up {
