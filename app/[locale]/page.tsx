@@ -32,7 +32,7 @@ export default async function Home() {
 
   return (
     <main className="flex flex-1 flex-col items-center w-full">
-      <section className="relative flex flex-col items-center justify-center w-full overflow-hidden min-h-screen px-4 sm:px-6 -mt-10 sm:-mt-16">
+      <section className="relative flex flex-col items-center justify-center w-full overflow-hidden min-h-screen px-4 sm:px-6 sm:-mt-16">
         <CanvasDots />
 
         <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
@@ -204,19 +204,32 @@ export default async function Home() {
       {/* Tech Stack */}
       <section className={`${section} reveal-scroll-scale`}>
         <div className={sectionContainer}>
-          <header className={sectionCentered}>
-            <span className={sectionLabel}>{t("tech_stack")}</span>
-            <h2 className={sectionTitle}>{t("tech_stack")}</h2>
-          </header>
-
-          <div className="mt-10 flex justify-center">
-            <SkillsGrid
-              skills={TECH_STACK_ICONS.map((s) => ({
-                ...s,
-                slug: toSlug(s.name),
-              }))}
-              linkPrefix="/technologies"
-            />
+          <div className="flex flex-col gap-10 lg:flex-row lg:gap-24">
+            <div className="flex flex-col items-center text-center justify-center lg:items-start lg:text-left lg:w-2/5">
+              <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+                {t("tech_stack")}
+              </span>
+              <h2 className={`${sectionTitle} mt-3`}>{t("tech_stack")}</h2>
+              <p className="mt-5 max-w-md text-base leading-relaxed text-text-muted">
+                {t("tech_stack_text")}
+              </p>
+              <Link
+                href="/about"
+                className="mt-5 btn-fill inline-flex w-fit items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-text transition-all duration-200 hover:text-white"
+              >
+                {t("tech_stack_cta")}
+                <FiArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="flex items-center justify-center lg:w-3/5">
+              <SkillsGrid
+                skills={TECH_STACK_ICONS.map((s) => ({
+                  ...s,
+                  slug: toSlug(s.name),
+                }))}
+                linkPrefix="/technologies"
+              />
+            </div>
           </div>
         </div>
       </section>

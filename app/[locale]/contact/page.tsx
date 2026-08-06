@@ -1,9 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import {
-  FiMail,
-  FiGithub,
-  FiLinkedin,
-} from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 import {
   section,
   sectionCentered,
@@ -38,7 +34,7 @@ export default async function ContactPage() {
 
   return (
     <section className={section}>
-      <div className="mx-auto max-w-4xl animate-fade-in" style={{ animationDelay: "200ms" }}>
+      <div className="mx-auto max-w-4xl animate-fade-in">
         <div className={sectionCentered}>
           <span className={sectionLabel}>{t("cta")}</span>
           <h2 className={sectionTitle}>{t("title")}</h2>
