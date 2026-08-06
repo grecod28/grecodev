@@ -37,17 +37,6 @@
     "back": "Ir a Proyectos",
     "challenges_title": "Principales Retos",
     "items": {
-      "ecommerce": {
-        "title": "E-Commerce Platform",
-        "description": "Una tienda online completa con gestión de productos, carrito de compras, integración de pagos y panel de administración. Construida con un stack moderno para rendimiento y escalabilidad.",
-        "detail": "Una solución de e-commerce completa diseñada para gestionar catálogos de productos, autenticación de usuarios, lógica de carrito de compras, procesamiento seguro de pagos y un panel administrativo para inventario y pedidos. Construida pensando en rendimiento y SEO, aprovechando renderizado del lado del servidor y regeneración estática incremental.",
-        "challenges": [
-          "Implementar un sistema de gestión de stock en tiempo real que evite sobreventas durante períodos de alto tráfico.",
-          "Diseñar un sistema flexible de descuentos y cupones que soporte descuentos porcentuales, por importe fijo y promociones 2x1.",
-          "Optimizar consultas a la base de datos para manejar miles de búsquedas concurrentes de productos sin degradación del rendimiento.",
-          "Construir un panel de administración responsivo con análisis de ventas en tiempo real y seguimiento de pedidos."
-        ]
-      },
       "umbrachat": {
         "title": "UmbraChat",
         "description": "Una plataforma de chat en tiempo real con comunicación por WebSocket, hilos de mensajes, anonimato de usuarios e historial con expiración.",
