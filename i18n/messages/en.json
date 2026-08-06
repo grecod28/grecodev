@@ -37,21 +37,10 @@
     "back": "Back to Projects",
     "challenges_title": "Key Challenges",
     "items": {
-      "ecommerce": {
-        "title": "E-Commerce Platform",
-        "description": "A full-featured online store with product management, shopping cart, payment integration, and an admin dashboard. Built with a modern stack for performance and scalability.",
-        "detail": "A complete e-commerce solution designed to handle product catalog management, user authentication, shopping cart logic, secure payment processing, and an administrative dashboard for inventory and order management. Built with performance and SEO in mind, leveraging server-side rendering and incremental static regeneration.",
-        "challenges": [
-          "Implementing a real-time stock management system that prevents overselling during high-traffic periods.",
-          "Designing a flexible discount and coupon system that supports percentage, fixed amount, and buy-one-get-one promotions.",
-          "Optimizing database queries to handle thousands of concurrent product searches without performance degradation.",
-          "Building a responsive admin dashboard with real-time sales analytics and order tracking."
-        ]
-      },
       "umbrachat": {
         "title": "UmbraChat",
-        "Description": "A real-time chat platform with WebSocket communication, message threads, user anonymity, and expiring message history.",
-        "Detail": "A full-stack real-time messaging application built with Next.js on the frontend and NestJS on the backend, using PostgreSQL for message persistence and WebSockets for low-latency, bidirectional communication. It supports public and private chat rooms, conversation threads, and online presence detection.",
+        "description": "A real-time chat platform with WebSocket communication, message threads, user anonymity, and expiring message history.",
+        "detail": "A full-stack real-time messaging application built with Next.js on the frontend and NestJS on the backend, using PostgreSQL for message persistence and WebSockets for low-latency, bidirectional communication. It supports public and private chat rooms, conversation threads, and online presence detection.",
         "challenges": [
           "Designing a message threading system that organizes replies in a hierarchical structure.",
           "Optimizing PostgreSQL queries for fast message retrieval across large conversation histories.",
