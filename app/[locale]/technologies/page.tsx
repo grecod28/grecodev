@@ -25,15 +25,11 @@ export default async function TechnologiesPage() {
         </header>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {ALL_TECH_ICONS.map(({ name, src }, index) => {
+          {ALL_TECH_ICONS.map(({ name, src }) => {
             const slug = toSlug(name);
 
             return (
-              <article
-                key={name}
-                className={`${cardHover} animate-fade-in`}
-                style={{ animationDelay: `${index * 75}ms` }}
-              >
+              <article key={name} className={`${cardHover} animate-fade-in`}>
                 <div className={iconBoxImage}>
                   <Image
                     src={src}

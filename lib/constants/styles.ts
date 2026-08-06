@@ -4,7 +4,7 @@ export const section = "w-full border-t border-border px-4 py-20";
 export const sectionCentered = "flex flex-col items-center text-center";
 export const sectionLabel =
   "text-xs font-medium uppercase tracking-[0.2em] text-primary";
-export const sectionTitle = "mt-2 text-2xl font-bold sm:text-3xl";
+export const sectionTitle = "uppercase mt-2 text-2xl font-bold sm:text-3xl";
 export const sectionDesc = "mt-3 max-w-lg text-text-muted";
 export const sectionContainer = "mx-auto max-w-6xl";
 export const bodyText = "text-base leading-relaxed text-text-muted";

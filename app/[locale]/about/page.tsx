@@ -33,10 +33,7 @@ export default async function AboutPage() {
   return (
     <main className="flex flex-1 flex-col w-full">
       <section className={section}>
-        <div
-          className={`${sectionContainer} animate-fade-in`}
-          style={{ animationDelay: "100ms" }}
-        >
+        <div className={`${sectionContainer} animate-fade-in`}>
           <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-16">
             <div className="flex w-full flex-col items-center text-center lg:w-1/2">
               <div className="mb-6">
@@ -87,10 +84,7 @@ export default async function AboutPage() {
       </section>
 
       <section className={section}>
-        <div
-          className="mx-auto max-w-3xl animate-fade-in"
-          style={{ animationDelay: "200ms" }}
-        >
+        <div className="mx-auto max-w-3xl animate-fade-in">
           <div className={sectionCentered}>
             <span className={sectionLabel}>{t("education.title")}</span>
             <h2 className={sectionTitle}>{t("education.subtitle")}</h2>
@@ -123,10 +117,7 @@ export default async function AboutPage() {
       </section>
 
       <section className={section}>
-        <div
-          className="mx-auto max-w-3xl animate-fade-in"
-          style={{ animationDelay: "300ms" }}
-        >
+        <div className="mx-auto max-w-3xl animate-fade-in">
           <div className={sectionCentered}>
             <span className={sectionLabel}>FAQ</span>
             <h2 className={sectionTitle}>{t("faq.title")}</h2>
@@ -136,7 +127,11 @@ export default async function AboutPage() {
             <FAQ
               items={FAQ_KEYS.map(({ q, a }) => ({
                 question: t(`faq.${q}`),
-                answer: <p className="text-sm leading-relaxed text-text-muted">{t(`faq.${a}`)}</p>,
+                answer: (
+                  <p className="text-sm leading-relaxed text-text-muted">
+                    {t(`faq.${a}`)}
+                  </p>
+                ),
               }))}
             />
           </div>
