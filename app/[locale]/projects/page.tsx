@@ -174,7 +174,7 @@ export default async function ProjectsPage() {
                         className="inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-text-muted transition-all duration-200 hover:border-primary hover:bg-primary hover:text-text"
                       >
                         <FiGithub className="h-4 w-4" />
-                        {t("github")}
+                        {c("github")}
                       </a>
                     )}
                   </div>

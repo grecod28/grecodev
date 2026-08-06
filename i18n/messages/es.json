@@ -10,6 +10,7 @@
     "back": "Volver atrás",
     "live": "Demo en vivo",
     "learn_more": "Ver más",
+    "github": "Repositorio",
     "view_all": "Ver todos",
     "scroll": "Desplazar",
     "send": "Enviar",
@@ -33,7 +34,6 @@
   "Projects": {
     "title": "Proyectos",
     "description": "Algunos proyectos que he creado para explorar, aprender y resolver problemas reales.",
-    "github": "Repositorio",
     "back": "Ir a Proyectos",
     "challenges_title": "Principales Retos",
     "items": {

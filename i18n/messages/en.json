@@ -9,6 +9,7 @@
   "Common": {
     "back": "Go back",
     "learn_more": "Learn more",
+    "github": "Repository",
     "live": "Live Demo",
     "view_all": "View all",
     "scroll": "Scroll",
@@ -33,7 +34,6 @@
   "Projects": {
     "title": "Projects",
     "description": "Some projects I've built to explore, learn, and solve real problems.",
-    "github": "Repository",
     "back": "Back to Projects",
     "challenges_title": "Key Challenges",
     "items": {

@@ -36,38 +36,23 @@ export default async function Home() {
         <CanvasDots />
 
         <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
-          <div
-            className="animate-fade-in-up mb-8"
-            style={{ animationDelay: "100ms" }}
-          >
+          <div className="animate-fade-in-up mb-8">
             <ProfilePhoto />
           </div>
 
-          <h1
-            className="animate-fade-in-left text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
-            style={{ animationDelay: "300ms" }}
-          >
+          <h1 className="animate-fade-in-left text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             Santiago Greco
           </h1>
 
-          <p
-            className="mt-3 bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-xl font-semibold text-transparent sm:text-2xl lg:text-3xl bg-size-[200%_200%] animate-gradient"
-            style={{ animationDelay: "500ms" }}
-          >
+          <p className="mt-3 bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-xl font-semibold text-transparent sm:text-2xl lg:text-3xl bg-size-[200%_200%] animate-gradient">
             {t("role")}
           </p>
 
-          <p
-            className="animate-fade-in-up mt-6 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg"
-            style={{ animationDelay: "700ms" }}
-          >
+          <p className="animate-fade-in-up mt-6 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg">
             {t("bio")}
           </p>
 
-          <div
-            className="animate-scale-in mt-10 flex flex-col gap-4 sm:flex-row"
-            style={{ animationDelay: "900ms" }}
-          >
+          <div className="animate-scale-in mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/projects"
               className="btn-glow text-white inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold"
@@ -202,7 +187,7 @@ export default async function Home() {
                           className="inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-text-muted transition-all duration-200 hover:border-primary hover:bg-primary hover:text-text"
                         >
                           <FiGithub className="h-4 w-4" />
-                          {t("github")}
+                          {c("github")}
                         </a>
                       )}
                     </div>
