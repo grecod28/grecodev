@@ -1,4 +1,4 @@
-import { FiMessageCircle, FiBarChart2 } from "react-icons/fi";
+import { FiMessageCircle, FiBarChart2, FiSmartphone } from "react-icons/fi";
 
 export const PROJECTS = [
   {
@@ -21,19 +21,19 @@ export const PROJECTS = [
     featured: true,
   },
   {
-    id: "devmirror",
-    icon: FiBarChart2,
+    id: "knowmeet",
+    icon: FiSmartphone,
     techStack: [
-      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Node.js",
       "PostgreSQL",
       "Docker",
-      "TypeScript",
-      "HTML5",
-      "CSS3",
     ],
-    githubUrl: "https://github.com/grecod28/devmirror",
-    liveUrl: undefined,
-    ImageSrc: "",
+    githubUrl: undefined,
+    liveUrl:
+      "https://play.google.com/store/apps/details?id=com.grecod28.knowmeetapp",
+    ImageSrc: "/images/projects/knowmeet.png",
     featured: true,
   },
   {
@@ -41,8 +41,7 @@ export const PROJECTS = [
     icon: FiBarChart2,
     techStack: ["Next.js", "Tailwind CSS", "TypeScript", "HTML5", "CSS3"],
     githubUrl: "https://github.com/grecod28/grecodev",
-    liveUrl: "https://grecodev.vercel.app",
-    ImageSrc: "",
+    ImageSrc: "/images/projects/devfolio.png",
     featured: false,
   },
-] as const;
+];

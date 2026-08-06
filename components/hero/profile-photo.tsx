@@ -17,7 +17,6 @@ export default function ProfilePhoto() {
           flipped ? "transform-[rotateY(180deg)]" : "group-hover:transform-[rotateY(180deg)]"
         }`}
       >
-        {/* Front — question mark */}
         <div className="absolute inset-0 flex items-center justify-center rounded-full bg-surface ring-4 ring-primary/30 shadow-(--shadow-primary) backface-hidden">
           <div
             className="absolute -inset-6 rounded-full bg-primary/20 blur-3xl animate-float"
@@ -30,7 +29,6 @@ export default function ProfilePhoto() {
           />
           <FiHelpCircle className="relative z-10 h-16 w-16 text-primary" />
         </div>
-        {/* Back — photo */}
         <div className="absolute inset-0 backface-hidden transform-[rotateY(180deg)]">
           <Image
             src="/images/foto_perfil.png"
@@ -42,7 +40,6 @@ export default function ProfilePhoto() {
           />
         </div>
       </div>
-      {/* Indicator */}
       <div className="absolute -right-1 -top-1 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-primary shadow-(--shadow-primary) transition-transform duration-300 group-hover:scale-0">
         <span className="text-xs font-bold text-white">ME</span>
       </div>

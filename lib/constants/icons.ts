@@ -16,6 +16,7 @@ export const ALL_TECH_ICONS = [
   { name: "Next.js", src: "/images/nextjs-fill-svgrepo-com.svg" },
   { name: "NestJS", src: "/images/nestjs-svgrepo-com.svg" },
   { name: "React", src: "/images/react-svgrepo-com.svg" },
+  { name: "React Native", src: "/images/react-native-svgrepo-com.svg" },
   { name: "Angular", src: "/images/angular-svgrepo-com.svg" },
   { name: "PostgreSQL", src: "/images/pgsql-svgrepo-com.svg" },
   { name: "MongoDB", src: "/images/mongo-svgrepo-com.svg" },

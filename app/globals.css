@@ -1,41 +1,38 @@
 @import "tailwindcss";
 
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 :root {
   --color-background: #0b1020;
   --color-surface: #121a2b;
   --color-surface-light: #1b2640;
 
-  /* Text */
   --color-text: #f3f4f6;
   --color-text-muted: #9ca3af;
 
-  /* Primary */
   --color-primary: #6366f1;
   --color-primary-hover: #7c83ff;
   --color-primary-active: #4f46e5;
 
-  /* Secondary */
   --color-secondary: #22c55e;
   --color-secondary-hover: #34d399;
 
-  /* Accent */
   --color-accent: #06b6d4;
   --color-accent-hover: #22d3ee;
 
-  /* Borders */
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-strong: rgba(255, 255, 255, 0.16);
 
-  /* States */
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-danger: #ef4444;
 
-  /* Effects */
   --shadow-primary: 0 10px 30px rgba(99, 102, 241, 0.25);
   --shadow-surface: 0 8px 24px rgba(0, 0, 0, 0.35);
 
-  /* Gradients */
   --gradient-primary: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
   --gradient-surface: linear-gradient(180deg, #121a2b 0%, #0b1020 100%);
 }
@@ -74,7 +71,8 @@
   --animate-gradient: gradient-shift 3s ease-in-out infinite;
 }
 
-/* ── Keyframes ── */
+/* Keyframes */
+
 @keyframes float {
   0%,
   100% {
@@ -169,7 +167,8 @@ button.no-scale-hover:hover {
   transform: scale(1) !important;
 }
 
-/* ── Hero glow button ── */
+/* glow effect on hover */
+
 .btn-glow {
   position: relative;
   transition: transform 0.2s ease;
@@ -206,7 +205,8 @@ button.no-scale-hover:hover {
   transform: translateY(-1px);
 }
 
-/* ── Underline-to-fill button ── */
+/* underline that grows to fill */
+
 .btn-fill {
   position: relative;
   z-index: 0;
@@ -228,7 +228,8 @@ button.no-scale-hover:hover {
   height: 100%;
 }
 
-/* ── Fixed nav overlay ── */
+/* transparent at top, opaque on scroll */
+
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -252,44 +253,48 @@ button.no-scale-hover:hover {
   border-bottom-color: var(--color-border);
 }
 
-/* ── scroll reveal  ── */
-.reveal-up,
-.reveal-left,
-.reveal-right,
+.reveal-up {
+  animation: reveal-up 0.5s ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+.reveal-left {
+  animation: reveal-left 0.5s ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+.reveal-right {
+  animation: reveal-right 0.5s ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
 .reveal-scale {
-  opacity: 0;
+  animation: reveal-scale 0.4s ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
 }
 
+/* scroll-driven: animan al entrar y salir del viewport (Chrome 115+) */
 @supports (animation-timeline: view()) {
-  .reveal-up {
+  .reveal-scroll-up {
     animation: reveal-up linear both;
     animation-timeline: view();
-    animation-range: entry 0% entry 100%;
+    animation-range: entry 5% cover 20%;
+    animation-delay: 0s;
   }
-  .reveal-left {
+  .reveal-scroll-left {
     animation: reveal-left linear both;
     animation-timeline: view();
-    animation-range: entry 0% entry 100%;
+    animation-range: entry 5% cover 20%;
+    animation-delay: 0s;
   }
-  .reveal-right {
+  .reveal-scroll-right {
     animation: reveal-right linear both;
     animation-timeline: view();
-    animation-range: entry 0% entry 100%;
+    animation-range: entry 5% cover 20%;
+    animation-delay: 0s;
   }
-  .reveal-scale {
+  .reveal-scroll-scale {
     animation: reveal-scale linear both;
     animation-timeline: view();
-    animation-range: entry 0% entry 85%;
-  }
-}
-
-/* Fallback para navegadores sin soporte para animation-timeline */
-@supports not (animation-timeline: view()) {
-  .reveal-up,
-  .reveal-left,
-  .reveal-right,
-  .reveal-scale {
-    opacity: 1;
+    animation-range: entry 5% cover 15%;
+    animation-delay: 0s;
   }
 }
 
