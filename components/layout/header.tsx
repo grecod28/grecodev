@@ -44,10 +44,11 @@ export default function Header() {
 
   return (
     <header
-      className={`nav-overlay flex items-center justify-between w-full px-6 py-4 ${
+      className={`nav-overlay flex justify-center w-full px-6 py-4 ${
         scrolled ? "scrolled" : ""
       }`}
     >
+      <div className="flex items-center justify-between w-full max-w-[1400px]">
       <nav className="hidden xl:flex xl:gap-8 text-base">
         {links.map((link) => (
           <Link
@@ -73,6 +74,7 @@ export default function Header() {
 
       <div className="xl:hidden">
         <MobileMenu links={links} />
+      </div>
       </div>
     </header>
   );
