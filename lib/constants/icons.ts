@@ -14,6 +14,7 @@ export const TECH_STACK_ICONS = [
 export const ALL_TECH_ICONS = [
   { name: "TypeScript", src: "/images/typescript-svgrepo-com.svg" },
   { name: "React", src: "/images/react-svgrepo-com.svg" },
+  { name: "Astro", src: "/images/astro.svg" },
   { name: "Next.js", src: "/images/nextjs-fill-svgrepo-com.svg" },
   { name: "Node.js", src: "/images/nodejs-svgrepo-com.svg" },
   { name: "NestJS", src: "/images/nestjs-svgrepo-com.svg" },
@@ -23,8 +24,8 @@ export const ALL_TECH_ICONS = [
   { name: "Redis", src: "/images/redis-svgrepo-com.svg" },
   { name: "MongoDB", src: "/images/mongo-svgrepo-com.svg" },
   { name: "React Native", src: "/images/react-native-svgrepo-com.svg" },
-  { name: "Angular", src: "/images/angular-svgrepo-com.svg" },
   { name: "Express.js", src: "/images/express.svg" },
+  { name: "Angular", src: "/images/angular-svgrepo-com.svg" },
   { name: "Tailwind CSS", src: "/images/tailwind-svgrepo-com.svg" },
   { name: "Nginx", src: "/images/nginx-svgrepo-com.svg" },
   { name: "Apache", src: "/images/apache-svgrepo-com.svg" },
@@ -32,8 +33,5 @@ export const ALL_TECH_ICONS = [
   { name: "PHP", src: "/images/php-svgrepo-com.svg" },
   { name: "CSS3", src: "/images/css-3-svgrepo-com.svg" },
   { name: "HTML5", src: "/images/html-5-svgrepo-com.svg" },
-  { name: "Astro", src: "/images/astro.svg" },
   { name: "GitHub Actions", src: "/images/github-actions.svg" },
-  { name: "AWS S3", src: "/images/aws-s3.svg" },
-  { name: "CloudFront", src: "/images/aws-cloudfront.svg" },
 ] as const;

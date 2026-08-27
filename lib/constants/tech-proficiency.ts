@@ -1,7 +1,9 @@
 export const TECH_PROFICIENCY: Record<string, number> = {
+  React: 4,
   "Next.js": 3,
   NestJS: 4,
   Angular: 3,
+  Astro: 3,
   PostgreSQL: 4,
   MongoDB: 3,
   Redis: 4,
@@ -15,17 +17,13 @@ export const TECH_PROFICIENCY: Record<string, number> = {
   PHP: 3,
   N8N: 1,
   JavaScript: 4,
-  React: 4,
   "React Native": 3,
   Docker: 2,
   "Node.js": 4,
   Express: 4,
   Git: 4,
   AWS: 3,
-  Astro: 3,
   "GitHub Actions": 3,
-  "AWS S3": 3,
-  CloudFront: 3,
 };
 
 export function getProficiencyLevel(name: string): number {
