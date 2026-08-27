@@ -1,11 +1,6 @@
 import { getTranslations } from "next-intl/server";
-import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
-import {
-  section,
-  sectionCentered,
-  sectionLabel,
-  sectionTitle,
-} from "@/lib/constants/styles";
+import { FiMail, FiGithub, FiLinkedin, FiMapPin } from "react-icons/fi";
+import { section, sectionLabel, sectionTitle } from "@/lib/constants/styles";
 import ContactForm from "@/components/contact/contact-form";
 
 const SOCIAL_LINKS = [
@@ -18,7 +13,7 @@ const SOCIAL_LINKS = [
   {
     key: "linkedin",
     icon: FiLinkedin,
-    href: "https://linkedin.com/in/santiago-greco-dominguez-681588348",
+    href: "https://linkedin.com/in/santiago-greco-dominguez",
     label: "LinkedIn",
   },
   {
@@ -34,43 +29,72 @@ export default async function ContactPage() {
 
   return (
     <section className={section}>
-      <div className="mx-auto max-w-4xl animate-fade-in">
-        <div className={sectionCentered}>
+      <div className="mx-auto grid max-w-6xl gap-14 animate-fade-in lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="flex flex-col justify-center">
           <span className={sectionLabel}>{t("cta")}</span>
-          <h2 className={sectionTitle}>{t("title")}</h2>
-          <p className="mt-3 max-w-lg text-base leading-relaxed text-text-muted">
+          <h1 className={sectionTitle}>{t("title")}</h1>
+          <p className="mt-4 max-w-md text-base leading-relaxed text-text-muted">
             {t("description")}
           </p>
-        </div>
 
-        <div className="mt-12 flex flex-col items-center">
-          <ContactForm />
-        </div>
-
-        <div className="mt-12 border-t border-border pt-10">
-          <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-text-muted">
-            {t("location")}
-          </p>
-
-          <div className="mt-6 flex items-center justify-center gap-6">
-            {SOCIAL_LINKS.map((item) => (
+          <ul className="mt-10 space-y-4">
+            <li>
               <a
-                key={item.key}
-                href={item.href}
-                target={item.key !== "email" ? "_blank" : undefined}
-                rel={item.key !== "email" ? "noopener noreferrer" : undefined}
-                className="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-110"
+                href={`mailto:${t("email")}`}
+                className="flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all duration-200 hover:border-primary/50 hover:bg-surface-light"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-surface-light transition-all duration-200 group-hover:bg-primary/10 group-hover:text-primary">
-                  <item.icon className="h-6 w-6 text-text-muted transition-colors group-hover:text-primary" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <FiMail className="h-5 w-5" />
                 </div>
-                <span className="text-[10px] font-medium uppercase tracking-wider text-text-muted transition-colors group-hover:text-primary">
-                  {item.label}
-                </span>
+                <div className="min-w-0">
+                  <p className="text-xs font-medium uppercase tracking-wider text-text-muted">
+                    {t("info_email")}
+                  </p>
+                  <p className="truncate text-sm font-medium text-text">
+                    {t("email")}
+                  </p>
+                </div>
               </a>
-            ))}
+            </li>
+            <li>
+              <div className="flex items-center gap-4 rounded-xl border border-border bg-surface p-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                  <FiMapPin className="h-5 w-5" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs font-medium uppercase tracking-wider text-text-muted">
+                    {t("info_location")}
+                  </p>
+                  <p className="text-sm font-medium text-text">
+                    {t("location")}
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div className="mt-10">
+            <p className="text-xs font-medium uppercase tracking-wider text-text-muted">
+              {t("info_follow")}
+            </p>
+            <div className="mt-4 flex items-center gap-3">
+              {SOCIAL_LINKS.map((item) => (
+                <a
+                  key={item.key}
+                  href={item.href}
+                  target={item.key !== "email" ? "_blank" : undefined}
+                  rel={item.key !== "email" ? "noopener noreferrer" : undefined}
+                  aria-label={item.label}
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-surface text-text-muted transition-all duration-200 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+                >
+                  <item.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
+
+        <ContactForm />
       </div>
     </section>
   );

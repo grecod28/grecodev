@@ -126,9 +126,7 @@
       "docker": "A platform for developing, shipping, and running applications inside lightweight, portable containers that run consistently across any environment.",
       "expressjs": "A minimal and flexible Node.js web application framework providing a robust set of features for web and mobile applications.",
       "astro": "A modern web framework that generates ultra-fast static sites with UI components and minimal client-side JavaScript.",
-      "github-actions": "GitHub's built-in CI/CD platform for automating builds, tests, and deployments.",
-      "aws-s3": "AWS's scalable and durable object storage service, ideal for hosting static websites.",
-      "cloudfront": "AWS's CDN that accelerates content delivery with edge caching and global HTTPS."
+      "github-actions": "GitHub's built-in CI/CD platform for automating builds, tests, and deployments."
     }
   },
   "About": {
@@ -180,9 +178,14 @@
     "github": "github.com/grecod28",
     "linkedin": "linkedin.com/in/santiagogreco",
     "location": "Ourense, Galicia, Spain",
+    "info_email": "Email",
+    "info_location": "Location",
+    "info_follow": "Follow me",
     "cta": "Get in Touch",
     "form_name": "Name",
+    "form_name_placeholder": "Full name",
     "form_email": "Email",
+    "form_email_placeholder": "name@company.com",
     "form_subject": "Subject",
     "form_subject_placeholder": "Project collaboration",
     "form_message": "Message",

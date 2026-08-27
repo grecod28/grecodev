@@ -126,9 +126,7 @@
       "docker": "Una plataforma para desarrollar, desplegar y ejecutar aplicaciones dentro de contenedores ligeros y portables que se ejecutan de forma consistente en cualquier entorno.",
       "expressjs": "Un framework de aplicaciones web Node.js minimalista y flexible que proporciona un conjunto robusto de características para aplicaciones web y móviles.",
       "astro": "Un framework web moderno que genera sitios estáticos ultrarrápidos con componentes de UI y JavaScript mínimo en el cliente.",
-      "github-actions": "Plataforma de CI/CD integrada en GitHub para automatizar builds, pruebas y despliegues.",
-      "aws-s3": "Servicio de almacenamiento de objetos de AWS, escalable y duradero, ideal para alojar sitios estáticos.",
-      "cloudfront": "CDN de AWS que acelera la entrega de contenido con cacheado en el edge y HTTPS global."
+      "github-actions": "Plataforma de CI/CD integrada en GitHub para automatizar builds, pruebas y despliegues."
     }
   },
   "About": {
@@ -175,13 +173,18 @@
   "Contact": {
     "title": "Trabajemos Juntos",
     "description": "¿Tienes un proyecto en mente? Me encantaría conocerlo. Ya sea una aplicación web, una API o una solución digital completa — estoy aquí para ayudar.",
-    "email": "stgrecodev@gamil.com",
+    "email": "stgrecodev@gmail.com",
     "github": "github.com/grecod28",
     "linkedin": "linkedin.com/in/santiagogreco",
     "location": "Ourense, Galicia, España",
+    "info_email": "Email",
+    "info_location": "Ubicación",
+    "info_follow": "Sígueme",
     "cta": "Ponte en Contacto",
     "form_name": "Nombre",
+    "form_name_placeholder": "Nombre y apellidos",
     "form_email": "Correo electrónico",
+    "form_email_placeholder": "nombre@empresa.com",
     "form_subject": "Asunto",
     "form_subject_placeholder": "Colaboración en proyecto",
     "form_message": "Mensaje",
