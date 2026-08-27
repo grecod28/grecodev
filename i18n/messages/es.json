@@ -60,6 +60,16 @@
           "Optimizar la carga de tarjetas para manejar cientos de contactos compartidos sin lag."
         ]
       },
+      "k2studio": {
+        "title": "K2 Studio",
+        "description": "Sitio web estático para una agencia de marketing, construido con Astro y desplegado en AWS S3 con CloudFront y CI/CD automatizado mediante GitHub Actions.",
+        "detail": "Sitio web corporativo estático para K2 Studio, una agencia de marketing digital. Construido con Astro para un rendimiento y SEO óptimos, se publica en AWS S3 y se sirve a través de CloudFront como CDN global. El flujo de trabajo de CI/CD con GitHub Actions automatiza el build y el despliegue en cada cambio, garantizando publicaciones rápidas y sin servidores.",
+        "challenges": [
+          "Generar un sitio totalmente estático con Astro optimizando rendimiento, SEO y carga inicial.",
+          "Configurar el hosting en AWS S3 con distribución de CloudFront, HTTPS y cacheado en el edge.",
+          "Automatizar el despliegue con un pipeline de CI/CD en GitHub Actions que publica cada cambio en producción."
+        ]
+      },
       "devfolio": {
         "title": "DevFolio",
         "description": "Un portafolio de desarrollador moderno y multi-idioma construido con Next.js e internacionalización, con diseño responsive y tema claro/oscuro.",
@@ -114,7 +124,11 @@
       "react-native": "Un framework para construir aplicaciones móviles nativas usando React y JavaScript.",
       "aws": "Una plataforma integral de computación en la nube que ofrece servicios de infraestructura bajo demanda, desde servidores virtuales y almacenamiento hasta computación serverless y machine learning.",
       "docker": "Una plataforma para desarrollar, desplegar y ejecutar aplicaciones dentro de contenedores ligeros y portables que se ejecutan de forma consistente en cualquier entorno.",
-      "expressjs": "Un framework de aplicaciones web Node.js minimalista y flexible que proporciona un conjunto robusto de características para aplicaciones web y móviles."
+      "expressjs": "Un framework de aplicaciones web Node.js minimalista y flexible que proporciona un conjunto robusto de características para aplicaciones web y móviles.",
+      "astro": "Un framework web moderno que genera sitios estáticos ultrarrápidos con componentes de UI y JavaScript mínimo en el cliente.",
+      "github-actions": "Plataforma de CI/CD integrada en GitHub para automatizar builds, pruebas y despliegues.",
+      "aws-s3": "Servicio de almacenamiento de objetos de AWS, escalable y duradero, ideal para alojar sitios estáticos.",
+      "cloudfront": "CDN de AWS que acelera la entrega de contenido con cacheado en el edge y HTTPS global."
     }
   },
   "About": {

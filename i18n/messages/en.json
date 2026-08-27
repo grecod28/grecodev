@@ -60,6 +60,16 @@
           "Optimizing card loading performance to handle hundreds of shared contacts without lag."
         ]
       },
+      "k2studio": {
+        "title": "K2 Studio",
+        "description": "A static website for a marketing agency, built with Astro and deployed to AWS S3 with CloudFront and CI/CD automated via GitHub Actions.",
+        "detail": "A static corporate website for K2 Studio, a digital marketing agency. Built with Astro for optimal performance and SEO, it is published to AWS S3 and served through CloudFront as a global CDN. A CI/CD workflow with GitHub Actions automates build and deployment on every change, enabling fast, serverless releases.",
+        "challenges": [
+          "Building a fully static site with Astro, optimizing performance, SEO, and initial load.",
+          "Setting up AWS S3 hosting with a CloudFront distribution, HTTPS, and edge caching.",
+          "Automating deployments with a GitHub Actions CI/CD pipeline that ships every change to production."
+        ]
+      },
       "devfolio": {
         "title": "DevFolio",
         "description": "A modern, multi-language developer portfolio built with Next.js and internationalization, featuring a clean dark/light theme and responsive design.",
@@ -114,7 +124,11 @@
       "react-native": "A framework for building native mobile apps using React and JavaScript.",
       "aws": "A comprehensive cloud computing platform offering on-demand infrastructure services, from virtual servers and storage to serverless computing and machine learning.",
       "docker": "A platform for developing, shipping, and running applications inside lightweight, portable containers that run consistently across any environment.",
-      "expressjs": "A minimal and flexible Node.js web application framework providing a robust set of features for web and mobile applications."
+      "expressjs": "A minimal and flexible Node.js web application framework providing a robust set of features for web and mobile applications.",
+      "astro": "A modern web framework that generates ultra-fast static sites with UI components and minimal client-side JavaScript.",
+      "github-actions": "GitHub's built-in CI/CD platform for automating builds, tests, and deployments.",
+      "aws-s3": "AWS's scalable and durable object storage service, ideal for hosting static websites.",
+      "cloudfront": "AWS's CDN that accelerates content delivery with edge caching and global HTTPS."
     }
   },
   "About": {

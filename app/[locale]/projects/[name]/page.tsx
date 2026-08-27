@@ -32,6 +32,7 @@ export default async function ProjectDetailPage({
   }
 
   const t = await getTranslations("Projects");
+  const c = await getTranslations("Common");
 
   return (
     <main className={pageContainer}>
@@ -104,7 +105,7 @@ export default async function ProjectDetailPage({
               className={btnOutline}
             >
               <FiGithub className="h-4 w-4" />
-              {t("github")}
+              {c("github")}
             </a>
           )}
           {project.liveUrl && (
@@ -115,7 +116,7 @@ export default async function ProjectDetailPage({
               className={btnAction}
             >
               <FiExternalLink className="h-4 w-4" />
-              {t("live")}
+              {c("live")}
             </a>
           )}
         </div>
