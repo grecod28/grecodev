@@ -1,4 +1,9 @@
-import { FiMessageCircle, FiBarChart2, FiSmartphone } from "react-icons/fi";
+import {
+  FiMessageCircle,
+  FiBarChart2,
+  FiSmartphone,
+  FiTrendingUp,
+} from "react-icons/fi";
 
 export const PROJECTS = [
   {
@@ -34,6 +39,24 @@ export const PROJECTS = [
     liveUrl:
       "https://play.google.com/store/apps/details?id=com.grecod28.knowmeetapp",
     ImageSrc: "/images/projects/knowmeet.png",
+    featured: true,
+  },
+  {
+    id: "k2studio",
+    icon: FiTrendingUp,
+    techStack: [
+      "Astro",
+      "TypeScript",
+      "Tailwind CSS",
+      "AWS S3",
+      "CloudFront",
+      "GitHub Actions",
+      "HTML5",
+      "CSS3",
+    ],
+    githubUrl: "https://github.com/grecod28/k2",
+    liveUrl: "https://studiok2.es",
+    ImageSrc: "/images/projects/k2.png",
     featured: true,
   },
   {

@@ -32,4 +32,8 @@ export const ALL_TECH_ICONS = [
   { name: "PHP", src: "/images/php-svgrepo-com.svg" },
   { name: "CSS3", src: "/images/css-3-svgrepo-com.svg" },
   { name: "HTML5", src: "/images/html-5-svgrepo-com.svg" },
+  { name: "Astro", src: "/images/astro.svg" },
+  { name: "GitHub Actions", src: "/images/github-actions.svg" },
+  { name: "AWS S3", src: "/images/aws-s3.svg" },
+  { name: "CloudFront", src: "/images/aws-cloudfront.svg" },
 ] as const;
